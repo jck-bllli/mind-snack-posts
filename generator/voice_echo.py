@@ -3,10 +3,14 @@ import json, os, subprocess, sys, tempfile
 import numpy as np, soundfile as sf
 from kokoro_onnx import Kokoro
 HERE = os.path.dirname(os.path.abspath(__file__))
-SPEED, PITCH, VOICE = 1.38, 0.875, "am_echo"
-CHAIN = (f"aresample=48000,rubberband=pitch={PITCH}:formant=preserved,highpass=f=70,"
-         "equalizer=f=180:t=q:w=1:g=2,equalizer=f=3000:t=q:w=1.2:g=1.5,"
-         "acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=3")
+SPEED, PITCH, VOICE = 1.38, 0.93, "am_echo"
+# "Max clarity" chain: high-quality resample + pitch shift, cut mud, boost consonants, add air, tame "s".
+CHAIN = ("aresample=48000:resampler=soxr:precision=28,"
+         f"rubberband=pitch={PITCH}:formant=preserved:pitchq=quality:transients=crisp:detector=compound:window=standard,"
+         "highpass=f=90:poles=2,equalizer=f=280:t=q:w=1.0:g=-6,equalizer=f=650:t=q:w=1.4:g=-2,"
+         "equalizer=f=2500:t=q:w=1.0:g=6,equalizer=f=4500:t=q:w=1.2:g=3,highshelf=f=9500:g=4,"
+         "deesser=i=0.25:m=0.5:f=0.6,acompressor=threshold=-20dB:ratio=2.5:attack=5:release=60:makeup=2,"
+         "alimiter=limit=0.95")
 def main(lines_path, outdir):
     k = Kokoro(os.path.join(HERE, "tts_model/kokoro-v1.0.onnx"), os.path.join(HERE, "tts_model/voices-v1.0.bin"))
     quizzes = json.load(open(lines_path))

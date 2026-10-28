@@ -22,7 +22,8 @@
           "A choir"
         ],
         "answer": 1,
-        "fact": "A group of owls is called a parliament."
+        "fact": "A group of owls is called a parliament.",
+        "answer_say": "a murder"
       },
       {
         "level": "medium",
@@ -33,7 +34,8 @@
           "Black"
         ],
         "answer": 2,
-        "fact": "Black skin soaks up heat. The fur isn't white either, it's see-through."
+        "fact": "Black skin soaks up heat. The fur isn't white either, it's see-through.",
+        "answer_say": "black"
       },
       {
         "level": "medium",
@@ -55,7 +57,8 @@
           "Dolphin"
         ],
         "answer": 0,
-        "fact": "Koala prints are so close to human ones they're hard to tell apart."
+        "fact": "Koala prints are so close to human ones they're hard to tell apart.",
+        "answer_say": "the koala"
       }
     ]
   },
@@ -115,7 +118,8 @@
           "They're equal"
         ],
         "answer": 0,
-        "fact": "One Venus day is about 243 Earth days. Its year is about 225."
+        "fact": "One Venus day is about 243 Earth days. Its year is about 225.",
+        "answer_say": "a day"
       }
     ]
   },
@@ -142,7 +146,8 @@
           "Skin"
         ],
         "answer": 2,
-        "fact": "Your skin is constantly shedding and replacing itself."
+        "fact": "Your skin is constantly shedding and replacing itself.",
+        "answer_say": "skin"
       },
       {
         "level": "medium",
@@ -153,7 +158,8 @@
           "Lungs"
         ],
         "answer": 1,
-        "fact": "A liver can grow back even after a large part of it is removed."
+        "fact": "A liver can grow back even after a large part of it is removed.",
+        "answer_say": "the liver"
       },
       {
         "level": "medium",
@@ -164,7 +170,8 @@
           "Nose"
         ],
         "answer": 0,
-        "fact": "The stapes in your ear is about the size of a grain of rice."
+        "fact": "The stapes in your ear is about the size of a grain of rice.",
+        "answer_say": "the ear"
       },
       {
         "level": "hard",
@@ -191,7 +198,8 @@
           "Indian"
         ],
         "answer": 1,
-        "fact": "The Pacific is bigger than all the land on Earth combined."
+        "fact": "The Pacific is bigger than all the land on Earth combined.",
+        "answer_say": "the Pacific"
       },
       {
         "level": "easy",
@@ -251,7 +259,8 @@
           "Peanut"
         ],
         "answer": 0,
-        "fact": "Marzipan is mostly ground almonds and sugar."
+        "fact": "Marzipan is mostly ground almonds and sugar.",
+        "answer_say": "almond"
       },
       {
         "level": "easy",
@@ -262,7 +271,8 @@
           "Raspberry"
         ],
         "answer": 1,
-        "fact": "Bananas count as berries. Strawberries and raspberries don't."
+        "fact": "Bananas count as berries. Strawberries and raspberries don't.",
+        "answer_say": "a banana"
       },
       {
         "level": "medium",
@@ -273,7 +283,8 @@
           "Berries"
         ],
         "answer": 0,
-        "fact": "Peanuts are in the same family as beans and peas."
+        "fact": "Peanuts are in the same family as beans and peas.",
+        "answer_say": "legumes"
       },
       {
         "level": "medium",
@@ -284,7 +295,8 @@
           "Peanut butter"
         ],
         "answer": 1,
-        "fact": "Archaeologists have found honey in ancient Egyptian tombs."
+        "fact": "Archaeologists have found honey in ancient Egyptian tombs.",
+        "answer_say": "honey"
       },
       {
         "level": "hard",
@@ -295,7 +307,8 @@
           "Red"
         ],
         "answer": 1,
-        "fact": "Orange carrots took off in the Netherlands in the 1600s."
+        "fact": "Orange carrots took off in the Netherlands in the 1600s.",
+        "answer_say": "purple"
       }
     ]
   },
@@ -311,7 +324,8 @@
           "Mayflower"
         ],
         "answer": 0,
-        "fact": "Titanic sank on her very first voyage."
+        "fact": "Titanic sank on her very first voyage.",
+        "answer_say": "the Titanic"
       },
       {
         "level": "easy",
@@ -322,7 +336,8 @@
           "Light bulb"
         ],
         "answer": 0,
-        "fact": "An early fax was patented in 1843, decades before the telephone."
+        "fact": "An early fax was patented in 1843, decades before the telephone.",
+        "answer_say": "the fax machine"
       },
       {
         "level": "medium",
@@ -344,7 +359,8 @@
           "Both equal"
         ],
         "answer": 1,
-        "fact": "The Great Pyramid was already about 2,500 years old when she was born."
+        "fact": "The Great Pyramid was already about 2,500 years old when she was born.",
+        "answer_say": "the Moon landing"
       },
       {
         "level": "hard",
@@ -355,7 +371,8 @@
           "Ancient Egypt"
         ],
         "answer": 1,
-        "fact": "Oxford was teaching 200+ years before the Aztec capital existed."
+        "fact": "Oxford was teaching 200+ years before the Aztec capital existed.",
+        "answer_say": "the Aztec Empire"
       }
     ]
   },
@@ -415,7 +432,8 @@
           "Frisbee"
         ],
         "answer": 0,
-        "fact": "Astronaut Alan Shepard hit two golf balls on the Moon in 1971."
+        "fact": "Astronaut Alan Shepard hit two golf balls on the Moon in 1971.",
+        "answer_say": "golf"
       }
     ]
   },
@@ -453,7 +471,8 @@
           "To weigh less"
         ],
         "answer": 0,
-        "fact": "Dimples cut drag, so a ball can fly about twice as far."
+        "fact": "Dimples cut drag, so a ball can fly about twice as far.",
+        "answer_say": "to fly farther"
       },
       {
         "level": "medium",
@@ -475,7 +494,8 @@
           "Fishing nets"
         ],
         "answer": 0,
-        "fact": "Someone had to climb up and get the ball out after every basket."
+        "fact": "Someone had to climb up and get the ball out after every basket.",
+        "answer_say": "peach baskets"
       }
     ]
   },
