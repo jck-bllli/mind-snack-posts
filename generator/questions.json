@@ -1,0 +1,482 @@
+[
+  {
+    "theme": "Animal",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "How many hearts does an octopus have?",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": 2,
+        "fact": "Two pump blood to the gills, one pumps it to the rest of the body."
+      },
+      {
+        "level": "easy",
+        "q": "What is a group of crows called?",
+        "options": [
+          "A pack",
+          "A murder",
+          "A choir"
+        ],
+        "answer": 1,
+        "fact": "A group of owls is called a parliament."
+      },
+      {
+        "level": "medium",
+        "q": "What color is a polar bear's skin?",
+        "options": [
+          "White",
+          "Pink",
+          "Black"
+        ],
+        "answer": 2,
+        "fact": "Black skin soaks up heat. The fur isn't white either, it's see-through."
+      },
+      {
+        "level": "medium",
+        "q": "Which of these animals can't jump?",
+        "options": [
+          "Kangaroo",
+          "Elephant",
+          "Giraffe"
+        ],
+        "answer": 1,
+        "fact": "An elephant always keeps at least one foot on the ground."
+      },
+      {
+        "level": "hard",
+        "q": "Which animal has fingerprints like ours?",
+        "options": [
+          "Koala",
+          "Dog",
+          "Dolphin"
+        ],
+        "answer": 0,
+        "fact": "Koala prints are so close to human ones they're hard to tell apart."
+      }
+    ]
+  },
+  {
+    "theme": "Space",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which planet is closest to the Sun?",
+        "options": [
+          "Venus",
+          "Mercury",
+          "Mars"
+        ],
+        "answer": 1,
+        "fact": "A year on Mercury lasts just 88 Earth days."
+      },
+      {
+        "level": "easy",
+        "q": "How long does sunlight take to reach Earth?",
+        "options": [
+          "8 seconds",
+          "8 minutes",
+          "8 hours"
+        ],
+        "answer": 1,
+        "fact": "So the Sun you see is about 8 minutes old."
+      },
+      {
+        "level": "medium",
+        "q": "Which planet has the most moons?",
+        "options": [
+          "Jupiter",
+          "Saturn",
+          "Neptune"
+        ],
+        "answer": 1,
+        "fact": "Saturn has well over 200 known moons."
+      },
+      {
+        "level": "medium",
+        "q": "What is the hottest planet?",
+        "options": [
+          "Mercury",
+          "Venus",
+          "Mars"
+        ],
+        "answer": 1,
+        "fact": "Its thick clouds trap heat, even though Mercury is closer to the Sun."
+      },
+      {
+        "level": "hard",
+        "q": "On Venus, which one is longer?",
+        "options": [
+          "A day",
+          "A year",
+          "They're equal"
+        ],
+        "answer": 0,
+        "fact": "One Venus day is about 243 Earth days. Its year is about 225."
+      }
+    ]
+  },
+  {
+    "theme": "Human body",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "How many bones does an adult have?",
+        "options": [
+          "106",
+          "206",
+          "306"
+        ],
+        "answer": 1,
+        "fact": "Babies are born with around 300. Some fuse together as you grow."
+      },
+      {
+        "level": "easy",
+        "q": "What is the largest organ in your body?",
+        "options": [
+          "Liver",
+          "Brain",
+          "Skin"
+        ],
+        "answer": 2,
+        "fact": "Your skin is constantly shedding and replacing itself."
+      },
+      {
+        "level": "medium",
+        "q": "Which organ can regrow itself?",
+        "options": [
+          "Heart",
+          "Liver",
+          "Lungs"
+        ],
+        "answer": 1,
+        "fact": "A liver can grow back even after a large part of it is removed."
+      },
+      {
+        "level": "medium",
+        "q": "Where is the smallest bone in your body?",
+        "options": [
+          "Ear",
+          "Toe",
+          "Nose"
+        ],
+        "answer": 0,
+        "fact": "The stapes in your ear is about the size of a grain of rice."
+      },
+      {
+        "level": "hard",
+        "q": "How many times does your heart beat a day?",
+        "options": [
+          "10,000",
+          "100,000",
+          "1,000,000"
+        ],
+        "answer": 1,
+        "fact": "That's over 35 million beats a year."
+      }
+    ]
+  },
+  {
+    "theme": "Geography",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "What is the largest ocean on Earth?",
+        "options": [
+          "Atlantic",
+          "Pacific",
+          "Indian"
+        ],
+        "answer": 1,
+        "fact": "The Pacific is bigger than all the land on Earth combined."
+      },
+      {
+        "level": "easy",
+        "q": "What is the capital of Australia?",
+        "options": [
+          "Sydney",
+          "Melbourne",
+          "Canberra"
+        ],
+        "answer": 2,
+        "fact": "Canberra was built as a compromise between Sydney and Melbourne."
+      },
+      {
+        "level": "medium",
+        "q": "What is the largest desert on Earth?",
+        "options": [
+          "Sahara",
+          "Antarctica",
+          "Gobi"
+        ],
+        "answer": 1,
+        "fact": "A desert is about low rainfall, not heat."
+      },
+      {
+        "level": "medium",
+        "q": "Which country has the most islands?",
+        "options": [
+          "Indonesia",
+          "Sweden",
+          "Philippines"
+        ],
+        "answer": 1,
+        "fact": "Sweden has over 200,000 islands. Most have nobody living on them."
+      },
+      {
+        "level": "hard",
+        "q": "Which country has the most time zones?",
+        "options": [
+          "Russia",
+          "USA",
+          "France"
+        ],
+        "answer": 2,
+        "fact": "France has 12 thanks to its territories spread around the world."
+      }
+    ]
+  },
+  {
+    "theme": "Food",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which nut is used to make marzipan?",
+        "options": [
+          "Almond",
+          "Cashew",
+          "Peanut"
+        ],
+        "answer": 0,
+        "fact": "Marzipan is mostly ground almonds and sugar."
+      },
+      {
+        "level": "easy",
+        "q": "Which of these is a berry?",
+        "options": [
+          "Strawberry",
+          "Banana",
+          "Raspberry"
+        ],
+        "answer": 1,
+        "fact": "Bananas count as berries. Strawberries and raspberries don't."
+      },
+      {
+        "level": "medium",
+        "q": "Peanuts aren't nuts. What are they?",
+        "options": [
+          "Legumes",
+          "Seeds",
+          "Berries"
+        ],
+        "answer": 0,
+        "fact": "Peanuts are in the same family as beans and peas."
+      },
+      {
+        "level": "medium",
+        "q": "Which food can last for thousands of years?",
+        "options": [
+          "Rice",
+          "Honey",
+          "Peanut butter"
+        ],
+        "answer": 1,
+        "fact": "Archaeologists have found honey in ancient Egyptian tombs."
+      },
+      {
+        "level": "hard",
+        "q": "What color were carrots originally?",
+        "options": [
+          "Orange",
+          "Purple",
+          "Red"
+        ],
+        "answer": 1,
+        "fact": "Orange carrots took off in the Netherlands in the 1600s."
+      }
+    ]
+  },
+  {
+    "theme": "History",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which famous ship sank in 1912?",
+        "options": [
+          "Titanic",
+          "Lusitania",
+          "Mayflower"
+        ],
+        "answer": 0,
+        "fact": "Titanic sank on her very first voyage."
+      },
+      {
+        "level": "easy",
+        "q": "Which was invented first?",
+        "options": [
+          "Fax machine",
+          "Telephone",
+          "Light bulb"
+        ],
+        "answer": 0,
+        "fact": "An early fax was patented in 1843, decades before the telephone."
+      },
+      {
+        "level": "medium",
+        "q": "How long did the shortest war ever last?",
+        "options": [
+          "38 minutes",
+          "3 days",
+          "2 weeks"
+        ],
+        "answer": 0,
+        "fact": "That was the Anglo-Zanzibar War of 1896."
+      },
+      {
+        "level": "medium",
+        "q": "Cleopatra lived closer in time to which event?",
+        "options": [
+          "The pyramids",
+          "The Moon landing",
+          "Both equal"
+        ],
+        "answer": 1,
+        "fact": "The Great Pyramid was already about 2,500 years old when she was born."
+      },
+      {
+        "level": "hard",
+        "q": "Oxford is older than which empire?",
+        "options": [
+          "Roman",
+          "Aztec",
+          "Ancient Egypt"
+        ],
+        "answer": 1,
+        "fact": "Oxford was teaching 200+ years before the Aztec capital existed."
+      }
+    ]
+  },
+  {
+    "theme": "Random",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "How many keys are on a standard piano?",
+        "options": [
+          "76",
+          "88",
+          "96"
+        ],
+        "answer": 1,
+        "fact": "52 white keys and 36 black ones."
+      },
+      {
+        "level": "easy",
+        "q": "What is the most spoken native language?",
+        "options": [
+          "English",
+          "Spanish",
+          "Mandarin"
+        ],
+        "answer": 2,
+        "fact": "English is the most spoken overall once you count learners."
+      },
+      {
+        "level": "medium",
+        "q": "Which letter isn't in any US state name?",
+        "options": [
+          "Q",
+          "Z",
+          "X"
+        ],
+        "answer": 0,
+        "fact": "Z is in Arizona and X is in Texas."
+      },
+      {
+        "level": "medium",
+        "q": "What was the first toy advertised on TV?",
+        "options": [
+          "Barbie",
+          "Mr. Potato Head",
+          "Slinky"
+        ],
+        "answer": 1,
+        "fact": "Mr. Potato Head hit TV screens in 1952."
+      },
+      {
+        "level": "hard",
+        "q": "Which sport has been played on the Moon?",
+        "options": [
+          "Golf",
+          "Baseball",
+          "Frisbee"
+        ],
+        "answer": 0,
+        "fact": "Astronaut Alan Shepard hit two golf balls on the Moon in 1971."
+      }
+    ]
+  },
+  {
+    "theme": "Sports",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "How many players start for each soccer team?",
+        "options": [
+          "9",
+          "10",
+          "11"
+        ],
+        "answer": 2,
+        "fact": "That includes the goalkeeper."
+      },
+      {
+        "level": "easy",
+        "q": "How long is a marathon?",
+        "options": [
+          "13.1 miles",
+          "26.2 miles",
+          "31 miles"
+        ],
+        "answer": 1,
+        "fact": "That's about 42.2 kilometers."
+      },
+      {
+        "level": "medium",
+        "q": "Why do golf balls have dimples?",
+        "options": [
+          "To fly farther",
+          "To look cool",
+          "To weigh less"
+        ],
+        "answer": 0,
+        "fact": "Dimples cut drag, so a ball can fly about twice as far."
+      },
+      {
+        "level": "medium",
+        "q": "Which country has won the most World Cups?",
+        "options": [
+          "Germany",
+          "Brazil",
+          "Italy"
+        ],
+        "answer": 1,
+        "fact": "Brazil has won the men's World Cup five times."
+      },
+      {
+        "level": "hard",
+        "q": "What were the first basketball hoops?",
+        "options": [
+          "Peach baskets",
+          "Metal rings",
+          "Fishing nets"
+        ],
+        "answer": 0,
+        "fact": "Someone had to climb up and get the ball out after every basket."
+      }
+    ]
+  }
+]

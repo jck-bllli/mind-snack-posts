@@ -1,2 +1,4 @@
 __pycache__/
 .env
+generator/tts_model/
+generator/out/
