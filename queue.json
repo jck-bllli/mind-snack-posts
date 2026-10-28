@@ -1,0 +1,50 @@
+[
+  {
+    "id": "quiz_0",
+    "video": "videos/quiz_0.mp4",
+    "caption": "Animal trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #animaltrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_1",
+    "video": "videos/quiz_1.mp4",
+    "caption": "Space trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #spacetrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_2",
+    "video": "videos/quiz_2.mp4",
+    "caption": "Human body trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #humanbodytrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_3",
+    "video": "videos/quiz_3.mp4",
+    "caption": "Geography trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #geographytrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_4",
+    "video": "videos/quiz_4.mp4",
+    "caption": "Food trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #foodtrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_5",
+    "video": "videos/quiz_5.mp4",
+    "caption": "History trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #historytrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_6",
+    "video": "videos/quiz_6.mp4",
+    "caption": "Random trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #randomtrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_7",
+    "video": "videos/quiz_7.mp4",
+    "caption": "Sports trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #sportstrivia #brainteaser",
+    "thumb_offset_ms": 1000
+  }
+]

@@ -1,0 +1,47 @@
+name: Post daily Reel
+
+on:
+  schedule:
+    - cron: "17 23 * * *"   # every day 23:17 UTC = 4:17pm Pacific / 7:17pm Eastern (DST)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = test only, post = publish the next video now"
+        required: true
+        default: check
+        type: choice
+        options: [check, post]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-reel
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Post (or check)
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" = "check" ]; then
+            python post_next.py --check
+          else
+            python post_next.py
+          fi
+      - name: Record what was posted
+        run: |
+          if ! git diff --quiet posted.json; then
+            git config user.name "mindsnack-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add posted.json
+            git commit -m "Posted next Reel"
+            git push
+          fi
