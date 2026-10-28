@@ -48,7 +48,9 @@ def next_item():
 
 
 def public_url(item):
-    return f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{item['video']}"
+    # ?v=<commit> sidesteps GitHub's ~5 min cache of the raw file (e.g. right after a push)
+    ver = os.environ.get("GITHUB_SHA", str(int(time.time())))[:12]
+    return f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{item['video']}?v={ver}"
 
 
 def check_url(url):
