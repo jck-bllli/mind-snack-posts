@@ -478,5 +478,70 @@
         "fact": "Someone had to climb up and get the ball out after every basket."
       }
     ]
+  },
+  {
+    "theme": "Ocean",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "What is the largest animal alive today?",
+        "options": [
+          "Whale shark",
+          "Blue whale",
+          "Giant squid"
+        ],
+        "answer": 1,
+        "fact": "Its tongue alone can weigh as much as an elephant.",
+        "answer_say": "the blue whale"
+      },
+      {
+        "level": "easy",
+        "q": "How many arms does a starfish usually have?",
+        "options": [
+          "3",
+          "5",
+          "8"
+        ],
+        "answer": 1,
+        "fact": "One Antarctic starfish can grow up to 50 arms."
+      },
+      {
+        "level": "medium",
+        "q": "How much of Earth is ocean?",
+        "options": [
+          "About 30%",
+          "About 50%",
+          "About 70%"
+        ],
+        "answer": 2,
+        "fact": "We've seen less than 0.001% of the deep seafloor.",
+        "answer_say": "about seventy percent",
+        "fact_say": "We've seen less than one thousandth of a percent of the deep seafloor."
+      },
+      {
+        "level": "medium",
+        "q": "In which animal does the dad give birth?",
+        "options": [
+          "Seahorse",
+          "Clownfish",
+          "Octopus"
+        ],
+        "answer": 0,
+        "fact": "Seahorse dads carry the eggs in a pouch until they hatch.",
+        "answer_say": "the seahorse"
+      },
+      {
+        "level": "hard",
+        "q": "How deep is the deepest part of the ocean?",
+        "options": [
+          "About 4 kilometers",
+          "About 11 kilometers",
+          "About 25 kilometers"
+        ],
+        "answer": 1,
+        "fact": "Mount Everest would fit inside with about 2 kilometers to spare.",
+        "answer_say": "about eleven kilometers"
+      }
+    ]
   }
 ]

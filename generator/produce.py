@@ -77,12 +77,13 @@ def build_lines(quiz, n):
     rng = random.Random(1000 + n)
     lines = [{"id": "intro", "text": f"{quiz['theme']} trivia! Can you get five out of five? Let's go!"}]
     for i, q in enumerate(quiz["questions"][:5]):
-        a = speakable(q["options"][q["answer"]])
+        # optional overrides: "answer_say" / "fact_say" / "q_say" let the voice word things naturally
+        a = q.get("answer_say") or speakable(q["options"][q["answer"]])
         lines += [
             {"id": f"q{i + 1}_num", "text": f"Question {NUMS[i]}!" if i < 4 else "Last one, and it's a hard one!"},
-            {"id": f"q{i + 1}_question", "text": speakable(q["q"])},
-            {"id": f"q{i + 1}_answer", "text": rng.choice(REVEALS).format(a=a)},
-            {"id": f"q{i + 1}_fact", "text": speakable(q["fact"])},
+            {"id": f"q{i + 1}_question", "text": q.get("q_say") or speakable(q["q"])},
+            {"id": f"q{i + 1}_answer", "text": (lambda t: t[:1].upper() + t[1:])(rng.choice(REVEALS).format(a=a))},
+            {"id": f"q{i + 1}_fact", "text": q.get("fact_say") or speakable(q["fact"])},
         ]
     lines.append({"id": "outro", "text": "So, how many did you get? Comment your score below!"})
     return {"quiz": n, "theme": quiz["theme"], "lines": lines}
