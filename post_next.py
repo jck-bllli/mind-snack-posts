@@ -86,6 +86,13 @@ def main():
     quota = call("GET", f"{API}/{ig_id}/content_publishing_limit", {"fields": "quota_usage,config"})
     summary(f"Publishing quota: {quota.get('data', [{}])[0]}")
 
+    if "--once-per-day" in sys.argv:  # scheduled runs: skip if something already went out in the last 20 hours
+        done = [p for p in json.load(open("posted.json")) if p.get("posted_at")]
+        if done:
+            last = time.mktime(time.strptime(done[-1]["posted_at"], "%Y-%m-%dT%H:%M:%SZ")) - time.timezone
+            if time.time() - last < 20 * 3600:
+                summary(f"Already posted {done[-1]['id']} at {done[-1]['posted_at']}; skipping this scheduled run.")
+                return
     item = next_item()
     if not item:
         summary("Queue is empty. Add videos to queue.json.")
