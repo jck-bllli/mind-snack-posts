@@ -18,3 +18,9 @@ python3 generator/produce.py --new           # voice + render + queue every quiz
 git add -A && git commit -m "Add quizzes" && git push
 ```
 A weekly scheduled task does this automatically (7 new quizzes a week).
+
+## Token renewal
+
+Each run renews the Instagram token. When Meta returns a new token, the workflow saves it into the
+`IG_ACCESS_TOKEN` secret automatically, using the `GH_PAT` secret: a fine-grained GitHub token limited to this
+repo with **Secrets: Read and write** permission.

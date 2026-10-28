@@ -67,7 +67,12 @@ def keep_token_fresh():
             out = json.loads(r.read())
         days = out.get("expires_in", 0) // 86400
         if out.get("access_token") and out["access_token"] != TOKEN:
-            summary(f"⚠️ Meta issued a NEW token (valid {days} days). Update the IG_ACCESS_TOKEN secret soon.")
+            # hand the new token to the next workflow step (which saves it as the secret); never print it
+            path = os.environ.get("NEW_TOKEN_FILE")
+            if path:
+                with open(path, "w") as f:
+                    f.write(out["access_token"])
+            summary(f"Meta issued a new token (valid {days} days); saving it to the secret.")
         else:
             summary(f"Token refreshed, valid for about {days} more days.")
     except Exception as e:  # refresh is only allowed on tokens older than 24h; not fatal

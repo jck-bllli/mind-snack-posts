@@ -23,18 +23,35 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Post (or check)
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          NEW_TOKEN_FILE: ${{ runner.temp }}/new_token
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" = "check" ]; then
             python post_next.py --check
           else
             python post_next.py
+          fi
+      - name: Save renewed Instagram token
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          NEW_TOKEN_FILE: ${{ runner.temp }}/new_token
+        run: |
+          if [ -s "$NEW_TOKEN_FILE" ]; then
+            echo "::add-mask::$(cat "$NEW_TOKEN_FILE")"
+            if [ -z "$GH_TOKEN" ]; then
+              echo "::warning::Meta issued a new Instagram token but the GH_PAT secret is missing, so it could not be saved. Add GH_PAT (see README)."
+            else
+              gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" < "$NEW_TOKEN_FILE"
+              echo "Saved the renewed token to IG_ACCESS_TOKEN." >> "$GITHUB_STEP_SUMMARY"
+            fi
+            rm -f "$NEW_TOKEN_FILE"
           fi
       - name: Record what was posted
         run: |
