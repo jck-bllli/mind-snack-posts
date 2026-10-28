@@ -3,6 +3,9 @@ name: Post daily Reel
 on:
   schedule:
     - cron: "17 23 * * *"   # every day 23:17 UTC = 4:17pm Pacific / 7:17pm Eastern (DST)
+  push:
+    branches: [main]
+    paths: ["post_now.txt"]   # editing this file posts the next video immediately
   workflow_dispatch:
     inputs:
       mode:
