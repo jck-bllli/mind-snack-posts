@@ -1,0 +1,46 @@
+name: Render on home PC
+
+on:
+  push:
+    branches: [main]
+    paths: ["generator/questions.json"]   # new quizzes from the weekly task -> render them on the PC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]   # Jack's home PC; if the queue runs dry the daily post renders in the cloud
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONUTF8: "1"   # Windows defaults to cp1252
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          clean: false   # keep the downloaded voice model between runs
+
+      - name: Setup (fast after the first run)
+        run: bash generator/setup.sh
+
+      - name: Render every quiz not queued yet
+        run: python generator/produce.py --new
+
+      - name: Save the videos and queue
+        run: |
+          if [ -n "$(git status --porcelain videos queue.json)" ]; then
+            git config user.name "mindsnack-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add videos queue.json
+            git commit -m "Render new quizzes on home PC"
+            git pull --rebase --autostash
+            git push
+            echo "Rendered new quizzes on the home PC." >> "$GITHUB_STEP_SUMMARY"
+          fi
