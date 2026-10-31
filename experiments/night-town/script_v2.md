@@ -15,3 +15,4 @@ Jack 2026-10-31: heavier POV visual hallucination, more environment changes, qui
 Hallucination layer throughout: ghost trails, speed streaks, breathing fisheye, RGB split on beats, melting edges, hue drift, kaleidoscope at transitions. Transitions about 0.5s.
 - v3 (2026-10-31): varied colors per world, ~15 distinct hallucination effects in quick bursts, ~50% of runtime, scenery stays clear.
 - v3 45s render (2026-10-31): town 0-7.5, forest 7.5-15.5, library 15.5-23.5, sky town 23.5-30.5 (eyes open 30.4), rainbow spiral takeover 30.6-38 (bright C-major shimmer), red throat 38-42, back to town 42-45 (loop). Intense effects only.
+- v4 (2026-10-31): pacing rework, 4 long build/peak/fade trips, morph transitions, 128 BPM grid (24 bars = 45s).
