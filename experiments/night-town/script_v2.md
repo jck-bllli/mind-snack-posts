@@ -17,3 +17,4 @@ Hallucination layer throughout: ghost trails, speed streaks, breathing fisheye, 
 - v3 45s render (2026-10-31): town 0-7.5, forest 7.5-15.5, library 15.5-23.5, sky town 23.5-30.5 (eyes open 30.4), rainbow spiral takeover 30.6-38 (bright C-major shimmer), red throat 38-42, back to town 42-45 (loop). Intense effects only.
 - v4 (2026-10-31): pacing rework, 4 long build/peak/fade trips, morph transitions, 128 BPM grid (24 bars = 45s).
 - v4 changes (Jack): physical in-world transitions, scarier monster, obvious jaws-open mouth entry, flat hard-edged rainbow with no white, faster varied whirl, hard electronic 128 BPM score.
+- v4 45s done on PC (2026-10-31): physical transitions, scarier monster, flat rainbow, 128 BPM electronic track.
