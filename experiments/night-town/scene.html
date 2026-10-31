@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html><head><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body>
+<script type="importmap">{"imports":{"three":"http://local/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+
+const W = 540, H = 960;
+const renderer = new THREE.WebGLRenderer({antialias:false, preserveDrawingBuffer:true});
+renderer.setSize(W, H);
+renderer.setPixelRatio(1);
+document.body.appendChild(renderer.domElement);
+
+// deterministic random
+let seed = 1337;
+const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+const R = (a,b) => a + (b-a)*rnd();
+
+function canvasTex(w, h, draw, rep) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const g = c.getContext('2d'); draw(g, w, h);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.magFilter = THREE.NearestFilter; t.minFilter = THREE.NearestMipmapLinearFilter;
+  if (rep) { t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep[0], rep[1]); }
+  return t;
+}
+function speckle(g, w, h, n, cols, s=2) {
+  for (let i=0;i<n;i++){ g.fillStyle = cols[(rnd()*cols.length)|0]; g.fillRect(rnd()*w, rnd()*h, s, s); }
+}
+
+// ---------- textures ----------
+const stoneTex = canvasTex(256, 256, (g,w,h)=>{
+  g.fillStyle = '#120828'; g.fillRect(0,0,w,h);
+  const rows = 8;
+  for (let r=0;r<rows;r++){
+    let x = (r%2)*-16;
+    const y = r*h/rows;
+    while (x < w) {
+      const bw = R(26,40), bh = h/rows - 4;
+      const grd = g.createRadialGradient(x+bw*0.4, y+bh*0.35, 2, x+bw/2, y+bh/2, bw*0.7);
+      const hue = R(245,275), l = R(28,42);
+      grd.addColorStop(0, `hsl(${hue},70%,${l+18}%)`);
+      grd.addColorStop(1, `hsl(${hue},65%,${l-14}%)`);
+      g.fillStyle = grd;
+      g.beginPath(); g.roundRect(x+2, y+2, bw-3, bh, 7); g.fill();
+      x += bw;
+    }
+  }
+  speckle(g,w,h,2500,['#0a0418','#6a4ad8','#3a1f86','#8f7aff'],2);
+}, [3, 30]);
+
+const wallTex = canvasTex(128, 128, (g,w,h)=>{
+  g.fillStyle = '#1d1846'; g.fillRect(0,0,w,h);
+  speckle(g,w,h,1800,['#2b2a6e','#141036','#35307a','#4a3c9a'],2);
+  g.fillStyle = '#4a1a1a';
+  g.fillRect(0,0,w,8); g.fillRect(0,h-8,w,8); g.fillRect(0,0,8,h); g.fillRect(w-8,0,8,h);
+  g.fillRect(0,h/2-4,w,8);
+  g.lineWidth = 7; g.strokeStyle = '#4a1a1a';
+  g.beginPath(); g.moveTo(8,8); g.lineTo(w/2,h/2); g.moveTo(w-8,8); g.lineTo(w/2,h/2); g.stroke();
+  speckle(g,w,h,300,['#2a0c0c','#6a2a22'],2);
+}, [1,1]);
+
+const roofTex = canvasTex(128, 128, (g,w,h)=>{
+  g.fillStyle = '#081c24'; g.fillRect(0,0,w,h);
+  for (let r=0;r<10;r++) for (let c=0;c<9;c++){
+    const x = c*16 + (r%2)*8 - 8, y = r*13;
+    g.fillStyle = `hsl(${R(180,215)},${R(45,70)}%,${R(14,30)}%)`;
+    g.beginPath(); g.roundRect(x+1,y,14,14,[0,0,6,6]); g.fill();
+  }
+  speckle(g,w,h,600,['#031014','#2f6f7a'],2);
+}, [2,2]);
+
+const winTex = canvasTex(32, 48, (g,w,h)=>{
+  const grd = g.createRadialGradient(w/2,h*0.55,2,w/2,h/2,w);
+  grd.addColorStop(0,'#fff2a8'); grd.addColorStop(0.5,'#ff9a1e'); grd.addColorStop(1,'#c2400a');
+  g.fillStyle = grd; g.fillRect(0,0,w,h);
+  g.fillStyle = '#3a0e06'; g.fillRect(0,0,w,3); g.fillRect(0,h-3,w,3); g.fillRect(0,0,3,h); g.fillRect(w-3,0,3,h);
+  g.fillRect(w/2-1.5,0,3,h); g.fillRect(0,h/2-1.5,w,3);
+});
+
+const skyTex = canvasTex(2048, 1024, (g,w,h)=>{
+  const grd = g.createLinearGradient(0,0,0,h);
+  grd.addColorStop(0,'#05021a'); grd.addColorStop(0.45,'#1a0a4a'); grd.addColorStop(0.6,'#3a1068'); grd.addColorStop(1,'#0a0420');
+  g.fillStyle = grd; g.fillRect(0,0,w,h);
+  // swirly clouds
+  for (let i=0;i<1400;i++){ // rose-like spiral clouds
+    const x=R(0,w), y=R(h*0.1,h*0.66), r0=R(4,22);
+    g.strokeStyle = `hsla(${R(255,320)},75%,${R(22,48)}%,${R(0.2,0.55)})`;
+    g.lineWidth = R(2.5,5);
+    g.beginPath();
+    for (let a=0;a<R(6,14);a+=0.2){ const rr=r0*(0.2+a/10); g.lineTo(x+Math.cos(a)*rr, y+Math.sin(a)*rr*0.7); }
+    g.stroke();
+  }
+  for (let i=0;i<300;i++){ g.fillStyle=`rgba(255,255,255,${R(0.3,1)})`; g.fillRect(R(0,w),R(0,h*0.35),2,2); }
+});
+
+// creature skin + face (face centered at u=0.25 -> +z)
+const faceTex = canvasTex(1024, 512, (g,w,h)=>{
+  g.fillStyle = '#16304a'; g.fillRect(0,0,w,h);
+  for (let i=0;i<5000;i++){ // scaly mottling
+    g.fillStyle = `hsl(${R(190,250)},${R(50,80)}%,${R(10,32)}%)`;
+    g.beginPath(); g.arc(R(0,w),R(0,h),R(2,6),0,7); g.fill();
+  }
+  // glowing cracks
+  g.strokeStyle = '#4fd8ff'; g.lineWidth = 2.5; g.shadowColor = '#7ff'; g.shadowBlur = 8;
+  for (let i=0;i<40;i++){
+    let x=R(0,w), y=R(0,h); g.beginPath(); g.moveTo(x,y);
+    for (let k=0;k<6;k++){ x+=R(-30,30); y+=R(-30,30); g.lineTo(x,y); }
+    g.stroke();
+  }
+  g.shadowBlur = 0;
+  const cx = w*0.25, cy = h*0.5;
+  // mouth: wide jagged grin
+  g.fillStyle = '#12010a';
+  g.beginPath();
+  g.moveTo(cx-150, cy+10);
+  g.quadraticCurveTo(cx, cy+40, cx+150, cy+10);
+  g.quadraticCurveTo(cx, cy+150, cx-150, cy+10);
+  g.fill();
+  // inner glow
+  const mg = g.createRadialGradient(cx, cy+70, 5, cx, cy+70, 110);
+  mg.addColorStop(0,'rgba(255,90,30,0.9)'); mg.addColorStop(1,'rgba(255,40,0,0)');
+  g.fillStyle = mg; g.fill();
+  // teeth
+  g.fillStyle = '#efe6ff'; g.strokeStyle='#6a5a90'; g.lineWidth=2;
+  for (let i=0;i<13;i++){
+    const t = i/12, x = cx-140+t*280;
+    const yTop = cy+10 + 30*Math.sin(Math.PI*t)*0.9;
+    g.beginPath(); g.moveTo(x-10,yTop); g.lineTo(x+10,yTop); g.lineTo(x, yTop+R(18,30)); g.closePath(); g.fill(); g.stroke();
+    const yBot = cy+10 + 140*Math.sin(Math.PI*t)*0.5 + 10*Math.sin(Math.PI*t);
+    if (i>0 && i<12){ g.beginPath(); g.moveTo(x-9,yBot); g.lineTo(x+9,yBot); g.lineTo(x, yBot-R(14,24)); g.closePath(); g.fill(); g.stroke(); }
+  }
+  // brow ridges
+  g.fillStyle = '#081828';
+  g.beginPath(); g.ellipse(cx-70, cy-62, 62, 16, 0.35, 0, 7); g.fill();
+  g.beginPath(); g.ellipse(cx+70, cy-62, 62, 16, -0.35, 0, 7); g.fill();
+});
+
+const glowTex = canvasTex(1024, 512, (g,w,h)=>{
+  g.fillStyle = '#000'; g.fillRect(0,0,w,h);
+  g.drawImage(faceTex.image, 0, 0);
+  const id = g.getImageData(0,0,w,h), d = id.data;
+  for (let i=0;i<d.length;i+=4){ // keep only bright cyan cracks and teeth
+    const b = Math.max(d[i],d[i+1],d[i+2]);
+    if (b < 150) { d[i]=d[i+1]=d[i+2]=0; } else { d[i]*=0.6; d[i+1]*=0.6; d[i+2]*=0.6; }
+  }
+  g.putImageData(id,0,0);
+  const cx = w*0.25, cy = h*0.5;
+  g.globalCompositeOperation = 'lighter';
+  const mg = g.createRadialGradient(cx, cy+60, 5, cx, cy+60, 120);
+  mg.addColorStop(0,'rgba(255,110,30,1)'); mg.addColorStop(0.6,'rgba(200,30,10,0.6)'); mg.addColorStop(1,'rgba(0,0,0,0)');
+  g.fillStyle = mg;
+  g.beginPath(); g.moveTo(cx-150, cy+10); g.quadraticCurveTo(cx, cy+40, cx+150, cy+10); g.quadraticCurveTo(cx, cy+150, cx-150, cy+10); g.fill();
+});
+
+const eyeTex = canvasTex(128, 128, (g,w,h)=>{
+  const grd = g.createRadialGradient(w/2,h/2,4,w/2,h/2,w/2);
+  grd.addColorStop(0,'#fff6b0'); grd.addColorStop(0.45,'#ffb020'); grd.addColorStop(0.85,'#d04a00'); grd.addColorStop(1,'#300800');
+  g.fillStyle = grd; g.fillRect(0,0,w,h);
+  g.fillStyle = '#000';
+  g.beginPath(); g.ellipse(w/2,h/2,9,48,0,0,7); g.fill();
+});
+
+// ---------- scene ----------
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0a0420');
+scene.fog = new THREE.FogExp2('#1c0b44', 0.028);
+
+const sky = new THREE.Mesh(new THREE.SphereGeometry(400, 32, 16), new THREE.MeshBasicMaterial({map:skyTex, side:THREE.BackSide, fog:false}));
+sky.rotation.y = Math.PI/2;
+scene.add(sky);
+
+scene.add(new THREE.HemisphereLight('#6a5cff', '#1a0830', 1.4));
+const moon = new THREE.DirectionalLight('#8fa0ff', 1.6); moon.position.set(-10, 20, 5); scene.add(moon);
+scene.add(new THREE.AmbientLight('#3a2a8a', 0.6));
+
+// road
+const road = new THREE.Mesh(new THREE.PlaneGeometry(5, 120), new THREE.MeshLambertMaterial({map:stoneTex}));
+road.rotation.x = -Math.PI/2; road.position.z = -50; scene.add(road);
+const groundTex = stoneTex.clone(); groundTex.repeat.set(12, 30); groundTex.needsUpdate = true;
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(60, 120), new THREE.MeshLambertMaterial({color:'#2a1850', map:groundTex}));
+ground.rotation.x = -Math.PI/2; ground.position.set(0,-0.02,-50); scene.add(ground);
+
+const wallMat = new THREE.MeshLambertMaterial({map:wallTex});
+const roofMat = new THREE.MeshLambertMaterial({map:roofTex});
+const winMat = new THREE.MeshBasicMaterial({map:winTex});
+const winGeo = new THREE.PlaneGeometry(0.55, 0.8);
+
+function house(side, z) {
+  const grp = new THREE.Group();
+  const w = R(2.6, 3.6), d = R(3, 4), h = z < -30 ? R(3, 4.5) : R(3.2, 6.5);
+  const body = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), wallMat);
+  body.position.y = h/2; grp.add(body);
+  // gabled roof: triangular prism
+  const shape = new THREE.Shape(); const rh = R(1.6, 3.2);
+  shape.moveTo(-w/2-0.35, 0); shape.lineTo(w/2+0.35, 0); shape.lineTo(R(-0.3,0.3), rh); shape.closePath();
+  const roofG = new THREE.ExtrudeGeometry(shape, {depth: d+0.5, bevelEnabled:false});
+  roofG.translate(0, 0, -(d+0.5)/2);
+  const roof = new THREE.Mesh(roofG, roofMat); roof.position.y = h; roof.rotation.y = Math.PI/2; grp.add(roof);
+  // windows on road-facing side
+  const face = -side * (w/2 + 0.01);
+  const floors = Math.floor(h / 1.6);
+  for (let f=0; f<floors; f++) for (let k=-1; k<=1; k+=2) {
+    if (rnd() < 0.25) continue;
+    const win = new THREE.Mesh(winGeo, winMat);
+    win.position.set(face, 1.1 + f*1.5, k*d*0.22);
+    win.rotation.y = side > 0 ? -Math.PI/2 : Math.PI/2;
+    grp.add(win);
+  }
+  grp.position.set(side * (2.5 + w/2 + R(0,0.6)), 0, z);
+  grp.rotation.z = R(-0.06, 0.06); grp.rotation.y = R(-0.08, 0.08);
+  scene.add(grp);
+}
+for (let z = 6; z > -62; z -= R(3.6, 4.8)) { house(-1, z); house(1, z + R(-1,1)); }
+
+// lanterns with warm lights
+const postMat = new THREE.MeshLambertMaterial({color:'#1a1020'});
+const lampMat = new THREE.MeshBasicMaterial({color:'#ffb347'});
+const lanterns = [];
+for (let i=0;i<7;i++){
+  const z = -2 - i*7, x = (i%2 ? 2.4 : -2.4);
+  const post = new THREE.Mesh(new THREE.CylinderGeometry(0.06,0.08,2.6,6), postMat); post.position.set(x,1.3,z); scene.add(post);
+  const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.28,0.38,0.28), lampMat); lamp.position.set(x,2.7,z); scene.add(lamp);
+  const L = new THREE.PointLight('#ff8a2a', 6, 9, 1.6); L.position.set(x,2.6,z); scene.add(L);
+  lanterns.push(L);
+}
+
+// distant towers
+const towerMat = new THREE.MeshLambertMaterial({map:wallTex, color:'#6a6aa8'});
+for (const [x,z,h] of [[-9,-58,16],[10,-62,20],[-14,-66,12]]) {
+  const t = new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.9,h,8), towerMat); t.position.set(x,h/2,z); scene.add(t);
+  const c = new THREE.Mesh(new THREE.ConeGeometry(2.4,4,8), roofMat); c.position.set(x,h+2,z); scene.add(c);
+}
+
+// the creature: giant grinning head rising behind the town
+const beast = new THREE.Group();
+const skinMat = new THREE.MeshLambertMaterial({map:faceTex, fog:false, emissive:'#ffffff', emissiveMap: glowTex});
+const head = new THREE.Mesh(new THREE.SphereGeometry(16, 48, 32), skinMat);
+beast.add(head);
+const eyeMat = new THREE.MeshBasicMaterial({map:eyeTex, fog:false});
+const eyes = [];
+for (const s of [-1, 1]) {
+  const e = new THREE.Mesh(new THREE.SphereGeometry(3.0, 24, 16), eyeMat);
+  e.position.set(s*5.2, 3.4, 13.4); e.rotation.y = -Math.PI/2; e.scale.z = 0.5;
+  beast.add(e); eyes.push(e);
+}
+const hornMat = new THREE.MeshLambertMaterial({color:'#d8cfa8', fog:false, emissive:'#221a10'});
+for (const s of [-1, 1]) {
+  const horn = new THREE.Mesh(new THREE.ConeGeometry(2.2, 12, 10), hornMat);
+  horn.position.set(s*10, 13, 2); horn.rotation.z = -s*0.55; beast.add(horn);
+}
+beast.position.set(0, -6, -70); beast.scale.setScalar(1.25);
+scene.add(beast);
+const beastGlow = new THREE.PointLight('#ff5a20', 0, 60, 1); beastGlow.position.set(0, 2, -60); scene.add(beastGlow);
+
+// embers
+const emberGeo = new THREE.BufferGeometry();
+const N = 260, pos = new Float32Array(N*3), base = [];
+for (let i=0;i<N;i++){ base.push([R(-6,6), R(0,9), R(-40,4), R(0,6.28), R(0.3,1)]); }
+emberGeo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+const embers = new THREE.Points(emberGeo, new THREE.PointsMaterial({color:'#ffb060', size:0.07}));
+scene.add(embers);
+
+const camera = new THREE.PerspectiveCamera(62, W/H, 0.1, 900);
+
+const ease = x => x<0?0:x>1?1:x*x*(3-2*x);
+window.renderAt = (t) => {
+  // walk forward
+  const z = 4 - t * 2.6;
+  camera.position.set(Math.sin(t*1.4)*0.08, 1.65 + Math.abs(Math.sin(t*4.2))*0.06, z);
+  const look = new THREE.Vector3(0, 3.5 + ease((t-0.4)/3.2)*14, z - 20);
+  camera.lookAt(look);
+  camera.rotation.z += Math.sin(t*2.1)*0.012;
+
+  // creature rises and opens eyes
+  const rise = ease((t-0.3)/3.2);
+  beast.position.y = -10 + rise * 36;
+  beast.rotation.z = Math.sin(t*0.9)*0.05;
+  const open = ease((t-2.2)/0.6);
+  for (const e of eyes) { e.scale.y = 0.06 + 0.94*open; }
+  // eyes track camera slightly
+  for (const e of eyes) e.rotation.x = -0.1 + 0.05*Math.sin(t*3);
+  beastGlow.intensity = 30 * open;
+
+  for (let i=0;i<lanterns.length;i++) lanterns[i].intensity = 6 + Math.sin(t*9 + i*2.3)*1.2;
+  for (let i=0;i<N;i++){
+    const b = base[i];
+    pos[i*3] = b[0] + Math.sin(t*b[4] + b[3])*0.4;
+    pos[i*3+1] = (b[1] + t*0.5*b[4]) % 9;
+    pos[i*3+2] = b[2];
+  }
+  emberGeo.attributes.position.needsUpdate = true;
+  renderer.render(scene, camera);
+  return renderer.domElement.toDataURL('image/png');
+};
+window.ready = true;
+</script>
+</body></html>
