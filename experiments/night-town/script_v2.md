@@ -18,3 +18,4 @@ Hallucination layer throughout: ghost trails, speed streaks, breathing fisheye, 
 - v4 (2026-10-31): pacing rework, 4 long build/peak/fade trips, morph transitions, 128 BPM grid (24 bars = 45s).
 - v4 changes (Jack): physical in-world transitions, scarier monster, obvious jaws-open mouth entry, flat hard-edged rainbow with no white, faster varied whirl, hard electronic 128 BPM score.
 - v4 45s done on PC (2026-10-31): physical transitions, scarier monster, flat rainbow, 128 BPM electronic track.
+- Jack: render without asking for confirmation.
