@@ -1,0 +1,38 @@
+name: Send PC renders to the cloud
+
+# Copies finished renders from Jack's home PC into this branch so cloud chats can fetch them.
+# Runs on the PC's runner; only on pushes to this experiment branch (never on pull_request).
+on:
+  push:
+    branches: [claude/project-thread-7qzvou]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  outbox:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Copy renders from the PC
+        run: |
+          mkdir -p outbox
+          shopt -s nullglob
+          for f in /c/runners/outbox/*.mp4 /c/runners/night-town/*.mp4; do
+            echo "found $f ($(stat -c %s "$f") bytes)"
+            cp "$f" outbox/
+          done
+          ls -la outbox
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add outbox
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "PC renders: $(ls outbox | tr '\n' ' ')"
+          git push origin HEAD:${GITHUB_REF_NAME}
