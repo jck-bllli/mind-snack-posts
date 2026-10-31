@@ -1,0 +1,68 @@
+name: Render on home PC
+
+on:
+  push:
+    branches: [main]
+    paths: ["generator/questions.json"]   # new quizzes from the weekly task -> render them on the PC
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Test only: render the first quiz to a temp folder and attach it to the run (commits nothing)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]   # Jack's home PC; if the queue runs dry the daily post renders in the cloud
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONUTF8: "1"   # Windows defaults to cp1252
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          clean: false   # keep the downloaded voice model between runs
+
+      - name: Setup (fast after the first run)
+        run: bash generator/setup.sh
+
+      - name: Test render (commits nothing)
+        if: inputs.test
+        run: |
+          start=$(date +%s)
+          python generator/produce.py --start 0 --end 0 --dry-run | tee test.log
+          out=$(sed -n 's/^Dry run done. Output in //p' test.log)
+          mkdir -p test-render && cp "$out"/*.mp4 test-render/
+          echo "Test render of quiz 0 took $(( $(date +%s) - start ))s on the home PC." >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: inputs.test
+        with:
+          name: test-render
+          path: test-render/
+
+      - name: Render every quiz not queued yet
+        if: ${{ !inputs.test }}
+        run: python generator/produce.py --new
+
+      - name: Save the videos and queue
+        if: ${{ !inputs.test }}
+        run: |
+          if [ -n "$(git status --porcelain videos queue.json)" ]; then
+            git config user.name "mindsnack-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add videos queue.json
+            git commit -m "Render new quizzes on home PC"
+            git pull --rebase --autostash
+            git push
+            echo "Rendered new quizzes on the home PC." >> "$GITHUB_STEP_SUMMARY"
+          fi

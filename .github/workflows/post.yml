@@ -31,6 +31,35 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Backup render in the cloud (only if the queue ran dry and the home PC has quizzes waiting)
+        if: github.event_name == 'schedule'
+        id: fallback
+        run: |
+          python - <<'EOF'
+          import json, os
+          queue = json.load(open("queue.json"))
+          posted = {p["id"] for p in json.load(open("posted.json"))}
+          quizzes = json.load(open("generator/questions.json"))
+          queued = {q["id"] for q in queue}
+          empty = all(q["id"] in posted for q in queue)
+          waiting = any(f"quiz_{n}" not in queued for n in range(len(quizzes)))
+          open(os.environ["GITHUB_OUTPUT"], "a").write(f"need={'yes' if empty and waiting else ''}\n")
+          EOF
+
+      - name: Render in the cloud (backup only)
+        if: steps.fallback.outputs.need
+        run: |
+          echo "::warning::The queue ran dry before the home PC rendered the new quizzes, so the cloud rendered them. Check the PC is on and its runner is Idle."
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          bash generator/setup.sh
+          python generator/produce.py --new
+          git config user.name "mindsnack-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add videos queue.json
+          git commit -m "Backup render in the cloud"
+          git pull --rebase --autostash
+          git push   # the video must be on GitHub before Instagram can fetch it
+
       - name: Post (or check)
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -61,10 +90,10 @@ jobs:
           fi
       - name: Record what was posted
         run: |
-          if ! git diff --quiet posted.json; then
+          if [ -n "$(git status --porcelain posted.json queue.json videos)" ]; then
             git config user.name "mindsnack-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add posted.json
+            git add posted.json queue.json videos
             git commit -m "Posted next Reel"
             git push
           fi
