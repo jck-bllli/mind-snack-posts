@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p outbox
           shopt -s nullglob
-          for f in /c/runners/outbox/*.mp4 /c/runners/night-town/*.mp4; do
+          for f in /c/runners/outbox/*.mp4 /c/runners/outbox/*.png /c/runners/outbox/*.jpg /c/runners/night-town/*.mp4; do
             echo "found $f ($(stat -c %s "$f") bytes)"
             cp "$f" outbox/
           done
