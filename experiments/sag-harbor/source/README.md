@@ -18,6 +18,11 @@ Reusable as the template for any real-place render: swap the bbox, re-run the da
 6. **Render** - `NT_SCENE=scene_sh.html node render.js <outDir> <fps> <secs> [frameList]` then ffmpeg nearest-upscale to 1080x1920.
    Reel spec: libx264 veryfast crf 20 yuv420p, AAC 128k 48 kHz, +faststart. Outputs to `C:\runners\outbox` for sync.
 
+## Music
+`tools/score.py` writes an original 30 s jam-band style score (Karplus-Strong guitar, organ, walking bass, shuffle drums, wobble/phaser that follow the trip).
+Run with the local venv: `.venv/Scripts/python.exe -I tools/score.py score.wav` (create with `python -m venv .venv` + `pip install numpy`).
+Full video: render 900 frames to `full30/`, then ffmpeg upscale + `volume=1.85dB,alimiter=limit=0.8:level=false,loudnorm=I=-14:TP=-1.5:LRA=11`.
+
 ## Versions
 - `scene_sh_v1.html` first pass (window-grid facades, steeple shot)
 - `scene_sh_v2.html` 55 real shops, Wharf Shop stop, Long Wharf swoop
