@@ -1,0 +1,36 @@
+name: Mockup frames on home PC
+
+# Renders still mockup frames on Jack's PC and commits them back to this branch.
+on:
+  push:
+    branches: [claude/project-thread-9mduyl]
+    paths: [experiments/mockups/make_frames.py, .github/workflows/pc-mockups.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  frames:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Render frames
+        run: |
+          python -m venv .venv-mock
+          .venv-mock/Scripts/python.exe -m pip install -q pillow
+          .venv-mock/Scripts/python.exe experiments/mockups/make_frames.py
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add experiments/mockups/out
+          git diff --cached --quiet && exit 0
+          git commit -m "PC mockup frames"
+          git push origin HEAD:${GITHUB_REF_NAME}
