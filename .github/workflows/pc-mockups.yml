@@ -4,7 +4,7 @@ name: Mockup frames on home PC
 on:
   push:
     branches: [claude/project-thread-9mduyl]
-    paths: [experiments/mockups/make_frames.py, .github/workflows/pc-mockups.yml]
+    paths: [experiments/mockups/make_trivia_v2.py, .github/workflows/pc-mockups.yml]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
         run: |
           python -m venv .venv-mock
           .venv-mock/Scripts/python.exe -m pip install -q pillow
-          .venv-mock/Scripts/python.exe experiments/mockups/make_frames.py
+          .venv-mock/Scripts/python.exe experiments/mockups/make_trivia_v2.py
       - name: Commit
         run: |
           git config user.name "home-pc-runner"
