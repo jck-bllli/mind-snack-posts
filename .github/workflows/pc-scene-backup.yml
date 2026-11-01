@@ -34,6 +34,7 @@ jobs:
               cp "$f" "$dst"/
             done
             [ -d "$src/aerial" ] && { mkdir -p "$dst/aerial"; cp "$src"/aerial/*.jpg "$src"/aerial/*.json "$dst/aerial"/ 2>/dev/null || true; }
+            if [ -d "$src/tools" ]; then mkdir -p "$dst/tools"; for t in "$src"/tools/*.py "$src"/tools/*.js "$src"/tools/*.mjs "$src"/tools/*.ps1 "$src"/tools/*.md; do cp "$t" "$dst/tools"/; done; fi
             [ -f "$src/photos/credits.csv" ] && cp "$src/photos/credits.csv" "$dst/photo_credits.csv"
             ls -la "$dst"
           done
