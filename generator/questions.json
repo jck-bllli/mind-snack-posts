@@ -563,5 +563,673 @@
         "answer_say": "about eleven kilometers"
       }
     ]
+  },
+  {
+    "theme": "Dinosaurs",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which dinosaur had three horns?",
+        "options": [
+          "Stegosaurus",
+          "Triceratops",
+          "Allosaurus"
+        ],
+        "answer": 1,
+        "fact": "Its name means three-horned face.",
+        "answer_say": "Triceratops"
+      },
+      {
+        "level": "easy",
+        "q": "Which dinosaur had plates on its back?",
+        "options": [
+          "Stegosaurus",
+          "Velociraptor",
+          "Brachiosaurus"
+        ],
+        "answer": 0,
+        "fact": "Its name means roof lizard.",
+        "answer_say": "Stegosaurus"
+      },
+      {
+        "level": "medium",
+        "q": "Which animals are living dinosaurs?",
+        "options": [
+          "Crocodiles",
+          "Birds",
+          "Lizards"
+        ],
+        "answer": 1,
+        "fact": "Birds evolved from small feathered dinosaurs.",
+        "answer_say": "birds"
+      },
+      {
+        "level": "medium",
+        "q": "T. rex lived closer in time to whom?",
+        "options": [
+          "Stegosaurus",
+          "Humans",
+          "They're equal"
+        ],
+        "answer": 1,
+        "fact": "Stegosaurus vanished about 80 million years before T. rex.",
+        "q_say": "Tyrannosaurus rex lived closer in time to whom?",
+        "answer_say": "humans",
+        "fact_say": "Stegosaurus vanished about eighty million years before Tyrannosaurus rex."
+      },
+      {
+        "level": "hard",
+        "q": "What is fossil dinosaur poop called?",
+        "options": [
+          "Fossilites",
+          "Dung stones",
+          "Coprolites"
+        ],
+        "answer": 2,
+        "fact": "Scientists study it to learn what dinosaurs ate.",
+        "answer_say": "coprolites"
+      }
+    ]
+  },
+  {
+    "theme": "Inventions",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which tool always points north?",
+        "options": [
+          "Clock",
+          "Compass",
+          "Ruler"
+        ],
+        "answer": 1,
+        "fact": "Compasses were first used in ancient China.",
+        "answer_say": "the compass"
+      },
+      {
+        "level": "easy",
+        "q": "What did the Wright brothers build?",
+        "options": [
+          "Submarine",
+          "Airplane",
+          "Car"
+        ],
+        "answer": 1,
+        "fact": "Their first flight in 1903 lasted 12 seconds.",
+        "answer_say": "an airplane",
+        "fact_say": "Their first flight in nineteen oh three lasted twelve seconds."
+      },
+      {
+        "level": "medium",
+        "q": "A candy bar led to which invention?",
+        "options": [
+          "Refrigerator",
+          "Toaster",
+          "Microwave"
+        ],
+        "answer": 2,
+        "fact": "A melted candy bar gave an engineer the idea.",
+        "answer_say": "the microwave"
+      },
+      {
+        "level": "medium",
+        "q": "What was the first item scanned by barcode?",
+        "options": [
+          "Soda",
+          "Chewing gum",
+          "Cereal"
+        ],
+        "answer": 1,
+        "fact": "A pack of gum was scanned in Ohio in 1974.",
+        "answer_say": "chewing gum",
+        "fact_say": "A pack of gum was scanned in Ohio in nineteen seventy four."
+      },
+      {
+        "level": "hard",
+        "q": "How old was the Popsicle's inventor?",
+        "options": [
+          "25 years old",
+          "40 years old",
+          "11 years old"
+        ],
+        "answer": 2,
+        "fact": "He left soda with a stick outside on a cold night.",
+        "answer_say": "eleven years old"
+      }
+    ]
+  },
+  {
+    "theme": "Weather",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "What falls from storms as balls of ice?",
+        "options": [
+          "Fog",
+          "Hail",
+          "Dew"
+        ],
+        "answer": 1,
+        "fact": "Some hailstones grow as big as softballs.",
+        "answer_say": "hail"
+      },
+      {
+        "level": "easy",
+        "q": "What is the middle of a hurricane called?",
+        "options": [
+          "The eye",
+          "The core",
+          "The heart"
+        ],
+        "answer": 0,
+        "fact": "The eye is calm, but the winds around it are fierce.",
+        "answer_say": "the eye"
+      },
+      {
+        "level": "medium",
+        "q": "Is lightning hotter than the Sun's surface?",
+        "options": [
+          "No, much cooler",
+          "Yes, about 5 times",
+          "Exactly the same"
+        ],
+        "answer": 1,
+        "fact": "A bolt can reach about 50,000 degrees Fahrenheit.",
+        "answer_say": "about five times hotter",
+        "fact_say": "A bolt can reach about fifty thousand degrees Fahrenheit."
+      },
+      {
+        "level": "medium",
+        "q": "Which cloud word means rain?",
+        "options": [
+          "Cirrus",
+          "Cumulus",
+          "Nimbus"
+        ],
+        "answer": 2,
+        "fact": "Nimbus is Latin for rain. Cumulus means heap.",
+        "answer_say": "nimbus"
+      },
+      {
+        "level": "hard",
+        "q": "Where do Celsius and Fahrenheit match?",
+        "options": [
+          "0 degrees",
+          "-20 degrees",
+          "-40 degrees"
+        ],
+        "answer": 2,
+        "fact": "At minus 40, both scales show the same number.",
+        "answer_say": "minus forty degrees",
+        "fact_say": "At minus forty, both scales show the same number."
+      }
+    ]
+  },
+  {
+    "theme": "Music",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "How many strings does a guitar have?",
+        "options": [
+          "4",
+          "6",
+          "8"
+        ],
+        "answer": 1,
+        "fact": "A bass guitar usually has just four.",
+        "q_say": "How many strings does a standard guitar have?"
+      },
+      {
+        "level": "easy",
+        "q": "A trumpet belongs to which family?",
+        "options": [
+          "Woodwind",
+          "Strings",
+          "Brass"
+        ],
+        "answer": 2,
+        "fact": "Brass players make sound by buzzing their lips.",
+        "answer_say": "brass"
+      },
+      {
+        "level": "medium",
+        "q": "A Stradivarius is what instrument?",
+        "options": [
+          "Violin",
+          "Flute",
+          "Trumpet"
+        ],
+        "answer": 0,
+        "fact": "Antonio Stradivari made them in Italy around 1700.",
+        "answer_say": "the violin",
+        "fact_say": "Antonio Stradivari made them in Italy around seventeen hundred."
+      },
+      {
+        "level": "medium",
+        "q": "Which composer kept writing while deaf?",
+        "options": [
+          "Mozart",
+          "Bach",
+          "Beethoven"
+        ],
+        "answer": 2,
+        "fact": "Beethoven kept composing even as he lost his hearing."
+      },
+      {
+        "level": "hard",
+        "q": "The oldest instruments ever found are?",
+        "options": [
+          "Drums",
+          "Flutes",
+          "Harps"
+        ],
+        "answer": 1,
+        "fact": "Bone flutes over 40,000 years old were found in Germany.",
+        "answer_say": "flutes",
+        "fact_say": "Bone flutes over forty thousand years old were found in Germany."
+      }
+    ]
+  },
+  {
+    "theme": "Movies",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Whose nose grows when he lies?",
+        "options": [
+          "Pinocchio",
+          "Peter Pan",
+          "Aladdin"
+        ],
+        "answer": 0,
+        "fact": "Pinocchio is a wooden puppet who wants to be a real boy.",
+        "answer_say": "Pinocchio"
+      },
+      {
+        "level": "easy",
+        "q": "What does Simba mean in Swahili?",
+        "options": [
+          "King",
+          "Lion",
+          "Brave"
+        ],
+        "answer": 1,
+        "fact": "Rafiki, the wise baboon, is Swahili for friend.",
+        "answer_say": "lion"
+      },
+      {
+        "level": "medium",
+        "q": "What is an Oscar statue made of?",
+        "options": [
+          "Solid gold",
+          "Gold-plated bronze",
+          "Gold-plated wood"
+        ],
+        "answer": 1,
+        "fact": "It stands 13.5 inches tall and weighs 8.5 pounds.",
+        "answer_say": "gold-plated bronze",
+        "fact_say": "It stands thirteen and a half inches tall and weighs eight and a half pounds."
+      },
+      {
+        "level": "medium",
+        "q": "What made Toy Story a first in 1995?",
+        "options": [
+          "Clay figures",
+          "Puppets",
+          "Computer animation"
+        ],
+        "answer": 2,
+        "fact": "It was the first full-length film made entirely on computers.",
+        "answer_say": "computer animation"
+      },
+      {
+        "level": "hard",
+        "q": "Which animal is in the T. rex roar?",
+        "options": [
+          "Lion",
+          "Tiger",
+          "Bear"
+        ],
+        "answer": 1,
+        "fact": "Sound designers mixed elephant, tiger and alligator noises.",
+        "q_say": "Which animal's sound is in the Jurassic Park T. rex roar?",
+        "answer_say": "the tiger"
+      }
+    ]
+  },
+  {
+    "theme": "Words and language",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which letter is used most in English?",
+        "options": [
+          "A",
+          "T",
+          "E"
+        ],
+        "answer": 2,
+        "fact": "About one in eight letters in English text is an E.",
+        "answer_say": "the letter E"
+      },
+      {
+        "level": "easy",
+        "q": "Racecar is an example of a what?",
+        "options": [
+          "Anagram",
+          "Palindrome",
+          "Acronym"
+        ],
+        "answer": 1,
+        "fact": "A palindrome reads the same forward and backward.",
+        "answer_say": "a palindrome"
+      },
+      {
+        "level": "medium",
+        "q": "How many letters does Hawaiian have?",
+        "options": [
+          "13",
+          "18",
+          "26"
+        ],
+        "answer": 0,
+        "fact": "Hawaiian uses just 13 letters, including five vowels.",
+        "answer_say": "thirteen"
+      },
+      {
+        "level": "medium",
+        "q": "What is the most used word in English?",
+        "options": [
+          "And",
+          "Of",
+          "The"
+        ],
+        "answer": 2,
+        "fact": "Ten tiny words make up about a quarter of English.",
+        "answer_say": "the little word, the"
+      },
+      {
+        "level": "hard",
+        "q": "About how many languages exist today?",
+        "options": [
+          "About 700",
+          "About 7,000",
+          "About 70,000"
+        ],
+        "answer": 1,
+        "fact": "Papua New Guinea alone has over 800 of them.",
+        "answer_say": "about seven thousand"
+      }
+    ]
+  },
+  {
+    "theme": "Technology",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "What was the first computer mouse made of?",
+        "options": [
+          "Plastic",
+          "Wood",
+          "Metal"
+        ],
+        "answer": 1,
+        "fact": "Douglas Engelbart's 1964 prototype had a wooden shell.",
+        "answer_say": "wood",
+        "fact_say": "Douglas Engelbart's nineteen sixty four prototype had a wooden shell."
+      },
+      {
+        "level": "easy",
+        "q": "The first computer bug was a real what?",
+        "options": [
+          "Ant",
+          "Spider",
+          "Moth"
+        ],
+        "answer": 2,
+        "fact": "It was taped into a Harvard logbook in 1947.",
+        "answer_say": "a moth",
+        "fact_say": "It was taped into a Harvard logbook in nineteen forty seven."
+      },
+      {
+        "level": "medium",
+        "q": "What does Wi-Fi stand for?",
+        "options": [
+          "Wireless Fidelity",
+          "Wide Frequency",
+          "Nothing"
+        ],
+        "answer": 2,
+        "fact": "A marketing company made up the name Wi-Fi.",
+        "answer_say": "nothing"
+      },
+      {
+        "level": "medium",
+        "q": "What did the first text message say?",
+        "options": [
+          "Hello",
+          "Merry Christmas",
+          "Test"
+        ],
+        "answer": 1,
+        "fact": "It was sent in 1992 from a computer to a phone.",
+        "fact_say": "It was sent in nineteen ninety two from a computer to a phone."
+      },
+      {
+        "level": "hard",
+        "q": "What was the first message sent online?",
+        "options": [
+          "Hello",
+          "Test",
+          "Lo"
+        ],
+        "answer": 2,
+        "fact": "The system crashed after two letters of login.",
+        "answer_say": "Lo"
+      }
+    ]
+  },
+  {
+    "theme": "Art",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Blue plus yellow makes which color?",
+        "options": [
+          "Orange",
+          "Green",
+          "Purple"
+        ],
+        "answer": 1,
+        "fact": "Red plus blue makes purple.",
+        "answer_say": "green"
+      },
+      {
+        "level": "easy",
+        "q": "What do painters mix colors on?",
+        "options": [
+          "Canvas",
+          "Easel",
+          "Palette"
+        ],
+        "answer": 2,
+        "fact": "Many palettes have a thumb hole to hold them.",
+        "answer_say": "a palette"
+      },
+      {
+        "level": "medium",
+        "q": "Which artist painted melting clocks?",
+        "options": [
+          "Picasso",
+          "Salvador Dali",
+          "Monet"
+        ],
+        "answer": 1,
+        "fact": "The painting is called The Persistence of Memory.",
+        "answer_say": "Salvador Dali"
+      },
+      {
+        "level": "medium",
+        "q": "What metal is the Statue of Liberty's skin?",
+        "options": [
+          "Iron",
+          "Copper",
+          "Steel"
+        ],
+        "answer": 1,
+        "fact": "Its copper skin slowly turned green with age.",
+        "q_say": "What metal is the skin of the Statue of Liberty?",
+        "answer_say": "copper"
+      },
+      {
+        "level": "hard",
+        "q": "How tall is the Mona Lisa painting?",
+        "options": [
+          "About 8 feet",
+          "About 15 feet",
+          "About 2.5 feet"
+        ],
+        "answer": 2,
+        "fact": "It's smaller than many people expect.",
+        "answer_say": "about two and a half feet"
+      }
+    ]
+  },
+  {
+    "theme": "World records",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which mountain is tallest above sea level?",
+        "options": [
+          "K2",
+          "Mount Everest",
+          "Kilimanjaro"
+        ],
+        "answer": 1,
+        "fact": "Everest stands about 29,000 feet high.",
+        "answer_say": "Mount Everest",
+        "fact_say": "Everest stands about twenty nine thousand feet high."
+      },
+      {
+        "level": "easy",
+        "q": "What is the fastest land animal?",
+        "options": [
+          "Lion",
+          "Cheetah",
+          "Horse"
+        ],
+        "answer": 1,
+        "fact": "Cheetahs can run over 60 miles per hour.",
+        "answer_say": "the cheetah",
+        "fact_say": "Cheetahs can run over sixty miles per hour."
+      },
+      {
+        "level": "medium",
+        "q": "What is the largest rainforest on Earth?",
+        "options": [
+          "Congo",
+          "Daintree",
+          "Amazon"
+        ],
+        "answer": 2,
+        "fact": "It stretches across nine countries.",
+        "answer_say": "the Amazon"
+      },
+      {
+        "level": "medium",
+        "q": "Which country is largest by area?",
+        "options": [
+          "Canada",
+          "China",
+          "Russia"
+        ],
+        "answer": 2,
+        "fact": "Russia spans 11 time zones.",
+        "answer_say": "Russia",
+        "fact_say": "Russia spans eleven time zones."
+      },
+      {
+        "level": "hard",
+        "q": "Which animal is fastest on Earth?",
+        "options": [
+          "Cheetah",
+          "Peregrine falcon",
+          "Sailfish"
+        ],
+        "answer": 1,
+        "fact": "In a dive, it tops 200 miles per hour.",
+        "answer_say": "the peregrine falcon",
+        "fact_say": "In a dive, it tops two hundred miles per hour."
+      }
+    ]
+  },
+  {
+    "theme": "US states",
+    "questions": [
+      {
+        "level": "easy",
+        "q": "Which is the largest US state?",
+        "options": [
+          "Texas",
+          "Alaska",
+          "California"
+        ],
+        "answer": 1,
+        "fact": "Alaska is more than twice the size of Texas.",
+        "answer_say": "Alaska"
+      },
+      {
+        "level": "easy",
+        "q": "Which is the smallest US state?",
+        "options": [
+          "Delaware",
+          "Hawaii",
+          "Rhode Island"
+        ],
+        "answer": 2,
+        "fact": "Rhode Island is only about 48 miles long.",
+        "answer_say": "Rhode Island",
+        "fact_say": "Rhode Island is only about forty eight miles long."
+      },
+      {
+        "level": "medium",
+        "q": "Which US state is entirely islands?",
+        "options": [
+          "Hawaii",
+          "Maine",
+          "Florida"
+        ],
+        "answer": 0,
+        "fact": "Hawaii has eight main islands and over 100 small ones.",
+        "answer_say": "Hawaii",
+        "fact_say": "Hawaii has eight main islands and over one hundred small ones."
+      },
+      {
+        "level": "medium",
+        "q": "Which state has a town called Boring?",
+        "options": [
+          "Nevada",
+          "Vermont",
+          "Oregon"
+        ],
+        "answer": 2,
+        "fact": "Boring, Oregon is a sister town of Dull, Scotland.",
+        "answer_say": "Oregon"
+      },
+      {
+        "level": "hard",
+        "q": "Which state's flag isn't a rectangle?",
+        "options": [
+          "Texas",
+          "Ohio",
+          "Maine"
+        ],
+        "answer": 1,
+        "fact": "Ohio's flag is shaped like a pointed swallowtail.",
+        "answer_say": "Ohio"
+      }
+    ]
   }
 ]
