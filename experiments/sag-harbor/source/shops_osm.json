@@ -1,0 +1,392 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-31T22:58:50Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 3972716140,
+  "lat": 41.0013891,
+  "lon": -72.2957897,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "127",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "clothes": "women",
+    "contact:phone": "+1 631 7251667",
+    "contact:website": "http://shopatlifestyle.com",
+    "description:en": "Womens Clothing, Retail Clothing Store, Shopping, Shoes, Footwear, Sports Wear, Jeans, Cashmere, Contemporary Designer, Casual Attire",
+    "name": "Lifestyle",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 4816150394,
+  "lat": 41.0021853,
+  "lon": -72.2956323,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "10A",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Grindstone Coffee & Donuts",
+    "opening_hours": "Mo-Su 08:00-17:00",
+    "outdoor_seating": "no",
+    "phone": "+1-631-808-3370",
+    "smoking": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 8791936877,
+  "lat": 40.9998747,
+  "lon": -72.2956091,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "126",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "amenity": "restaurant",
+    "contact:facebook": "https://facebook.com/lulukitchenandbar/",
+    "email": "info@lulusagharbor.com",
+    "name": "Lulu Kitchen & Bar",
+    "nysgissam:nysaddresspointid": "SUFF234476",
+    "phone": "+1-631-725-0900",
+    "short_name": "Lulu’s",
+    "website": "https://www.lulusagharbor.com"
+  }
+},
+{
+  "type": "node",
+  "id": 9610717777,
+  "lat": 40.9982953,
+  "lon": -72.2973508,
+  "tags": {
+    "artwork_type": "statue",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 9880026546,
+  "lat": 41.0009538,
+  "lon": -72.2947793,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "55",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "government": "administrative",
+    "name": "Village of Sag Harbor",
+    "office": "government",
+    "operator": "Village of Sag Harbor",
+    "operator:wikidata": "Q3087814",
+    "website": "https://www.sagharborny.gov/"
+  }
+},
+{
+  "type": "node",
+  "id": 9884796818,
+  "lat": 41.0010676,
+  "lon": -72.2941263,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "51",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Division Street",
+    "contact:phone": "+1-631-842-3400",
+    "contact:website": "https://camtouchviewproductsinc.com",
+    "name": "Cam Touchview Products Inc.",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "operator": "Manny Cardinale",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:cheque": "yes",
+    "payment:discover_card": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "shop": "printer_ink"
+  }
+},
+{
+  "type": "node",
+  "id": 12249254560,
+  "lat": 41.0003514,
+  "lon": -72.2955235,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "90",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "amenity": "cinema",
+    "architect": "John Eberson",
+    "contact:facebook": "https://facebook.com/SagHarborCinemaArtsCenter/",
+    "email": "info@sagharborcinema.org",
+    "name": "Sag Harbor Cinema",
+    "operator": "Sag Harbor Cinema Arts Center",
+    "phone": "+1-631-725-0010",
+    "screen": "3",
+    "website": "https://sagharborcinema.org"
+  }
+},
+{
+  "type": "node",
+  "id": 12762711963,
+  "lat": 41.0005119,
+  "lon": -72.2943447,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "80",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Division Street",
+    "addr:unit": "A",
+    "branch": "Sag Harbor",
+    "check_date": "2025-04-17",
+    "female": "yes",
+    "level": "0;1",
+    "male": "yes",
+    "name": "Scarlett Rose Mindful Beauty",
+    "phone": "+1-631-899-4949",
+    "reservation": "required",
+    "shop": "hairdresser;beauty",
+    "short_name": "Scarlett Rose",
+    "website": "https://www.scarlettrosemindfulbeauty.com/sagharbor"
+  }
+},
+{
+  "type": "node",
+  "id": 12766944254,
+  "lat": 40.9982240,
+  "lon": -72.2954207,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "48",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Madison Street",
+    "changing_table": "no",
+    "check_date": "2025-04-19",
+    "email": "info@thechurchsagharbor.org",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "level": "0;1;2",
+    "name": "The Church Sag Harbor",
+    "opening_hours": "Mo 11:00-17:00; Tu,We off; Th-Su 11:00-17:00",
+    "phone": "+1-631-919-5342",
+    "short_name": "The Church",
+    "source": "survey",
+    "toilets": "yes",
+    "toilets:wheelchair": "yes",
+    "tourism": "gallery",
+    "website": "https://www.thechurchsagharbor.org",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14266038114,
+  "lat": 41.0004489,
+  "lon": -72.2971158,
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "23",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Bridge Street",
+    "internet_access": "yes",
+    "name": "Warren Tricomi - Sag Harbor",
+    "opening_hours": "Mo-Sa 09:00-18:00, Su closed",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:credit_cards": "yes",
+    "phone": "+1-631-324-3036",
+    "shop": "hairdresser",
+    "website": "https://warrentricomi.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 473207903,
+  "center": {
+    "lat": 41.0011732,
+    "lon": -72.2951065
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "45",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "addr:unit": "#3012",
+    "building": "yes",
+    "name": "American Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 473207931,
+  "center": {
+    "lat": 41.0017797,
+    "lon": -72.2968122
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "21",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Long Island Avenue",
+    "amenity": "post_office",
+    "building": "retail",
+    "check_date": "2026-06-01",
+    "name": "Sag Harbor Post Office",
+    "nysgissam:nysaddresspointid": "SUFF406725",
+    "official_name": "United States Postal Service",
+    "operator": "United States Postal Service",
+    "operator:short": "USPS",
+    "operator:type": "public",
+    "operator:website": "https://www.usps.com",
+    "operator:wikidata": "Q668687",
+    "operator:wikipedia": "en:United States Postal Service",
+    "short_name": "USPS",
+    "website": "https://tools.usps.com/locations/details/1380238"
+  }
+},
+{
+  "type": "way",
+  "id": 473207945,
+  "center": {
+    "lat": 40.9974918,
+    "lon": -72.2963565
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "201",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "amenity": "library",
+    "building": "public",
+    "name": "John Jermain Memorial Library",
+    "nysgissam:nysaddresspointid": "SUFF441027"
+  }
+},
+{
+  "type": "way",
+  "id": 473208444,
+  "center": {
+    "lat": 40.9987447,
+    "lon": -72.2946041
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "46",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Church Street",
+    "building": "public",
+    "museum": "firefighter",
+    "name": "Sag Harbor Fireman's Museum",
+    "nysgissam:nysaddresspointid": "SUFF107934",
+    "phone": "+1-631-725-0779",
+    "tourism": "museum",
+    "website": "http://www.sagharborfd.com/museum.html"
+  }
+},
+{
+  "type": "way",
+  "id": 473208530,
+  "center": {
+    "lat": 40.9982291,
+    "lon": -72.2975049
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "912",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "building": "yes",
+    "description": "Sag Harbor was an important port of entry since 1789, servicing whalers, coasters, and West Indian trade ships. Henry Packer Dering, Sag Harbor’s first United States Custom Master, acquired the property in the early 1790s.",
+    "heritage": "2",
+    "heritage:operator": "nrhp",
+    "heritage:website": "https://www.nps.gov/subjects/nationalregister/index.htm",
+    "historic": "maritime",
+    "museum": "history",
+    "name": "Custom House",
+    "nrhp:criteria": "A;C",
+    "nrhp:inscription_date": "1973-07-20",
+    "nysgissam:nysaddresspointid": "SUFF585924",
+    "operator": "Preservation Long Island",
+    "operator:type": "private_non_profit",
+    "protection_title": "Add Ownership",
+    "ref:nrhp": "73001274",
+    "source_ref": "https://catalog.archives.gov/id/75322224",
+    "start_date": "1789",
+    "tourism": "museum",
+    "website": "https://preservationlongisland.org/custom-house/"
+  }
+},
+{
+  "type": "way",
+  "id": 473208574,
+  "center": {
+    "lat": 40.9995515,
+    "lon": -72.2965444
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "11",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Spring Street",
+    "building": "commercial",
+    "building:levels": "1",
+    "craft": "brewery",
+    "name": "Kidd Squid Brewing Company",
+    "nysgissam:nysaddresspointid": "SUFF585942"
+  }
+},
+{
+  "type": "way",
+  "id": 473208582,
+  "center": {
+    "lat": 40.9976659,
+    "lon": -72.2972518
+  },
+  "tags": {
+    "addr:city": "Sag Harbor",
+    "addr:housenumber": "200",
+    "addr:postcode": "11963",
+    "addr:state": "NY",
+    "addr:street": "Main Street",
+    "building": "public",
+    "ele": "6",
+    "gnis:feature_id": "2076466",
+    "museum": "history",
+    "name": "Sag Harbor Whaling Museum",
+    "operator": "Sag Harbor Whaling and Historical Museum",
+    "source": "USGS Geonames",
+    "tourism": "museum",
+    "website": "https://www.sagharborwhalingmuseum.org/",
+    "wikidata": "Q7398871"
+  }
+}
+
+  ]
+}

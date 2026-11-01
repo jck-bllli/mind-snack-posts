@@ -1,0 +1,552 @@
+[
+{
+"name": "Dime Community Bank",
+"num": 2,
+"unit": "",
+"street": "Bay St",
+"type": "bank",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "2 Bay Street, Sag Harbor, NY 11963",
+"side": "south"
+},
+{
+"name": "Sag Harbor Florist",
+"num": 3,
+"unit": "",
+"street": "Bay St",
+"type": "florist",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "3 bay street sag harbor",
+"side": "north"
+},
+{
+"name": "Harbor Pets",
+"num": 12,
+"unit": "",
+"street": "Bay St",
+"type": "pets",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "12 Bay Street  Sag Harbor, Sag Harbor, NY 11963",
+"side": "south"
+},
+{
+"name": "Ava's / Around Again",
+"num": 1,
+"unit": "",
+"street": "Long Wharf",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "Long Wharf Promenade, 1 Long Wharf Street, Sag Harbor, NY 11963",
+"side": "wharf"
+},
+{
+"name": "Le Bilboquet Sag Harbor",
+"num": 1,
+"unit": "",
+"street": "Long Wharf",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "1 Long Wharf, Sag Harbor, NY 11963",
+"side": "wharf"
+},
+{
+"name": "Long Wharf Upholstery & Fabrics",
+"num": 1,
+"unit": "",
+"street": "Long Wharf",
+"type": "home",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "Long Wharf Promenade, St. 3, Sag Harbor, NY 11963",
+"side": "wharf"
+},
+{
+"name": "OMO The Apothecary",
+"num": 1,
+"unit": "",
+"street": "Long Wharf",
+"type": "pharmacy",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "7 Long Wharf, Sag Harbor, NY 11963",
+"side": "wharf"
+},
+{
+"name": "K Pasa",
+"num": 2,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "2 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Provisions Natural Foods",
+"num": 7,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "7 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Grindstone Coffee & Donuts",
+"num": 10,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "OpenStreetMap node (10A Main St)",
+"addr": "10 Main St",
+"side": "west"
+},
+{
+"name": "Tutto il Giorno",
+"num": 16,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "16 Main Street, Sag Harbor, NY  11963",
+"side": "west"
+},
+{
+"name": "M & T Bank",
+"num": 17,
+"unit": "",
+"street": "Main St",
+"type": "bank",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "17 Main St Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Sen Restaurant",
+"num": 23,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "23 Main Street, Sag Harbor NY 11963",
+"side": "east"
+},
+{
+"name": "Grenning Gallery",
+"num": 26,
+"unit": "",
+"street": "Main St",
+"type": "gallery",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "26 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Sara Nightingale Gallery",
+"num": 26,
+"unit": "",
+"street": "Main St",
+"type": "gallery",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "26 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Miracle",
+"num": 29,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "29 main st sag harbor",
+"side": "east"
+},
+{
+"name": "Steve Madden",
+"num": 32,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "32 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Romany Kramoris Gallery",
+"num": 41,
+"unit": "",
+"street": "Main St",
+"type": "gallery",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "41 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Road to Nowhere",
+"num": 42,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "42 main street, sag harbor",
+"side": "west"
+},
+{
+"name": "Schiavoni's Market",
+"num": 48,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "48 Main Street, Sag Harbor NY 11963",
+"side": "west"
+},
+{
+"name": "The American Hotel",
+"num": 49,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "49 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Sag Harbor Liquor Store",
+"num": 52,
+"unit": "",
+"street": "Main St",
+"type": "liquor",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "52 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Sag Harbor Village Hall",
+"num": 55,
+"unit": "",
+"street": "Main St",
+"type": "civic",
+"source": "OpenStreetMap",
+"addr": "55 Main St",
+"side": "east"
+},
+{
+"name": "Faherty Brand",
+"num": 56,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "56 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Page at 63 Main",
+"num": 65,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "65 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Frances Valentine",
+"num": 66,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "66 main st. sag harbor, ny 11963",
+"side": "west"
+},
+{
+"name": "The Wharf Shop",
+"num": 69,
+"unit": "A",
+"street": "Main St",
+"type": "toys",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "69A Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Emporium True Value Hardware",
+"num": 72,
+"unit": "",
+"street": "Main St",
+"type": "hardware",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "72 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Kites of the Harbor",
+"num": 75,
+"unit": "",
+"street": "Main St",
+"type": "toys",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "75 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Land Shark Unlimited",
+"num": 75,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "75 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Illusions",
+"num": 78,
+"unit": "",
+"street": "Main St",
+"type": "jewelry",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "78 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "SagTown Coffee",
+"num": 78,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "78 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Matta",
+"num": 82,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "theshopkeepers.com Hamptons guide",
+"addr": "82 Main St",
+"side": "west"
+},
+{
+"name": "Comerford Collection",
+"num": 83,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "83 Main St, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "ETHEL + ROW",
+"num": 83,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "83 Main Street sag harbor",
+"side": "east"
+},
+{
+"name": "Leallo",
+"num": 83,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "83 Main Street, Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Sag Harbor Cinema",
+"num": 90,
+"unit": "",
+"street": "Main St",
+"type": "cinema",
+"source": "OpenStreetMap node + sagharborcinema.org",
+"addr": "90 Main St",
+"side": "west"
+},
+{
+"name": "rag & bone",
+"num": 95,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "95 Main Street, Sag Harbor NY 11963",
+"side": "east"
+},
+{
+"name": "Madewell",
+"num": 102,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "102 main st sag harbor ny",
+"side": "west"
+},
+{
+"name": "Henry Lehr",
+"num": 103,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Modern Luxury, Aug 2025 (moved to 103 Main St)",
+"addr": "103 Main St",
+"side": "east"
+},
+{
+"name": "Dragon Hemp/Menard",
+"num": 108,
+"unit": "",
+"street": "Main St",
+"type": "pharmacy",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "108 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Goldberg's Famous Bagels",
+"num": 111,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "111 Main Street, Sag Harbor, Ny 11963",
+"side": "east"
+},
+{
+"name": "Sag Harbor Variety",
+"num": 114,
+"unit": "",
+"street": "Main St",
+"type": "variety",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "114 Main Street, Sag Harbor, NY",
+"side": "west"
+},
+{
+"name": "LoveShackFancy",
+"num": 117,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "theshopkeepers.com Hamptons guide",
+"addr": "117 Main St",
+"side": "east"
+},
+{
+"name": "Sag Harbor Pharmacy",
+"num": 120,
+"unit": "",
+"street": "Main St",
+"type": "pharmacy",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "120 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Lulu Kitchen & Bar",
+"num": 126,
+"unit": "",
+"street": "Main St",
+"type": "food",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "126 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Lifestyle",
+"num": 127,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "OpenStreetMap node",
+"addr": "127 Main St",
+"side": "east"
+},
+{
+"name": "Southern Tide",
+"num": 127,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "127 Main Street sag harbor",
+"side": "east"
+},
+{
+"name": "La Maisonette + Cannon Art",
+"num": 133,
+"unit": "A",
+"street": "Main St",
+"type": "gallery",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "133A Main Street Sag Harbor, NY 11963",
+"side": "east"
+},
+{
+"name": "Apple Bank for Savings",
+"num": 138,
+"unit": "",
+"street": "Main St",
+"type": "bank",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "138 Main Street, Sag Harbor NY 11963",
+"side": "west"
+},
+{
+"name": "Fishers Home Furnishings",
+"num": 144,
+"unit": "",
+"street": "Main St",
+"type": "home",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "144 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Stella & Ruby",
+"num": 144,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "144 Main Street, Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Annabel The Shop",
+"num": 150,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "150 Main St Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "Katie J NYC",
+"num": 150,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "Sag Harbor Chamber of Commerce directory (sagharborchamber.com)",
+"addr": "150 Main St. Sag Harbor, NY 11963",
+"side": "west"
+},
+{
+"name": "TWP",
+"num": 155,
+"unit": "",
+"street": "Main St",
+"type": "clothing",
+"source": "twpclothing.com store page",
+"addr": "155 Main St",
+"side": "east"
+}
+]
