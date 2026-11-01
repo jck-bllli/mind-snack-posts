@@ -1,9 +1,13 @@
-name: Post daily Reel
+name: Post daily Reels
 
 on:
   schedule:
-    - cron: "17 23 * * *"   # every day 23:17 UTC = 4:17pm Pacific / 7:17pm Eastern (DST)
-    - cron: "47 0 * * *"    # backup 00:47 UTC = 5:47pm Pacific, in case GitHub skips the first (it skips if one already posted)
+    # Two posts a day. Each slot has a backup run 90 min later in case GitHub skips the first
+    # (--once-per-day skips a run if something already posted in the last 4 hours).
+    - cron: "17 16 * * *"   # morning slot 16:17 UTC = 8:17am Pacific / 11:17am Eastern (standard time)
+    - cron: "47 17 * * *"   # morning backup
+    - cron: "17 23 * * *"   # evening slot 23:17 UTC = 3:17pm Pacific / 6:17pm Eastern (standard time)
+    - cron: "47 0 * * *"    # evening backup
   push:
     branches: [main]
     paths: ["post_now.txt"]   # editing this file posts the next video immediately

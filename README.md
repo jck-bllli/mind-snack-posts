@@ -5,7 +5,7 @@ Posts one trivia Reel a day to [@mindsnackhere](https://www.instagram.com/mindsn
 - `videos/` – rendered Reels (public, so Instagram can fetch them)
 - `queue.json` – posting order and captions
 - `posted.json` – what has been posted (updated automatically)
-- `.github/workflows/post.yml` – runs daily at 23:17 UTC; can also be run by hand (Actions tab → Post daily Reel → Run workflow → check / post)
+- `.github/workflows/post.yml` – runs twice a day at 16:17 and 23:17 UTC (each with a backup run 90 min later); can also be run by hand (Actions tab → Post daily Reel → Run workflow → check / post)
 
 The Instagram token lives only in the repo secret `IG_ACCESS_TOKEN`. Never commit it.
 
@@ -17,7 +17,7 @@ bash generator/setup.sh                      # once per machine (Python packages
 python3 generator/produce.py --new           # voice + render + queue every quiz not yet queued
 git add -A && git commit -m "Add quizzes" && git push
 ```
-A weekly scheduled task does this automatically (7 new quizzes a week).
+A weekly scheduled task does this automatically (14 new quizzes a week, two posts a day).
 
 ## Token renewal
 
