@@ -1,0 +1,47 @@
+name: Back up PC scene source
+
+# Copies 3D scene source (not renders) from Jack's home PC into this branch so it survives
+# outside the PC. Runs on the PC's runner; only on pushes to this branch (never on pull_request).
+# Commits made with GITHUB_TOKEN do not retrigger this workflow.
+on:
+  push:
+    branches: [claude/project-thread-fdoeig]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Copy scene source from the PC
+        run: |
+          shopt -s nullglob
+          # One folder per scene. Source, data and credits only; reference photos stay on the PC.
+          for scene in sag-harbor; do
+            src=/c/runners/$scene
+            dst=experiments/$scene/source
+            [ -d "$src" ] || { echo "missing $src"; continue; }
+            mkdir -p "$dst"
+            for f in "$src"/*.html "$src"/*.js "$src"/*.mjs "$src"/*.json "$src"/*.csv "$src"/*.py "$src"/*.ps1 "$src"/*.md "$src"/aerial*.jpg; do
+              [ "$(stat -c %s "$f")" -lt 50000000 ] || { echo "skip big $f"; continue; }
+              cp "$f" "$dst"/
+            done
+            [ -d "$src/aerial" ] && { mkdir -p "$dst/aerial"; cp "$src"/aerial/*.jpg "$src"/aerial/*.json "$dst/aerial"/ 2>/dev/null || true; }
+            [ -f "$src/photos/credits.csv" ] && cp "$src/photos/credits.csv" "$dst/photo_credits.csv"
+            ls -la "$dst"
+          done
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add experiments
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Back up PC scene source: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push origin HEAD:${GITHUB_REF_NAME}
