@@ -26,8 +26,34 @@ Full video: render 900 frames to `full30/`, then ffmpeg upscale + `volume=1.85dB
 ## Versions
 - `scene_sh_v1.html` first pass (window-grid facades, steeple shot)
 - `scene_sh_v2.html` 55 real shops, Wharf Shop stop, Long Wharf swoop
-- `scene_sh.html` current (v3): narrowed Main St, continuous street wall
+- v3 (git tag v3): narrowed Main St, continuous street wall
+- `scene_sh.html` current (v4): landmark beats, key cinema shot, 45 s
 - Stills: `stills/`, `stills_v2/`, `stills_v3/`
+
+## KEY SHOT: Sag Harbor Cinema (reuse in every Sag Harbor video)
+Jack marked this as the key shot (photo in the project library: sag-harbor-trip/reference/key_shot_cinema.png, reference only, never a texture).
+Camera holds across Main St at the crosswalk, straight on, slight low angle (y 1.25 m, fov 76), facing the cinema.
+Matches the photo: white streamline-moderne front with a rounded blue-trimmed top, big red stacked SAG / HARBOR letters,
+thin red band, blue glass doors and base, poster cases each side, tall leafy trees both sides, red-brick neighbour with an
+orange awning on the left, lighter storefront on the right, zebra crosswalk with yellow curb paint, red vintage convertible.
+Shot in bright summer daylight (uDay = 1) for a calm, real beat, then the trip kicks in (letters glow and drip, facade breathes).
+Code: tools/v4_cinema.js (facade) and the 'KEY: sag harbor cinema' entry in SHOTS (tools/v4_camera.js). Still: stills_v4/sag_harbor_v4_key_cinema.png
+
+## v4 shot list (45 s, 128 bpm)
+| time | shot |
+|---|---|
+| 0-5 | Whaling & Historical Museum, Greek Revival front + whalebone gate |
+| 5-10 | Old Whalers' Church, Egyptian Revival front, stylized steeple |
+| 10-15 | Main St stroll (1.2 m/s), signal-flag bunting |
+| 15-19 | KEY: Sag Harbor Cinema (calm daylight to 16.8, then trip) |
+| 19-23 | The Wharf Shop glows |
+| 23-27 | The American Hotel porch |
+| 27-31.5 | Windmill + bridge to North Haven, rainbow pinwheel at 28.6 |
+| 31.5-36 | Long Wharf, marinas and harbor from the water |
+| 36-42 | Tie-dye whale rises off the wharf end, spouts at 39.5 |
+| 42-45 | Color rain, flash to loop |
+Shop facades are locked to the v3 look (seed reset before the shop section; extra random draws are saved and restored).
+Music: tools/score.py (v4, 45 s); tools/score_v3.py is the 30 s cut.
 
 ## Rules
 Original art only (no logos, no Grateful Dead imagery). Shop names in plain fonts. Do not post anything without Jack's go.
