@@ -1,0 +1,129 @@
+{
+ "median_views": 128.5,
+ "styles": [
+  {
+   "style": "untagged",
+   "posts": 8,
+   "median_views": 128.5,
+   "avg_outlier": 2.56,
+   "median_eng_rate": 0.0131,
+   "shares": 2,
+   "saves": 3
+  }
+ ],
+ "posts": [
+  {
+   "id": "quiz_8",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfBrmXGk9-h/",
+   "posted_at": "2026-10-28T05:28:52Z",
+   "outlier": 0.0,
+   "eng_rate": 0.0
+  },
+  {
+   "id": "quiz_8_v2",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfBuiB3gZuk/",
+   "posted_at": "2026-10-28T05:54:32Z",
+   "views": 1266,
+   "reach": 1120,
+   "likes": 15,
+   "comments": 0,
+   "shares": 1,
+   "saved": 3,
+   "total_interactions": 19,
+   "outlier": 9.85,
+   "eng_rate": 0.017
+  },
+  {
+   "id": "quiz_0",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfERFFMilo8/",
+   "posted_at": "2026-10-29T05:35:00Z",
+   "views": 145,
+   "reach": 112,
+   "likes": 3,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 3,
+   "outlier": 1.13,
+   "eng_rate": 0.0268
+  },
+  {
+   "id": "quiz_1",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfGhn_QEokN/",
+   "posted_at": "2026-10-30T02:37:58Z",
+   "views": 121,
+   "reach": 109,
+   "likes": 2,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 2,
+   "outlier": 0.94,
+   "eng_rate": 0.0183
+  },
+  {
+   "id": "quiz_2",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfJE5WgDO8l/",
+   "posted_at": "2026-10-31T02:24:36Z",
+   "views": 125,
+   "reach": 104,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 0,
+   "outlier": 0.97,
+   "eng_rate": 0.0
+  },
+  {
+   "id": "quiz_3",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfLopINgDbd/",
+   "posted_at": "2026-11-01T02:15:37Z",
+   "views": 714,
+   "reach": 620,
+   "likes": 12,
+   "comments": 0,
+   "shares": 1,
+   "saved": 0,
+   "total_interactions": 13,
+   "outlier": 5.56,
+   "eng_rate": 0.021
+  },
+  {
+   "id": "quiz_4",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfOPXEhAT3Y/",
+   "posted_at": "2026-11-02T02:32:26Z",
+   "views": 131,
+   "reach": 118,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 1,
+   "outlier": 1.02,
+   "eng_rate": 0.0085
+  },
+  {
+   "id": "quiz_5",
+   "style": "untagged",
+   "permalink": "https://www.instagram.com/reel/DfOtI0VjzY2/",
+   "posted_at": "2026-11-02T06:52:33Z",
+   "views": 126,
+   "reach": 109,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 1,
+   "outlier": 0.98,
+   "eng_rate": 0.0092
+  }
+ ]
+}
