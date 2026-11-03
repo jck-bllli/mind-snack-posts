@@ -1,0 +1,47 @@
+name: Ball race samples on home PC
+
+# Renders the bouncing ball race sample videos on Jack's PC and commits them back to this branch.
+on:
+  push:
+    branches: [claude/project-thread-s1kone]
+    paths: [experiments/ballsim/ballsim.py, .github/workflows/pc-ballsim.yml]
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "cube_vs_compound, grower_vs_splitter, bracket, or all"
+        default: all
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Find ffmpeg
+        run: |
+          for d in /c/ffmpeg/bin "/c/Program Files/WinGet/Packages"/Gyan.FFmpeg*/*/bin; do
+            if [ -f "$d/ffmpeg.exe" ]; then cygpath -w "$d" >> "$GITHUB_PATH"; exit 0; fi
+          done
+          command -v ffmpeg || { echo "::error::ffmpeg is not installed on the home PC"; exit 1; }
+      - name: Render
+        run: |
+          python -m venv .venv-ball
+          .venv-ball/Scripts/python.exe -m pip install -q pillow numpy
+          .venv-ball/Scripts/python.exe experiments/ballsim/ballsim.py --video "${{ inputs.video || 'all' }}" --out experiments/ballsim/out
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add experiments/ballsim/out
+          git diff --cached --quiet && exit 0
+          git commit -m "PC ball race samples"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push origin HEAD:${GITHUB_REF_NAME}
