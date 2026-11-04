@@ -9,6 +9,8 @@ for f in kokoro-v1.0.onnx voices-v1.0.bin; do
   [ -s "tts_model/$f" ] || curl -sSL --max-time 600 -o "tts_model/$f" \
     "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f"
 done
+# Chatterbox narrator voices (large first install: torch + models)
+python -c "import chatterbox" 2>/dev/null || pip install -q chatterbox-tts
 command -v ffmpeg >/dev/null || { echo "ffmpeg is required (with the rubberband filter)"; exit 1; }
 ffmpeg -hide_banner -filters 2>/dev/null | grep -q rubberband || echo "warning: ffmpeg lacks rubberband; voice pitch shift will fail"
 echo "generator setup ok"

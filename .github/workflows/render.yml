@@ -56,12 +56,21 @@ jobs:
 
       - name: Test render (commits nothing)
         if: inputs.test
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           start=$(date +%s)
-          python generator/produce.py --start 0 --end 0 --dry-run | tee test.log
+          python generator/produce.py --start 1 --end 2 --dry-run | tee test.log   # quiz 1 = turbo voice, quiz 2 = hype voice
           out=$(sed -n 's/^Dry run done. Output in //p' test.log)
-          mkdir -p test-render && cp "$out"/*.mp4 test-render/
-          echo "Test render of quiz 0 took $(( $(date +%s) - start ))s on the home PC." >> "$GITHUB_STEP_SUMMARY"
+          rm -rf test-render prev && mkdir -p test-render prev && cp "$out"/*.mp4 test-render/
+          # small previews on the test-previews branch, so a cloud session can check them
+          for f in test-render/*.mp4; do
+            ffmpeg -v error -y -i "$f" -vf scale=540:-2 -c:v libx264 -crf 28 -preset veryfast -c:a aac -b:a 96k "prev/$(basename "$f")"
+          done
+          (cd prev && git init -q && git checkout -q -b test-previews && git add . \
+            && git -c user.name=mindsnack-bot -c user.email=actions@users.noreply.github.com commit -qm "Test previews" \
+            && git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" test-previews)
+          echo "Test render of quizzes 1-2 took $(( $(date +%s) - start ))s on the home PC." >> "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/upload-artifact@v4
         if: inputs.test
