@@ -1,0 +1,49 @@
+name: Plank bridge sample on home PC
+
+# Renders the "plank becomes a bridge" sample on Jack's PC and commits the mp4 + contact sheet back to this branch.
+on:
+  push:
+    branches: [claude/project-thread-adplh4]
+    paths: [experiments/plankbridge/**, .github/workflows/plankbridge.yml]
+    paths-ignore: [experiments/plankbridge/out/**]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+        working-directory: experiments/plankbridge
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install
+        run: |
+          npm init -y >/dev/null
+          npm i three@0.170 playwright@1
+          npx playwright install chromium
+          python -m venv .venv
+          .venv/Scripts/python.exe -m pip install -q numpy
+      - name: Render frames
+        run: |
+          rm -rf frames out && mkdir out
+          node render.js frames 30 17
+          .venv/Scripts/python.exe audio.py
+      - name: Encode
+        run: |
+          FF=/c/ffmpeg/bin/ffmpeg.exe
+          $FF -v error -y -framerate 30 -i frames/f%04d.png -i audio.wav -vf "scale=1080:1920:flags=lanczos" -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 128k -ar 48000 -ac 2 -shortest -movflags +faststart out/plank_bridge_v1.mp4
+          $FF -v error -y -i out/plank_bridge_v1.mp4 -vf "fps=1/2.2,scale=270:-1,tile=4x2" -frames:v 1 out/plank_bridge_v1_sheet.jpg
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add out
+          git commit -m "Plank bridge sample render"
+          git push origin HEAD:${GITHUB_REF_NAME}

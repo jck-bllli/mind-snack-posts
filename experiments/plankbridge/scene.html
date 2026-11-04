@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html><head><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body>
+<script type="importmap">{"imports":{"three":"http://local/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const W = 540, H = 960;
+const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
+renderer.setSize(W, H); renderer.setPixelRatio(1);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+const out = document.createElement('canvas'); out.width = W; out.height = H;
+const g2 = out.getContext('2d');
+document.body.appendChild(out);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#bcd9ee');
+scene.fog = new THREE.Fog('#cfe3f1', 22, 60);
+const cam = new THREE.PerspectiveCamera(42, W/H, 0.1, 120);
+
+scene.add(new THREE.HemisphereLight('#ffffff', '#8a7a60', 1.1));
+const sun = new THREE.DirectionalLight('#fff3d6', 2.2);
+sun.position.set(-8, 14, 9); sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, {left:-16, right:16, top:14, bottom:-14, near:1, far:50});
+sun.shadow.bias = -0.0005;
+scene.add(sun);
+
+const mat = (c, o={}) => new THREE.MeshStandardMaterial({color:c, roughness:0.85, metalness:0, ...o});
+function box(w,h,d,c,x=0,y=0,z=0,p) {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat(c));
+  m.position.set(x,y,z); m.castShadow = m.receiveShadow = true; (p||scene).add(m); return m;
+}
+function texCanvas(w,h,draw){ const c=document.createElement('canvas'); c.width=w;c.height=h; draw(c.getContext('2d'),w,h); const t=new THREE.CanvasTexture(c); t.colorSpace=THREE.SRGBColorSpace; return t; }
+
+let seed = 7; const rnd = () => { seed = (seed*16807)%2147483647; return (seed-1)/2147483646; };
+
+// ---- ground block with a canal cut through the front ----
+const dirtTex = texCanvas(256,256,(g,w,h)=>{
+  g.fillStyle='#8b5a35'; g.fillRect(0,0,w,h);
+  for(let i=0;i<700;i++){ g.fillStyle=['#7a4c2b','#9c6a40','#6e4325','#a87649'][(rnd()*4)|0]; g.fillRect(rnd()*w,rnd()*h,2+rnd()*6,2+rnd()*4); }
+});
+dirtTex.wrapS=dirtTex.wrapT=THREE.RepeatWrapping;
+const dirtMat = new THREE.MeshStandardMaterial({map:dirtTex, roughness:1});
+const grassMat = mat('#5faa3a');
+function slab(x0,x1,z0,z1,y0,y1,top) {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(x1-x0,y1-y0,z1-z0), [dirtMat,dirtMat,top||grassMat,dirtMat,dirtMat,dirtMat]);
+  m.position.set((x0+x1)/2,(y0+y1)/2,(z0+z1)/2); m.castShadow=m.receiveShadow=true; scene.add(m); return m;
+}
+const BOT=-4.5, ZF=4, ZB=-14, CZ=-5.5;
+slab(-30,-3, ZB, ZF, BOT, 0);          // left bank
+slab(3, 30, ZB, ZF, BOT, 0);           // right bank
+slab(-3, 3, ZB, CZ, BOT, 0);           // behind the pond (pond ends at CZ)
+slab(-3, 3, CZ, ZF, BOT, -3.4, dirtMat); // canal floor
+// water
+const water = new THREE.Mesh(new THREE.BoxGeometry(6, 2.6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#2fa8e6', roughness:0.15, transparent:true, opacity:0.86}));
+water.position.set(0,-1.5,(ZF+CZ)/2); scene.add(water);
+const wtop = new THREE.Mesh(new THREE.PlaneGeometry(6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#5cc4f5', roughness:0.1, transparent:true, opacity:0.55}));
+wtop.rotation.x=-Math.PI/2; wtop.position.set(0,-0.2,(ZF+CZ)/2); scene.add(wtop);
+// big far ground
+const far = new THREE.Mesh(new THREE.PlaneGeometry(200,200), grassMat); far.rotation.x=-Math.PI/2; far.position.y=-0.01; far.position.z=-60; far.receiveShadow=true; scene.add(far);
+
+// trees + houses
+function tree(x,z,s=1){
+  box(0.35*s,1.4*s,0.35*s,'#6b4423',x,0.7*s,z);
+  for (const [dy,r] of [[1.7,1.0],[2.4,0.8],[3.0,0.55]]) {
+    const c = new THREE.Mesh(new THREE.ConeGeometry(r*s,1.2*s,8), mat('#2f7d32')); c.position.set(x,dy*s,z); c.castShadow=true; scene.add(c);
+  }
+}
+for (let i=0;i<9;i++){ tree(-6-rnd()*6, 3-i*2.6-rnd(), 0.9+rnd()*0.5); tree(6+rnd()*6, 3-i*2.6-rnd(), 0.9+rnd()*0.5); }
+function house(x,z,c){ box(2.4,1.6,2,c,x,0.8,z); const r=new THREE.Mesh(new THREE.ConeGeometry(1.9,1.1,4), mat('#a83c2e')); r.position.set(x,2.15,z); r.rotation.y=Math.PI/4; r.castShadow=true; scene.add(r); }
+house(-9,-2,'#f1e4c3'); house(10,-7,'#e8d2b0'); house(-12,-9,'#d9e6ef');
+
+// ---- character (original: round head, blue beanie, orange jacket) ----
+function makePerson(jacket, hat){
+  const p = new THREE.Group();
+  const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.22,0.35,4,10), mat(jacket)); body.position.y=0.72; body.castShadow=true; p.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.24,16,12), mat('#f0c9a0')); head.position.y=1.25; head.castShadow=true; p.add(head);
+  const cap = new THREE.Mesh(new THREE.SphereGeometry(0.255,16,10,0,Math.PI*2,0,Math.PI/2), mat(hat)); cap.position.y=1.29; cap.castShadow=true; p.add(cap);
+  for (const sx of [-1,1]) { const e = new THREE.Mesh(new THREE.SphereGeometry(0.035,6,6), mat('#222')); e.position.set(sx*0.09,1.24,0.22); p.add(e); }
+  const legs=[], arms=[];
+  for (const sx of [-1,1]) {
+    const l = new THREE.Group(); l.position.set(sx*0.11,0.5,0); const lm = new THREE.Mesh(new THREE.BoxGeometry(0.14,0.5,0.16), mat('#34405e')); lm.position.y=-0.25; lm.castShadow=true; l.add(lm); p.add(l); legs.push(l);
+    const a = new THREE.Group(); a.position.set(sx*0.3,0.95,0); const am = new THREE.Mesh(new THREE.BoxGeometry(0.11,0.42,0.11), mat(jacket)); am.position.y=-0.2; am.castShadow=true; a.add(am); p.add(a); arms.push(a);
+  }
+  p.userData={legs,arms}; scene.add(p); return p;
+}
+const hero = makePerson('#f08a24', '#2a5db0');
+function pose(p, ph, amt){ const s=Math.sin(ph)*amt; p.userData.legs[0].rotation.x=s; p.userData.legs[1].rotation.x=-s; p.userData.arms[0].rotation.x=-s*0.9; p.userData.arms[1].rotation.x=s*0.9; }
+
+// ---- bridge stages (all spanning x -3..3 at z=0) ----
+const stages = [];
+function stage(top, build){ const g = new THREE.Group(); g.visible=false; scene.add(g); build(g); stages.push({g, top}); }
+// 0 plank
+stage(0.12, g => { box(7.6,0.14,0.8,'#b98a4e',0,0,0,g); for(let i=0;i<3;i++) box(0.04,0.15,0.8,'#8a6232',-2+i*2,0,0,g); });
+// 1 rails
+stage(0.14, g => {
+  box(7.6,0.18,1.7,'#b98a4e',0,0,0,g);
+  for (const z of [-0.8,0.8]) { box(7.6,0.1,0.1,'#6b4423',0,0.75,z,g); for(let i=0;i<7;i++) box(0.1,0.8,0.1,'#6b4423',-3.3+i*1.1,0.4,z,g); }
+});
+// 2 stone arch
+stage(0.3, g => {
+  box(7.8,0.5,2.2,'#c8c2b6',0,0,0,g);
+  for (const z of [-1.0,1.0]) { box(7.8,0.35,0.22,'#b3ac9e',0,0.4,z,g); }
+  const arch = new THREE.Mesh(new THREE.TorusGeometry(2.3,0.3,10,24,Math.PI), mat('#a59f92')); arch.scale.set(1,0.9,3.2); arch.position.set(0,-2.1,0); arch.castShadow=true; g.add(arch);
+  box(0.7,3.2,2.2,'#b3ac9e',-3.1,-1.4,0,g); box(0.7,3.2,2.2,'#b3ac9e',3.1,-1.4,0,g);
+});
+// 3 steel truss
+stage(0.3, g => {
+  box(8,0.3,2.2,'#4b5563',0,0,0,g);
+  for (const z of [-1.0,1.0]) {
+    box(8,0.18,0.18,'#d4a21d',0,2.2,z,g); box(8,0.18,0.18,'#d4a21d',0,0.2,z,g);
+    for (let i=0;i<=8;i++) box(0.14,2,0.14,'#d4a21d',-3.9+i*0.975,1.2,z,g);
+    for (let i=0;i<8;i++){ const d=box(0.1,2.3,0.1,'#e0b030',-3.45+i*0.975,1.2,z,g); d.rotation.z=(i%2?1:-1)*0.42; }
+  }
+  for (let i=0;i<=4;i++) box(0.12,0.12,2.2,'#d4a21d',-3.9+i*1.95,2.2,0,g);
+});
+// 4 toll booth added on top of steel (separate group so it can pop later)
+const toll = new THREE.Group(); toll.visible=false; scene.add(toll);
+box(1.4,1.6,1.4,'#f4f1e8',4.6,0.8,1.6,toll);
+box(1.8,0.18,1.8,'#c0392b',4.6,1.7,1.6,toll);
+const signT = texCanvas(256,96,(g,w,h)=>{ g.fillStyle='#c0392b'; g.fillRect(0,0,w,h); g.fillStyle='#fff'; g.font='bold 64px Arial Black, Arial'; g.textAlign='center'; g.textBaseline='middle'; g.fillText('TOLL',w/2,h/2+3); });
+const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.5,0.55), new THREE.MeshBasicMaterial({map:signT})); sign.position.set(4.6,2.15,2.52); toll.add(sign);
+box(0.08,0.9,0.08,'#555',3.3,0.45,2.2,toll);
+const gate = box(1.2,0.1,0.1,'#e74c3c',3.9,0.95,2.2,toll);
+const queue = [];
+const cols=['#8e44ad','#16a085','#e67e22','#c0392b','#2980b9','#7f8c8d'];
+for (let i=0;i<6;i++){ const q = makePerson(cols[i%cols.length], ['#222','#9b2226','#264653'][i%3]); q.position.set(2.8+i*0.8, 0.1, 2.5); q.rotation.y=-Math.PI/2; q.visible=false; queue.push(q); }
+
+// ---- timeline ----
+const T = {plank:2.8, rails:5.0, stone:6.6, steel:8.2, toll:9.8, pull:11.8, walkStart:3.4, turn:8.4/1, end:16.5};
+const stageT = [T.plank,T.rails,T.stone,T.steel];
+const words = [
+ [0.2,'Every'],[0.5,'river'],[0.8,'needs'],[1.1,'a'],[1.3,'crossing'],
+ [2.5,'First,'],[2.8,'a'],[3.0,'plank.'],
+ [3.8,'It'],[4.0,'works.'],[4.4,'Barely.'],
+ [5.0,'Then'],[5.25,'rails.'],
+ [6.6,'Then'],[6.85,'stone.'],
+ [8.2,'Then'],[8.45,'steel.'],
+ [9.8,'Then'],[10.0,'a'],[10.2,'toll'],[10.5,'booth.'],
+ [11.6,'Years'],[11.9,'later,'],[12.3,'nobody'],[12.7,'checked'],[13.1,'the'],[13.3,'river.'],
+ [14.4,'He'],[14.65,'just'],[14.95,'walked'],[15.25,'around.']
+];
+const ease = x => x<0?0:x>1?1:x;
+const pop = x => { x=ease(x); return x<1 ? 1+Math.sin(x*Math.PI*1.0)*0.0 + (1-x)*0 : 1; };
+function popScale(t0, t){ const x=(t-t0)/0.35; if(x<0) return 0; if(x>=1) return 1; return 1 + Math.sin(x*Math.PI)*0.18 - (1-x)*(1-x)*1 ; } // squash up with overshoot
+
+function heroPath(t){
+  // returns {x,z,y,ry,walk}
+  const V = 22/8.4; // units per second across the bridge
+  const hDeck = (()=>{ let h=0; for (let i=0;i<stageT.length;i++) if (t>=stageT[i]) h=stages[i].top; return h; })();
+  if (t < T.walkStart) return {x:-5.5,z:0,y:0,ry:Math.PI/2,walk:0,idle:true};
+  if (t < T.pull) {
+    let p = (t-T.walkStart)*V; // 0..22 over 8.4s -> until t=11.8
+    let x, ry;
+    if (p<11) { x=-5.5+p; ry=Math.PI/2; } else { x=-5.5+(22-p); ry=-Math.PI/2; }
+    const onBridge = Math.abs(x)<3.2;
+    return {x, z:0, y: onBridge ? hDeck : 0, ry, walk:1};
+  }
+  // walk around the pond: (-5.5,0)->(-5.5,-7)->(5.5,-7)->(5.5,0)
+  const sp = 6.2; let d=(t-T.pull)*sp;
+  const segs=[[ -5.5,0,-5.5,-7 ],[ -5.5,-7,5.5,-7 ],[ 5.5,-7,5.5,0 ]];
+  for (const [x0,z0,x1,z1] of segs){
+    const L=Math.hypot(x1-x0,z1-z0);
+    if (d<=L){ const k=d/L; return {x:x0+(x1-x0)*k, z:z0+(z1-z0)*k, y:0, ry:Math.atan2(x1-x0,z1-z0), walk:1}; }
+    d-=L;
+  }
+  return {x:5.5,z:0,y:0,ry:0,walk:0,end:true};
+}
+
+function drawCaption(t){
+  let cur=null; for (const [ts,w] of words) if (t>=ts) cur=[ts,w];
+  if (!cur || t > cur[0]+1.2) return;
+  const age=t-cur[0]; const s = 1 + Math.max(0,0.25-age)*1.2;
+  g2.save(); g2.translate(W/2, H*0.5); g2.scale(s,s);
+  g2.font='900 64px "Arial Black", Impact, Arial'; g2.textAlign='center'; g2.textBaseline='middle';
+  g2.lineJoin='round'; g2.lineWidth=12; g2.strokeStyle='rgba(0,0,0,0.85)'; g2.strokeText(cur[1],0,0);
+  g2.fillStyle='#fff'; g2.fillText(cur[1],0,0); g2.restore();
+}
+
+window.renderAt = (t) => {
+  // stages
+  stages.forEach((s,i)=>{
+    const t0 = stageT[i]; const nextT = stageT[i+1] ?? 1e9;
+    s.g.visible = t>=t0 && t<nextT;
+    if (s.g.visible){ const k=popScale(t0,t); s.g.scale.set(1,Math.max(k,0.001),1); s.g.position.y = 0; }
+    // plank sway while alone
+    s.g.rotation.z = (i===0 && s.g.visible) ? Math.sin(t*6)*0.015 : 0;
+  });
+  // keep final stage (steel) as the active bridge from steel onward; toll appears
+  toll.visible = t>=T.toll; if (toll.visible){ const k=popScale(T.toll,t); toll.scale.setScalar(Math.max(k,0.001)); }
+  gate.rotation.z = t>T.toll+0.5 ? Math.sin((t-T.toll)*2)*0.0 : 0;
+  queue.forEach((q,i)=>{ const ti=T.toll+0.3+i*0.22; q.visible=t>=ti; if(q.visible){ const k=popScale(ti,t); q.scale.setScalar(Math.max(k,0.001)); pose(q,0,0); q.position.y=0.1*0; } });
+  // hero
+  const h = heroPath(t);
+  hero.position.set(h.x,h.y,h.z); hero.rotation.y=h.ry;
+  const ph = t*11;
+  if (h.idle) { pose(hero,0,0); hero.position.y = Math.abs(Math.sin(t*3))*0.03; }
+  else if (h.end) { pose(hero,0,0); hero.position.y = Math.abs(Math.sin((t-T.end+1)*8))*0.15; }
+  else { pose(hero, ph, 0.7); hero.position.y = h.y + Math.abs(Math.sin(ph))*0.07; }
+  if (t<T.rails && h.y>0) hero.rotation.z = Math.sin(t*7)*0.08; else hero.rotation.z=0;
+  // camera
+  const push = Math.min(t/T.pull,1);
+  const pk = ease((t-T.pull)/2.4); const pe = pk*pk*(3-2*pk);
+  const cx = 0 + 7*pe, cy = 2.4 + 6.8*pe - push*0.2, cz = 10.2 - push*1.4 + 3.4*pe;
+  cam.position.set(cx,cy,cz);
+  cam.lookAt(0*(1-pe), 0.1*(1-pe) - 0.5*pe, -0.2 - 3*pe);
+  renderer.render(scene, cam);
+  g2.clearRect(0,0,W,H); g2.drawImage(renderer.domElement,0,0);
+  drawCaption(t);
+  return out.toDataURL('image/png');
+};
+window.ready = true;
+</script>
+</body></html>
