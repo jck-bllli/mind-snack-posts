@@ -129,7 +129,7 @@ def main():
     media = call("POST", f"{API}/{ig_id}/media_publish", {"creation_id": container})["id"]
     link = call("GET", f"{API}/{media}", {"fields": "permalink"}).get("permalink", "")
     posted = json.load(open("posted.json"))
-    posted.append({"id": item["id"], "media_id": media, "permalink": link,
+    posted.append({"id": item["id"], "voice": item.get("voice", "kokoro"), "style": item.get("style"), "media_id": media, "permalink": link,
                    "posted_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())})
     json.dump(posted, open("posted.json", "w"), indent=2)
     summary(f"✅ Posted {item['id']}: {link}")

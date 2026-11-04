@@ -5,7 +5,7 @@
   python generator/produce.py --start 8 --end 14
   python generator/produce.py --start 0 --end 0 --dry-run   # render to /tmp only, touch nothing
 
-Steps per quiz: build the voice script -> voice it (Kokoro, matched 'Option A' voice)
+Steps per quiz: build the voice script -> voice it (Chatterbox, two voices alternating every two quizzes)
 -> render the video -> copy to videos/ -> append to queue.json with a caption.
 Run generator/setup.sh once per machine first.
 """
@@ -116,7 +116,8 @@ def main():
     a = ap.parse_args()
 
     import make_video
-    import voice_echo
+    import voice_chatterbox
+    from chatterbox_voice import voice_for
 
     quizzes = json.load(open(os.path.join(GEN, "questions.json")))
     queue_path = os.path.join(ROOT, "queue.json")
@@ -137,7 +138,7 @@ def main():
     lines_path = os.path.join(work, "lines.json")
     json.dump(lines, open(lines_path, "w"), indent=2)
     voice_dir = os.path.join(work, "voice")
-    voice_echo.main(lines_path, voice_dir)
+    voice_chatterbox.main(lines_path, voice_dir)
 
     out_dir = os.path.join(work, "out")
     for n in ids:
@@ -149,7 +150,8 @@ def main():
         shutil.copy(mp4, dest)
         if f"quiz_{n}" not in queued:
             queue.append({"id": f"quiz_{n}", "video": f"videos/quiz_{n}.mp4",
-                          "caption": caption(quizzes[n], a.handle), "thumb_offset_ms": 1000})
+                          "caption": caption(quizzes[n], a.handle), "thumb_offset_ms": 1000,
+                          "voice": voice_for(n)})
             queued.add(f"quiz_{n}")
     if not a.dry_run:
         json.dump(queue, open(queue_path, "w"), indent=2, ensure_ascii=False)
