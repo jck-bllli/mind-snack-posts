@@ -2,9 +2,6 @@ name: Ball race samples on home PC
 
 # Renders the bouncing ball race sample videos on Jack's PC and commits them back to this branch.
 on:
-  push:
-    branches: [claude/project-thread-s1kone]
-    paths: [experiments/ballsim/ballsim.py, .github/workflows/pc-ballsim.yml]
   workflow_dispatch:
     inputs:
       video:

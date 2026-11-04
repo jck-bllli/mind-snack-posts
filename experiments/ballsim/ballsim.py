@@ -35,7 +35,8 @@ TOP = (130, 970)               # box top y for ball A and ball B
 BG = (220, 208, 182)
 BOX = (250, 246, 236)
 INK = (20, 20, 20)
-COLORS = {"red": (214, 72, 40), "blue": (36, 104, 168), "green": (52, 132, 60), "gold": (204, 140, 20)}
+COLORS = {"red": (214, 72, 40), "blue": (36, 104, 168), "green": (52, 132, 60), "gold": (204, 140, 20),
+          "pink": (214, 76, 128)}
 
 RULES = {
     "fib": dict(name="FIBONACCI BALL", color="red", op="fib", r=26, apex=(90, 170)),
@@ -44,6 +45,14 @@ RULES = {
     "splitter": dict(name="SPLITTING BALL", color="green", op="const", d0=1, r=12, apex=(140, 300), split=40),
     "fast": dict(name="FAST BALL", color="red", op="add", k=1, r=16, apex=(10, 28)),
     "strong": dict(name="STRONG BALL", color="blue", op="pow", k=2, r=40, apex=(320, 380)),
+    # extra archetypes for the automatic daily picker
+    "tripling": dict(name="TRIPLING BALL", color="pink", op="mul", k=3, r=30, apex=(300, 400)),
+    "squares": dict(name="SQUARE BALL", color="green", op="pow", k=2, r=24, apex=(120, 240)),
+    "cube": dict(name="CUBE BALL", color="gold", op="pow", k=3, r=28, apex=(260, 380)),
+    "counting": dict(name="COUNTING BALL", color="blue", op="add", k=1, r=20, apex=(30, 70)),
+    "shrinking": dict(name="SHRINKING BALL", color="pink", op="add", k=2, r=70, apex=(120, 260),
+                      grow=-0.6, rmin=8, rmax=70),
+    "heavy": dict(name="HEAVY BALL", color="gold", op="add", k=5, r=60, apex=(330, 390)),
 }
 
 # layers: HP of the 3 bars as fractions of the bottom bar (top bar breaks first)
@@ -127,7 +136,7 @@ class Ball:
             for i, dv in zip(idx[:2], dealt[:2]):
                 events.append((t, float(p[i, 0]), float(self.floor), dv))
         if self.rule.get("grow"):
-            self.r = min(self.rule["rmax"], self.r + self.rule["grow"] * k)
+            self.r = min(self.rule["rmax"], max(self.rule.get("rmin", 4), self.r + self.rule["grow"] * k))
         cap = self.rule.get("split")
         if cap and len(p) < cap:
             idx = idx[: cap - len(p)]
@@ -148,13 +157,22 @@ def curve(rule, seed, seconds):
     return out
 
 
+def auto_layers(m, e):
+    """Ref style: small top bar, middle bar, huge bottom bar (1,000 / 10B / 1e15)."""
+    a = max(1, round(e * 0.2))
+    b = max(a + 1, round(e * 0.67))
+    if b >= e:
+        b = e - 1
+    return [m * 10 ** a, m * 10 ** b, m * 10 ** e]
+
+
 def layer_sets(spec, lo, hi):
-    f = spec["layers"]
-    e = int(math.floor(math.log10(max(lo, 1)))) - 1
+    f = spec.get("layers")
+    e = max(2, int(math.floor(math.log10(max(lo, 1)))) - 1)
     while True:
         for m in NICE:
             l3 = m * 10 ** e
-            layers = [max(1.0, round(l3 * x)) for x in f]
+            layers = [max(1.0, round(l3 * x)) for x in f] if f else auto_layers(m, e)
             tot = sum(layers)
             if tot > hi:
                 return
@@ -163,12 +181,16 @@ def layer_sets(spec, lo, hi):
         e += 1
 
 
-def search(spec, tries=160):
-    ra, rb = (RULES[k] for k in spec["balls"])
+def rules_of(spec):
+    return spec.get("rules") or tuple(RULES[k] for k in spec["balls"])
+
+
+def search(spec, tries=160, offset=0):
+    ra, rb = rules_of(spec)
     win = (TARGET - 7, TARGET + 7)
     best = None
     for s in range(tries):
-        sa, sb = 1000 + s * 7, 5000 + s * 13
+        sa, sb = 1000 + offset + s * 7, 5000 + offset + s * 13
         ca, cb = curve(ra, sa, win[1] + 4), curve(rb, sb, win[1] + 4)
         i0, i1 = int(win[0] / DT), int(win[1] / DT)
         for layers, tot in layer_sets(spec, min(ca[i0], cb[i0]), max(ca[i1], cb[i1])):
@@ -187,6 +209,30 @@ def search(spec, tries=160):
                 best = dict(score=score, seed_a=sa, seed_b=sb, layers=layers, total=tot,
                             ta=float(ta), tb=float(tb), gap=float(gap), swap=swap)
     return best
+
+
+SCALES = (0.25, 0.5, 1.0, 1.6)
+
+
+def scaled(rule, f):
+    lo, hi = rule["apex"]
+    lo, hi = max(6.0, lo * f), min(400.0 - rule["r"], hi * f)
+    return dict(rule, apex=(min(lo, hi - 4), hi))
+
+
+def tune_search(spec, tries=12, offset=0, good=0.25):
+    """Search bounce-height scales too, so any two ball types can be made to finish close."""
+    ra, rb = rules_of(spec)
+    best = None
+    combos = sorted(((fa, fb) for fa in SCALES for fb in SCALES), key=lambda c: abs(c[0] - 1) + abs(c[1] - 1))
+    for fa, fb in combos:
+        sp = dict(spec, rules=(scaled(ra, fa), scaled(rb, fb)))
+        f = search(sp, tries=tries, offset=offset)
+        if f and (best is None or f["score"] < best[1]["score"]):
+            best = (sp, dict(f, scale_a=fa, scale_b=fb))
+        if best and best[1]["gap"] <= good and best[1]["swap"]:
+            break
+    return best or (spec, None)
 
 
 # ---------- drawing ----------
@@ -275,13 +321,13 @@ def add(audio, t, snd):
     audio[i:i + n] += snd[:n]
 
 
-def make_video(key, outdir, search_only=False):
-    spec = VIDEOS[key]
-    found = search(spec)
+def make_video(key, outdir, search_only=False, spec=None, found=None):
+    spec = spec or VIDEOS[key]
+    found = found or search(spec)
     print(key, json.dumps(found))
     if search_only or not found:
         return
-    ra, rb = (RULES[k] for k in spec["balls"])
+    ra, rb = rules_of(spec)
     rules = (ra, rb)
     layers = found["layers"]
     balls = [Ball(ra, found["seed_a"]), Ball(rb, found["seed_b"])]
@@ -343,6 +389,7 @@ def make_video(key, outdir, search_only=False):
     with open(os.path.join(outdir, key + ".json"), "w") as fh:
         json.dump(found, fh, indent=1)
     print("wrote", out, f"{secs:.1f}s")
+    return out
 
 
 if __name__ == "__main__":

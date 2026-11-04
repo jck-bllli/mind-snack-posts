@@ -1,0 +1,63 @@
+name: Ball race daily render (home PC)
+
+# Keeps a queue of ready-to-post ball race videos in experiments/ballsim/queue.
+# Picks a fresh matchup, finds a near tie, renders on Jack's PC, commits the result.
+# The schedule only runs from the default branch; move into the ball account repo when it exists.
+on:
+  schedule:
+    - cron: "17 10 * * *"
+  push:
+    branches: [claude/project-thread-s1kone]
+    paths: [experiments/ballsim/daily.py, .github/workflows/ballrace-daily.yml]
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many videos to render now (blank = top the queue up to 4)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ballrace
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Find ffmpeg
+        run: |
+          for d in /c/ffmpeg/bin "/c/Program Files/WinGet/Packages"/Gyan.FFmpeg*/*/bin; do
+            if [ -f "$d/ffmpeg.exe" ]; then cygpath -w "$d" >> "$GITHUB_PATH"; exit 0; fi
+          done
+          command -v ffmpeg || { echo "::error::ffmpeg is not installed on the home PC"; exit 1; }
+      - name: Render
+        run: |
+          python -m venv .venv-ball
+          .venv-ball/Scripts/python.exe -m pip install -q pillow numpy
+          q=experiments/ballsim/queue
+          have=$(ls $q/*.mp4 2>/dev/null | wc -l)
+          n="${{ inputs.count }}"
+          if [ -z "$n" ]; then n=$(( 4 - have )); fi
+          if [ "${{ github.event_name }}" = "push" ]; then n=2; fi
+          echo "queue has $have, rendering $n"
+          if [ "$n" -gt 0 ]; then
+            cd experiments/ballsim && ../../.venv-ball/Scripts/python.exe daily.py --count "$n"
+          fi
+      - name: Commit
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add experiments/ballsim/queue experiments/ballsim/state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Ball race: queue new videos"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push origin HEAD:${GITHUB_REF_NAME}
