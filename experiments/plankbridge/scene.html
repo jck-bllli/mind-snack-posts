@@ -58,7 +58,7 @@ water.position.set(0,-1.5,(ZF+CZ)/2); scene.add(water);
 const wtop = new THREE.Mesh(new THREE.PlaneGeometry(6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#5cc4f5', roughness:0.1, transparent:true, opacity:0.55}));
 wtop.rotation.x=-Math.PI/2; wtop.position.set(0,-0.2,(ZF+CZ)/2); scene.add(wtop);
 // big far ground
-const far = new THREE.Mesh(new THREE.PlaneGeometry(200,200), grassMat); far.rotation.x=-Math.PI/2; far.position.y=-0.01; far.position.z=-60; far.receiveShadow=true; scene.add(far);
+const far = new THREE.Mesh(new THREE.PlaneGeometry(200,200), grassMat); far.rotation.x=-Math.PI/2; far.position.y=-0.01; far.position.z=-114; far.receiveShadow=true; scene.add(far);
 
 // trees + houses
 function tree(x,z,s=1){
