@@ -4,8 +4,7 @@ name: Plank bridge sample on home PC
 on:
   push:
     branches: [claude/project-thread-adplh4]
-    paths: [experiments/plankbridge/**, .github/workflows/plankbridge.yml]
-    paths-ignore: [experiments/plankbridge/out/**]
+    paths: [experiments/plankbridge/scene.html, experiments/plankbridge/render.js, experiments/plankbridge/audio.py, .github/workflows/plankbridge.yml]
   workflow_dispatch:
 
 permissions:
