@@ -2,7 +2,7 @@ name: Transcribe audio on home PC
 on:
   push:
     branches: [claude/project-thread-adplh4]
-    paths: [experiments/transcribe/ref.mp3, experiments/transcribe/run.py, .github/workflows/transcribe.yml]
+    paths: [experiments/transcribe/ref.wav, experiments/transcribe/run.py, .github/workflows/transcribe.yml]
   workflow_dispatch:
 permissions:
   contents: write
