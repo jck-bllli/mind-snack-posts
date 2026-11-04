@@ -1,0 +1,30 @@
+name: Transcribe audio on home PC
+on:
+  push:
+    branches: [claude/project-thread-adplh4]
+    paths: [experiments/transcribe/ref.mp3, experiments/transcribe/run.py, .github/workflows/transcribe.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  go:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+        working-directory: experiments/transcribe
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
+          python -m venv .venv
+          .venv/Scripts/python.exe -m pip install -q faster-whisper
+          .venv/Scripts/python.exe run.py
+      - run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add out
+          git commit -m "Transcript"
+          git push origin HEAD:${GITHUB_REF_NAME}
