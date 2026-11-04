@@ -1,5 +1,16 @@
 {
- "history": [],
+ "history": [
+  {
+   "pair": "doubling__fib",
+   "key": "ball_0001",
+   "gap": 0.05
+  },
+  {
+   "pair": "grower__shrinking",
+   "key": "ball_0002",
+   "gap": 0.075
+  }
+ ],
  "bad": [
   "counting__cube",
   "counting__doubling",
@@ -48,7 +59,8 @@
   "splitter__strong",
   "splitter__tripling",
   "squares__tripling",
-  "strong__tripling"
+  "strong__tripling",
+  "shrinking__splitter"
  ],
- "n": 0
+ "n": 2
 }
