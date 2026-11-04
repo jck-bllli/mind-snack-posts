@@ -52,6 +52,9 @@ RULES = {
     "counting": dict(name="COUNTING BALL", color="blue", op="add", k=1, r=20, apex=(30, 70)),
     "shrinking": dict(name="SHRINKING BALL", color="pink", op="add", k=2, r=70, apex=(120, 260),
                       grow=-0.6, rmin=8, rmax=70),
+    # steady balls: same damage every bounce, calibrated per matchup so a convex ball catches them at the very end
+    "steady": dict(name="STEADY BALL", color="green", op="const", d0=1, r=24, apex=(130, 260), calibrate=True),
+    "steady_fast": dict(name="QUICK STEADY BALL", color="red", op="const", d0=1, r=14, apex=(20, 50), calibrate=True),
     "heavy": dict(name="HEAVY BALL", color="gold", op="add", k=5, r=60, apex=(330, 390)),
 }
 
@@ -185,29 +188,76 @@ def rules_of(spec):
     return spec.get("rules") or tuple(RULES[k] for k in spec["balls"])
 
 
-def search(spec, tries=160, offset=0):
+MODES = {
+    # gap range (s), minimum comeback (winner's mid-race deficit as a share of total HP)
+    "split": dict(gap=(0.04, 0.35), comeback=0.04),   # obvious loser steals it by a split second
+    "late": dict(gap=(1.0, 3.0), comeback=0.04),      # the mid-race leader loses by 1 to 3 seconds (3s = the clearest win allowed)
+    "photo": dict(gap=(0.04, 0.20), comeback=-1.0),   # plain photo finish, lead swaps
+}
+MIX = ["split", "split", "late", "split", "photo", "late", "split"]   # per-video rotation, keeps the profile unpredictable
+
+
+def round_sig(x, n=2):
+    if x <= 0:
+        return 1
+    e = math.floor(math.log10(x)) - (n - 1)
+    return max(1, int(round(x / 10 ** e) * 10 ** e))
+
+
+def search(spec, tries=160, offset=0, mode="split"):
     ra, rb = rules_of(spec)
+    mcfg = MODES[mode]
     win = (TARGET - 7, TARGET + 7)
     best = None
+    i0, i1 = int(win[0] / DT), int(win[1] / DT)
     for s in range(tries):
         sa, sb = 1000 + offset + s * 7, 5000 + offset + s * 13
         ca, cb = curve(ra, sa, win[1] + 4), curve(rb, sb, win[1] + 4)
-        i0, i1 = int(win[0] / DT), int(win[1] / DT)
-        for layers, tot in layer_sets(spec, min(ca[i0], cb[i0]), max(ca[i1], cb[i1])):
-            ta, tb = np.searchsorted(ca, tot) * DT, np.searchsorted(cb, tot) * DT
-            if not (win[0] <= min(ta, tb) <= win[1]) or max(ta, tb) > win[1] + 3.9:
-                continue
-            gap = abs(ta - tb)
-            if gap < 0.04:
-                continue
-            i = int(min(ta, tb) / DT)
-            loser_a = ta > tb
-            d = (ca[:i] - cb[:i]) * (1 if loser_a else -1)
-            swap = bool((d > 0).any())          # the loser led at some point
-            score = gap - (0.3 if swap else 0)
-            if best is None or score < best["score"]:
-                best = dict(score=score, seed_a=sa, seed_b=sb, layers=layers, total=tot,
-                            ta=float(ta), tb=float(tb), gap=float(gap), swap=swap)
+        # calibrated (steady) ball: try several damage-per-hit values so it crosses its partner near the finish
+        cands = [(None, None, ca, cb)]
+        if ra.get("calibrate") != rb.get("calibrate"):
+            sa_is_cal = bool(ra.get("calibrate"))
+            hits = ca if sa_is_cal else cb
+            other = cb if sa_is_cal else ca
+            cands = []
+            for tc in np.arange(win[0] + 1, win[1] - 1, 1.5):
+                j = int(tc / DT)
+                if hits[j] <= 0 or other[j] <= 0:
+                    continue
+                d0 = round_sig(other[j] / hits[j])
+                if sa_is_cal:
+                    cands.append((d0, None, hits * d0, other))
+                else:
+                    cands.append((None, d0, other, hits * d0))
+        for d0a, d0b, ca2, cb2 in cands:
+            for layers, tot in layer_sets(spec, min(ca2[i0], cb2[i0]), max(ca2[i1], cb2[i1])):
+                ta, tb = np.searchsorted(ca2, tot) * DT, np.searchsorted(cb2, tot) * DT
+                if not (win[0] <= min(ta, tb) <= win[1]) or max(ta, tb) > win[1] + 3.9:
+                    continue
+                gap = abs(ta - tb)
+                if not (mcfg["gap"][0] <= gap <= mcfg["gap"][1]):
+                    continue
+                i = int(min(ta, tb) / DT)
+                loser_a = ta > tb
+                d = (ca2[:i] - cb2[:i]) * (1 if loser_a else -1)
+                swap = bool((d > 0).any())          # the loser led at some point
+                # how far behind the eventual winner looks mid-race (log scale: exponential balls look level on a linear bar)
+                la = np.log10(1.0 + np.maximum(ca2[:i], 0)) / math.log10(1.0 + tot)
+                lb = np.log10(1.0 + np.maximum(cb2[:i], 0)) / math.log10(1.0 + tot)
+                dl = (la - lb) * (1 if loser_a else -1)
+                lo_i, hi_i = int(i * 0.5), int(i * 0.9)
+                comeback = float(np.median(dl[lo_i:hi_i])) if hi_i > lo_i else 0.0
+                if comeback < mcfg["comeback"] or not swap:
+                    continue
+                if mode == "photo":
+                    score = gap
+                elif mode == "late":
+                    score = -4 * comeback + abs(gap - 2.0) * 0.1
+                else:
+                    score = gap - 4.0 * max(0.0, comeback)
+                if best is None or score < best["score"]:
+                    best = dict(score=score, seed_a=sa, seed_b=sb, layers=layers, total=tot, d0_a=d0a, d0_b=d0b,
+                                ta=float(ta), tb=float(tb), gap=float(gap), swap=swap, comeback=comeback, mode=mode)
     return best
 
 
@@ -220,17 +270,17 @@ def scaled(rule, f):
     return dict(rule, apex=(min(lo, hi - 4), hi))
 
 
-def tune_search(spec, tries=12, offset=0, good=0.25):
+def tune_search(spec, tries=12, offset=0, good=0.25, mode="split"):
     """Search bounce-height scales too, so any two ball types can be made to finish close."""
     ra, rb = rules_of(spec)
     best = None
     combos = sorted(((fa, fb) for fa in SCALES for fb in SCALES), key=lambda c: abs(c[0] - 1) + abs(c[1] - 1))
     for fa, fb in combos:
         sp = dict(spec, rules=(scaled(ra, fa), scaled(rb, fb)))
-        f = search(sp, tries=tries, offset=offset)
+        f = search(sp, tries=tries, offset=offset, mode=mode)
         if f and (best is None or f["score"] < best[1]["score"]):
             best = (sp, dict(f, scale_a=fa, scale_b=fb))
-        if best and best[1]["gap"] <= good and best[1]["swap"]:
+        if best and (mode != "split" or best[1]["gap"] <= good) and best[1]["comeback"] >= (0.05 if mode != "photo" else -1):
             break
     return best or (spec, None)
 
@@ -328,6 +378,10 @@ def make_video(key, outdir, search_only=False, spec=None, found=None):
     if search_only or not found:
         return
     ra, rb = rules_of(spec)
+    if found.get("d0_a"):
+        ra = dict(ra, d0=found["d0_a"])
+    if found.get("d0_b"):
+        rb = dict(rb, d0=found["d0_b"])
     rules = (ra, rb)
     layers = found["layers"]
     balls = [Ball(ra, found["seed_a"]), Ball(rb, found["seed_b"])]

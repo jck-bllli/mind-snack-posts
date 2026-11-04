@@ -51,14 +51,21 @@ def spec_for(pair, n):
     return {"rules": (ra, rb)}
 
 
-def next_pair(st):
+def eligible(p, mode):
+    """Comeback modes need a steady ball (it starts far ahead and gets caught); photo finishes work for any pair."""
+    if mode in ("split", "late"):
+        return any(bs.RULES[x].get("calibrate") for x in p.split("__"))
+    return True
+
+
+def next_pair(st, mode):
     recent = [h["pair"] for h in st["history"][-COOLDOWN:]]
-    for p in pairs():
-        if p not in st["bad"] and p not in recent:
+    ok = [p for p in pairs() if eligible(p, mode) and f"{p}|{mode}" not in st["bad"]]
+    for p in ok:
+        if p not in recent:
             yield p
-    for p in pairs():                             # everything used recently: allow repeats
-        if p not in st["bad"]:
-            yield p
+    for p in ok:                                  # everything used recently: allow repeats
+        yield p
 
 
 def caption(ra, rb):
@@ -67,13 +74,14 @@ def caption(ra, rb):
 
 
 def make_one(st):
-    for pair in next_pair(st):
+    mode = bs.MIX[st["n"] % len(bs.MIX)]
+    for pair in next_pair(st, mode):
         uses = sum(1 for h in st["history"] if h["pair"] == pair)
-        spec, found = bs.tune_search(spec_for(pair, st["n"]), offset=uses * 3000)
-        if not found or found["gap"] > MAX_GAP or not found["swap"]:
+        spec, found = bs.tune_search(spec_for(pair, st["n"]), offset=uses * 3000, mode=mode)
+        if not found:
             if uses == 0:
-                st["bad"].append(pair)
-            print("skip", pair, found and round(found["gap"], 3))
+                st["bad"].append(f"{pair}|{mode}")
+            print("skip", pair, mode)
             save(st)
             continue
         st["n"] += 1
@@ -81,14 +89,14 @@ def make_one(st):
         out = bs.make_video(key, QUEUE, spec=spec, found=found)
         ra, rb = spec["rules"]
         item = {"file": os.path.basename(out), "caption": caption(ra, rb), "style": pair,
-                "names": [ra["name"], rb["name"]], "gap": round(found["gap"], 3),
+                "names": [ra["name"], rb["name"]], "mode": mode, "winner": 0 if found["ta"] < found["tb"] else 1, "gap": round(found["gap"], 3), "comeback": round(found["comeback"], 3),
                 "seconds": round(max(found["ta"], found["tb"]) + 3, 1)}
         with open(os.path.join(QUEUE, key + ".json"), "w") as f:
             json.dump(item, f, indent=1)
         st["history"].append({"pair": pair, "key": key, "gap": item["gap"]})
         save(st)
         return item
-    raise SystemExit("::error::no pair produced a near tie")
+    raise SystemExit(f"::error::no pair produced a {mode} result")
 
 
 if __name__ == "__main__":
@@ -98,8 +106,13 @@ if __name__ == "__main__":
     a = ap.parse_args()
     if a.survey:
         for p in pairs():
-            _, f = bs.tune_search(spec_for(p, 0))
-            print(p, f and round(f["gap"], 3), f and f["swap"])
+            row = [p]
+            for m in bs.MODES:
+                _, f = bs.tune_search(spec_for(p, 0), tries=10, mode=m)
+                row.append(f"{m}={f and round(f['gap'], 2)}")
+            print(*row)
+            continue
+            print(p, f and round(f["gap"], 3), f and round(f["comeback"], 3))
     else:
         st = load()
         for _ in range(a.count):

@@ -47,7 +47,7 @@ jobs:
           have=$( (ls $q/*.mp4 2>/dev/null || true) | wc -l)
           n="${{ inputs.count }}"
           if [ -z "$n" ]; then n=$(( 4 - have )); fi
-          if [ "${{ github.event_name }}" = "push" ]; then n=2; fi
+          if [ "${{ github.event_name }}" = "push" ]; then n=3; fi
           echo "queue has $have, rendering $n"
           if [ "$n" -gt 0 ]; then
             cd experiments/ballsim && ../../.venv-ball/Scripts/python.exe daily.py --count "$n"
