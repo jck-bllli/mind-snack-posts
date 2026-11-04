@@ -16,7 +16,7 @@ document.body.appendChild(out);
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#bcd9ee');
 scene.fog = new THREE.Fog('#cfe3f1', 22, 60);
-const cam = new THREE.PerspectiveCamera(42, W/H, 0.1, 120);
+const cam = new THREE.PerspectiveCamera(50, W/H, 0.1, 120);
 
 scene.add(new THREE.HemisphereLight('#ffffff', '#8a7a60', 1.1));
 const sun = new THREE.DirectionalLight('#fff3d6', 2.2);
@@ -48,14 +48,14 @@ function slab(x0,x1,z0,z1,y0,y1,top) {
   m.position.set((x0+x1)/2,(y0+y1)/2,(z0+z1)/2); m.castShadow=m.receiveShadow=true; scene.add(m); return m;
 }
 const BOT=-4.5, ZF=4, ZB=-14, CZ=-5.5;
-slab(-30,-3, ZB, ZF, BOT, 0);          // left bank
-slab(3, 30, ZB, ZF, BOT, 0);           // right bank
-slab(-3, 3, ZB, CZ, BOT, 0);           // behind the pond (pond ends at CZ)
-slab(-3, 3, CZ, ZF, BOT, -3.4, dirtMat); // canal floor
+slab(-30,-1.6, ZB, ZF, BOT, 0);          // left bank
+slab(1.6, 30, ZB, ZF, BOT, 0);           // right bank
+slab(-1.6, 1.6, ZB, CZ, BOT, 0);           // behind the pond (pond ends at CZ)
+slab(-1.6, 1.6, CZ, ZF, BOT, -3.4, dirtMat); // canal floor
 // water
-const water = new THREE.Mesh(new THREE.BoxGeometry(6, 2.6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#2fa8e6', roughness:0.15, transparent:true, opacity:0.86}));
+const water = new THREE.Mesh(new THREE.BoxGeometry(3.2, 2.6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#2fa8e6', roughness:0.15, transparent:true, opacity:0.86}));
 water.position.set(0,-1.5,(ZF+CZ)/2); scene.add(water);
-const wtop = new THREE.Mesh(new THREE.PlaneGeometry(6, ZF-CZ), new THREE.MeshStandardMaterial({color:'#5cc4f5', roughness:0.1, transparent:true, opacity:0.55}));
+const wtop = new THREE.Mesh(new THREE.PlaneGeometry(3.2, ZF-CZ), new THREE.MeshStandardMaterial({color:'#5cc4f5', roughness:0.1, transparent:true, opacity:0.55}));
 wtop.rotation.x=-Math.PI/2; wtop.position.set(0,-0.2,(ZF+CZ)/2); scene.add(wtop);
 // big far ground
 const far = new THREE.Mesh(new THREE.PlaneGeometry(200,200), grassMat); far.rotation.x=-Math.PI/2; far.position.y=-0.01; far.position.z=-114; far.receiveShadow=true; scene.add(far);
@@ -67,9 +67,9 @@ function tree(x,z,s=1){
     const c = new THREE.Mesh(new THREE.ConeGeometry(r*s,1.2*s,8), mat('#2f7d32')); c.position.set(x,dy*s,z); c.castShadow=true; scene.add(c);
   }
 }
-for (let i=0;i<9;i++){ tree(-6-rnd()*6, 3-i*2.6-rnd(), 0.9+rnd()*0.5); tree(6+rnd()*6, 3-i*2.6-rnd(), 0.9+rnd()*0.5); }
+for (let i=0;i<9;i++){ tree(-4.2-rnd()*5, 3-i*2.6-rnd(), 0.9+rnd()*0.5); tree(4.2+rnd()*5, 3-i*2.6-rnd(), 0.9+rnd()*0.5); }
 function house(x,z,c){ box(2.4,1.6,2,c,x,0.8,z); const r=new THREE.Mesh(new THREE.ConeGeometry(1.9,1.1,4), mat('#a83c2e')); r.position.set(x,2.15,z); r.rotation.y=Math.PI/4; r.castShadow=true; scene.add(r); }
-house(-9,-2,'#f1e4c3'); house(10,-7,'#e8d2b0'); house(-12,-9,'#d9e6ef');
+house(-7,-2,'#f1e4c3'); house(8,-7,'#e8d2b0'); house(-12,-9,'#d9e6ef');
 
 // ---- character (original: round head, blue beanie, orange jacket) ----
 function makePerson(jacket, hat){
@@ -92,40 +92,40 @@ function pose(p, ph, amt){ const s=Math.sin(ph)*amt; p.userData.legs[0].rotation
 const stages = [];
 function stage(top, build){ const g = new THREE.Group(); g.visible=false; scene.add(g); build(g); stages.push({g, top}); }
 // 0 plank
-stage(0.12, g => { box(7.6,0.14,0.8,'#b98a4e',0,0,0,g); for(let i=0;i<3;i++) box(0.04,0.15,0.8,'#8a6232',-2+i*2,0,0,g); });
+stage(0.12, g => { box(4.6,0.14,0.8,'#b98a4e',0,0,0,g); for(let i=0;i<3;i++) box(0.04,0.15,0.8,'#8a6232',-1.2+i*1.2,0,0,g); });
 // 1 rails
 stage(0.14, g => {
-  box(7.6,0.18,1.7,'#b98a4e',0,0,0,g);
-  for (const z of [-0.8,0.8]) { box(7.6,0.1,0.1,'#6b4423',0,0.75,z,g); for(let i=0;i<7;i++) box(0.1,0.8,0.1,'#6b4423',-3.3+i*1.1,0.4,z,g); }
+  box(4.6,0.18,1.7,'#b98a4e',0,0,0,g);
+  for (const z of [-0.8,0.8]) { box(4.6,0.1,0.1,'#6b4423',0,0.75,z,g); for(let i=0;i<5;i++) box(0.1,0.8,0.1,'#6b4423',-2.1+i*1.05,0.4,z,g); }
 });
 // 2 stone arch
 stage(0.3, g => {
-  box(7.8,0.5,2.2,'#c8c2b6',0,0,0,g);
-  for (const z of [-1.0,1.0]) { box(7.8,0.35,0.22,'#b3ac9e',0,0.4,z,g); }
-  const arch = new THREE.Mesh(new THREE.TorusGeometry(2.3,0.3,10,24,Math.PI), mat('#a59f92')); arch.scale.set(1,0.9,3.2); arch.position.set(0,-2.1,0); arch.castShadow=true; g.add(arch);
-  box(0.7,3.2,2.2,'#b3ac9e',-3.1,-1.4,0,g); box(0.7,3.2,2.2,'#b3ac9e',3.1,-1.4,0,g);
+  box(4.8,0.5,2.2,'#c8c2b6',0,0,0,g);
+  for (const z of [-1.0,1.0]) { box(4.8,0.35,0.22,'#b3ac9e',0,0.4,z,g); }
+  const arch = new THREE.Mesh(new THREE.TorusGeometry(1.2,0.3,10,24,Math.PI), mat('#a59f92')); arch.scale.set(1,0.9,3.2); arch.position.set(0,-1.1,0); arch.castShadow=true; g.add(arch);
+  box(0.5,3.2,2.2,'#b3ac9e',-1.75,-1.4,0,g); box(0.5,3.2,2.2,'#b3ac9e',1.75,-1.4,0,g);
 });
 // 3 steel truss
 stage(0.3, g => {
-  box(8,0.3,2.2,'#4b5563',0,0,0,g);
+  box(5.2,0.3,2.2,'#4b5563',0,0,0,g);
   for (const z of [-1.0,1.0]) {
-    box(8,0.18,0.18,'#d4a21d',0,2.2,z,g); box(8,0.18,0.18,'#d4a21d',0,0.2,z,g);
-    for (let i=0;i<=8;i++) box(0.14,2,0.14,'#d4a21d',-3.9+i*0.975,1.2,z,g);
-    for (let i=0;i<8;i++){ const d=box(0.1,2.3,0.1,'#e0b030',-3.45+i*0.975,1.2,z,g); d.rotation.z=(i%2?1:-1)*0.42; }
+    box(5.2,0.18,0.18,'#d4a21d',0,2.2,z,g); box(5.2,0.18,0.18,'#d4a21d',0,0.2,z,g);
+    for (let i=0;i<=5;i++) box(0.14,2,0.14,'#d4a21d',-2.5+i*1.0,1.2,z,g);
+    for (let i=0;i<5;i++){ const d=box(0.1,2.3,0.1,'#e0b030',-2+i*1.0,1.2,z,g); d.rotation.z=(i%2?1:-1)*0.42; }
   }
-  for (let i=0;i<=4;i++) box(0.12,0.12,2.2,'#d4a21d',-3.9+i*1.95,2.2,0,g);
+  for (let i=0;i<=4;i++) box(0.12,0.12,2.2,'#d4a21d',-2.5+i*1.25,2.2,0,g);
 });
 // 4 toll booth added on top of steel (separate group so it can pop later)
 const toll = new THREE.Group(); toll.visible=false; scene.add(toll);
-box(1.4,1.6,1.4,'#f4f1e8',4.6,0.8,1.6,toll);
-box(1.8,0.18,1.8,'#c0392b',4.6,1.7,1.6,toll);
+box(1.4,1.6,1.4,'#f4f1e8',3.5,0.8,1.6,toll);
+box(1.8,0.18,1.8,'#c0392b',3.5,1.7,1.6,toll);
 const signT = texCanvas(256,96,(g,w,h)=>{ g.fillStyle='#c0392b'; g.fillRect(0,0,w,h); g.fillStyle='#fff'; g.font='bold 64px Arial Black, Arial'; g.textAlign='center'; g.textBaseline='middle'; g.fillText('TOLL',w/2,h/2+3); });
-const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.5,0.55), new THREE.MeshBasicMaterial({map:signT})); sign.position.set(4.6,2.15,2.52); toll.add(sign);
-box(0.08,0.9,0.08,'#555',3.3,0.45,2.2,toll);
-const gate = box(1.2,0.1,0.1,'#e74c3c',3.9,0.95,2.2,toll);
+const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.5,0.55), new THREE.MeshBasicMaterial({map:signT})); sign.position.set(3.5,2.15,2.52); toll.add(sign);
+box(0.08,0.9,0.08,'#555',2.5,0.45,2.2,toll);
+const gate = box(1.2,0.1,0.1,'#e74c3c',2.95,0.95,2.2,toll);
 const queue = [];
 const cols=['#8e44ad','#16a085','#e67e22','#c0392b','#2980b9','#7f8c8d'];
-for (let i=0;i<6;i++){ const q = makePerson(cols[i%cols.length], ['#222','#9b2226','#264653'][i%3]); q.position.set(2.8+i*0.8, 0.1, 2.5); q.rotation.y=-Math.PI/2; q.visible=false; queue.push(q); }
+for (let i=0;i<6;i++){ const q = makePerson(cols[i%cols.length], ['#222','#9b2226','#264653'][i%3]); q.position.set(2.2+i*0.6, 0.1, 2.6); q.rotation.y=-Math.PI/2; q.visible=false; queue.push(q); }
 
 // ---- timeline ----
 const T = {plank:2.8, rails:5.0, stone:6.6, steel:8.2, toll:9.8, pull:11.8, walkStart:3.4, turn:8.4/1, end:16.5};
@@ -147,25 +147,25 @@ function popScale(t0, t){ const x=(t-t0)/0.35; if(x<0) return 0; if(x>=1) return
 
 function heroPath(t){
   // returns {x,z,y,ry,walk}
-  const V = 22/8.4; // units per second across the bridge
+  const V = 14/8.4; // units per second across the bridge
   const hDeck = (()=>{ let h=0; for (let i=0;i<stageT.length;i++) if (t>=stageT[i]) h=stages[i].top; return h; })();
-  if (t < T.walkStart) return {x:-5.5,z:0,y:0,ry:Math.PI/2,walk:0,idle:true};
+  if (t < T.walkStart) return {x:-3.5,z:0,y:0,ry:Math.PI/2,walk:0,idle:true};
   if (t < T.pull) {
     let p = (t-T.walkStart)*V; // 0..22 over 8.4s -> until t=11.8
     let x, ry;
-    if (p<11) { x=-5.5+p; ry=Math.PI/2; } else { x=-5.5+(22-p); ry=-Math.PI/2; }
-    const onBridge = Math.abs(x)<3.2;
+    if (p<7) { x=-3.5+p; ry=Math.PI/2; } else { x=-3.5+(14-p); ry=-Math.PI/2; }
+    const onBridge = Math.abs(x)<2.4;
     return {x, z:0, y: onBridge ? hDeck : 0, ry, walk:1};
   }
   // walk around the pond: (-5.5,0)->(-5.5,-7)->(5.5,-7)->(5.5,0)
   const sp = 6.2; let d=(t-T.pull)*sp;
-  const segs=[[ -5.5,0,-5.5,-7 ],[ -5.5,-7,5.5,-7 ],[ 5.5,-7,5.5,0 ]];
+  const segs=[[ -3.5,0,-3.5,-7 ],[ -3.5,-7,3.5,-7 ],[ 3.5,-7,3.5,0 ]];
   for (const [x0,z0,x1,z1] of segs){
     const L=Math.hypot(x1-x0,z1-z0);
     if (d<=L){ const k=d/L; return {x:x0+(x1-x0)*k, z:z0+(z1-z0)*k, y:0, ry:Math.atan2(x1-x0,z1-z0), walk:1}; }
     d-=L;
   }
-  return {x:5.5,z:0,y:0,ry:0,walk:0,end:true};
+  return {x:3.5,z:0,y:0,ry:0,walk:0,end:true};
 }
 
 function drawCaption(t){
@@ -202,7 +202,7 @@ window.renderAt = (t) => {
   // camera
   const push = Math.min(t/T.pull,1);
   const pk = ease((t-T.pull)/2.4); const pe = pk*pk*(3-2*pk);
-  const cx = 0 + 7*pe, cy = 2.4 + 6.8*pe - push*0.2, cz = 10.2 - push*1.4 + 3.4*pe;
+  const cx = 0 + 8*pe, cy = 3.0 + 7.5*pe - push*0.2, cz = 13.2 - push*1.2 + 4*pe;
   cam.position.set(cx,cy,cz);
   cam.lookAt(0*(1-pe), 0.1*(1-pe) - 0.5*pe, -0.2 - 3*pe);
   renderer.render(scene, cam);
