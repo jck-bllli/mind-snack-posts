@@ -24,11 +24,19 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python otto/styles.py
+      - name: Find outlier reels from other creators
+        if: ${{ always() }}
+        env:
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$FB_ACCESS_TOKEN" ]; then echo "::warning::FB_ACCESS_TOKEN not set, skipping competitor research"; exit 0; fi
+          python otto/competitors.py
       - name: Save report
+        if: ${{ always() }}
         run: |
           git config user.name "otto-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add otto/report.md otto/stats.json
+          git add otto/*.md otto/*.json
           git diff --cached --quiet && exit 0
           git commit -m "Otto style report"
           git pull --rebase --autostash
