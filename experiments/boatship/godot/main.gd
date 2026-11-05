@@ -361,8 +361,8 @@ func _process(delta: float) -> void:
 	# ---- camera: slow pull back, aimed so the diorama sits lower in the frame ----
 	var k: float = clamp(t / total, 0.0, 1.0)
 	var e: float = k * k * (3.0 - 2.0 * k)
-	cam.position = Vector3(0, 5.0, 17.0).lerp(Vector3(0.3, 4.6, 16.5), e)
-	cam.look_at(Vector3(0, 1.0, 0).lerp(Vector3(0, 0.7, 0), e), Vector3.UP)
+	cam.position = Vector3(0, 4.4, 14.8).lerp(Vector3(0.2, 4.0, 14.2), e)
+	cam.look_at(Vector3(0, 1.3, 0).lerp(Vector3(0, 1.1, 0), e), Vector3.UP)
 
 	# ---- sky / storm ----
 	var storm: float = 0.0
@@ -622,6 +622,7 @@ func _process(delta: float) -> void:
 			idx = i
 	if idx >= 0 and t < float(words[idx]["t"]) + 1.0:
 		label.text = String(words[idx]["w"])
+		label.add_theme_font_size_override("font_size", int(min(120.0, 120.0 * 6.0 / float(max(label.text.length(), 1)))))
 		var age: float = t - float(words[idx]["t"])
 		var s: float = 1.0 + max(0.0, 0.2 - age) * 1.5
 		label.pivot_offset = label.size * 0.5
