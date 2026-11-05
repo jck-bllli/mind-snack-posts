@@ -57,8 +57,8 @@ jobs:
       - name: Encode
         working-directory: experiments/boatship
         run: |
-          ffmpeg -v error -y -i out/raw.avi -i final.wav -map 0:v -map 1:a -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 128k -ar 48000 -shortest -movflags +faststart out/boat_ship_beat1.mp4
-          ffmpeg -v error -y -i out/boat_ship_beat1.mp4 -vf "fps=1/0.9,scale=270:-1,tile=4x2" -frames:v 1 out/boat_ship_beat1_sheet.jpg
+          ffmpeg -v error -y -i out/raw.avi -i final.wav -map 0:v -map 1:a -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 128k -ar 48000 -shortest -movflags +faststart out/boat_ship_full.mp4
+          ffmpeg -v error -y -i out/boat_ship_full.mp4 -vf "fps=1/2.2,scale=180:-1,tile=6x4" -frames:v 1 out/boat_ship_full_sheet.jpg
           rm out/raw.avi
       - name: Commit
         working-directory: experiments/boatship
@@ -66,5 +66,5 @@ jobs:
           git config user.name "home-pc-runner"
           git config user.email "home-pc-runner@users.noreply.github.com"
           git add out godot/timing.json
-          git commit -m "Boat ship beat 1 render"
+          git commit -m "Boat ship full render"
           git push origin HEAD:${GITHUB_REF_NAME}
