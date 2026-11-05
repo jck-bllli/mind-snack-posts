@@ -1,2 +1,16 @@
 # Creators Otto studies, one Instagram handle per line (public Business/Creator accounts only).
-# Pick accounts in our niches whose reels blow up: trivia, quizzes, fun facts, AI/automation.
+# Accounts that Meta cannot look up show in the "Skipped" list of otto/outliers.md; swap them out.
+
+# Facts, science, history (mindsnack niche)
+natgeo
+nasa
+bbcearth
+sciencechannel
+historychannel
+smithsonianmag
+iflscience
+kurzgesagt
+veritasium
+
+# AI and growth creators (strategy ideas)
+jayantcreates.ai
