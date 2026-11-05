@@ -1,0 +1,70 @@
+name: Boat ship sample (Godot) on home PC
+
+# Renders the first beat of "How a Paper Boat Becomes a Cargo Ship" in Godot on the PC, commits mp4 + sheet to this branch.
+on:
+  push:
+    branches: [claude/project-thread-adplh4]
+    paths: [experiments/boatship/narrate.py, experiments/boatship/godot/main.gd, experiments/boatship/godot/main.tscn, experiments/boatship/godot/project.godot, .github/workflows/boatship.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: [self-hosted, render-pc]
+    timeout-minutes: 90
+    defaults:
+      run:
+        shell: C:\PROGRA~1\Git\bin\bash.exe --noprofile --norc -eo pipefail {0}
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          clean: false   # keep the voice model and venv between runs
+      - name: Python env, ffmpeg, voice deps
+        run: |
+          [ -x .venv/Scripts/python.exe ] || python -m venv .venv
+          cygpath -w "$PWD/.venv/Scripts" >> "$GITHUB_PATH"
+          for d in /c/ffmpeg/bin "/c/Program Files/WinGet/Packages"/Gyan.FFmpeg*/*/bin; do
+            if [ -f "$d/ffmpeg.exe" ]; then cygpath -w "$d" >> "$GITHUB_PATH"; break; fi
+          done
+          .venv/Scripts/python.exe -c "import chatterbox" 2>/dev/null || .venv/Scripts/python.exe -m pip install -q chatterbox-tts
+          .venv/Scripts/python.exe -m pip install -q soundfile numpy
+      - name: Godot (download once)
+        run: |
+          mkdir -p /c/runners/godot
+          ls /c/runners/godot/*console.exe >/dev/null 2>&1 || .venv/Scripts/python.exe - <<'PY'
+          import urllib.request, zipfile, io
+          u = "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_win64.exe.zip"
+          zipfile.ZipFile(io.BytesIO(urllib.request.urlopen(u).read())).extractall(r"C:\runners\godot")
+          PY
+          ls /c/runners/godot
+      - name: Narration, timing, sfx
+        working-directory: experiments/boatship
+        run: |
+          rm -rf out && mkdir out
+          ../../.venv/Scripts/python.exe narrate.py
+      - name: Render in Godot
+        working-directory: experiments/boatship
+        run: |
+          GODOT=$(ls /c/runners/godot/*console.exe | head -1)
+          N=$(.venv/Scripts/python.exe -c "import json,math;print(math.ceil(json.load(open('godot/timing.json'))['total']*30))" 2>/dev/null || ../../.venv/Scripts/python.exe -c "import json,math;print(math.ceil(json.load(open('godot/timing.json'))['total']*30))")
+          "$GODOT" --headless --path godot --import || true
+          "$GODOT" --path godot --write-movie "$(cygpath -w "$PWD/out/raw.avi")" --fixed-fps 30 --resolution 1080x1920 --quit-after "$N"
+          ls -la out
+      - name: Encode
+        working-directory: experiments/boatship
+        run: |
+          ffmpeg -v error -y -i out/raw.avi -i final.wav -map 0:v -map 1:a -c:v libx264 -pix_fmt yuv420p -crf 18 -c:a aac -b:a 128k -ar 48000 -shortest -movflags +faststart out/boat_ship_beat1.mp4
+          ffmpeg -v error -y -i out/boat_ship_beat1.mp4 -vf "fps=1/0.9,scale=270:-1,tile=4x2" -frames:v 1 out/boat_ship_beat1_sheet.jpg
+          rm out/raw.avi
+      - name: Commit
+        working-directory: experiments/boatship
+        run: |
+          git config user.name "home-pc-runner"
+          git config user.email "home-pc-runner@users.noreply.github.com"
+          git add out godot/timing.json
+          git commit -m "Boat ship beat 1 render"
+          git push origin HEAD:${GITHUB_REF_NAME}

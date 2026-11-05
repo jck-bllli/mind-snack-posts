@@ -1,0 +1,12 @@
+config_version=5
+
+[application]
+config/name="boatship"
+run/main_scene="res://main.tscn"
+
+[display]
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+
+[rendering]
+anti_aliasing/quality/msaa_3d=2
