@@ -34,6 +34,14 @@ def get(path, params):
         return {"error": e.read().decode(errors="replace").replace(TOKEN, "[token]")[:400]}
 
 
+def token_shape():
+    """Safe diagnostics: never prints the token itself."""
+    raw = os.environ.get("FB_ACCESS_TOKEN", "")
+    bad = [n for n, c in (("space", " "), ("newline", "\n"), ("quote", '"'), ("apostrophe", "'")) if c in TOKEN or c in raw.strip()]
+    return (f"token length {len(raw.strip())}, starts with EAA: {raw.strip().startswith('EAA')}, "
+            f"non-ascii: {not raw.strip().isascii()}, stray characters inside: {bad or 'none'}")
+
+
 def our_ig_id():
     if os.environ.get("IG_BUSINESS_ID"):
         return os.environ["IG_BUSINESS_ID"]
@@ -45,6 +53,7 @@ def our_ig_id():
         ig = next((p["instagram_business_account"]["id"] for p in res.get("data", [])
                    if p.get("instagram_business_account")), None)
     if not ig:
+        print(f"::error::Token check: {token_shape()}")
         sys.exit(f"::error::No Instagram account linked to a Facebook Page for this token. {res.get('error', '')}")
     return ig
 
