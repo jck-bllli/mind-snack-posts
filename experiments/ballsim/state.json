@@ -1,5 +1,36 @@
 {
- "history": [],
- "bad": [],
- "n": 0
+ "history": [
+  {
+   "pair": "counting__steady_fast",
+   "key": "ball_0001",
+   "gap": 0.042
+  },
+  {
+   "pair": "shrinking__steady",
+   "key": "ball_0002",
+   "gap": 0.058
+  },
+  {
+   "pair": "fast__steady",
+   "key": "ball_0003",
+   "gap": 1.317
+  },
+  {
+   "pair": "grower__steady_fast",
+   "key": "ball_0004",
+   "gap": 0.108
+  }
+ ],
+ "bad": [
+  "doubling__steady|split",
+  "doubling__steady_fast|split",
+  "cube__steady|split",
+  "fast__steady|split",
+  "heavy__steady|split",
+  "heavy__steady_fast|split",
+  "doubling__steady|late",
+  "doubling__steady_fast|late",
+  "cube__steady|late"
+ ],
+ "n": 4
 }
