@@ -20,7 +20,7 @@ import urllib.parse
 import urllib.request
 
 API = "https://graph.facebook.com/v24.0"
-TOKEN = os.environ.get("FB_ACCESS_TOKEN", "").strip()
+TOKEN = "".join(os.environ.get("FB_ACCESS_TOKEN", "").split())  # drop any pasted spaces or line breaks
 WATCHLIST = os.environ.get("OTTO_WATCHLIST", "otto/watchlist.txt")
 MEDIA_FIELDS = "caption,like_count,comments_count,media_product_type,media_type,permalink,timestamp"
 
