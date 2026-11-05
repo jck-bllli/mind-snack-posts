@@ -140,7 +140,7 @@ func _ready() -> void:
 		add_tree(5.0 + (i % 3) * 1.6, -0.5 - i * 2.2, 0.9 + ((i + 1) % 4) * 0.15)
 
 	# paper sheet (folds, then becomes the boat)
-	sheet = add_box(Vector3(1.3, 0.03, 1.3), mk(Color("#f4f1e8")), Vector3(0, 2.4, 1.0))
+	sheet = add_box(Vector3(1.3, 0.03, 1.3), mk(Color("#f4f1e8")), Vector3(0, 1.4, 0.5))
 	boat_mat = mk(Color("#f4f1e8"))
 	boat = Node3D.new()
 	add_child(boat)
@@ -169,7 +169,7 @@ func _ready() -> void:
 	ring.visible = false
 
 	dave = make_person(Color("#f08a24"), Color("#2a5db0"))
-	dave.position = Vector3(3.9, 0, 0.9)
+	dave.position = Vector3(3.3, 0, 0.9)
 	dave.rotation_degrees = Vector3(0, -35, 0)
 
 	cam = Camera3D.new()
@@ -196,8 +196,8 @@ func _process(delta: float) -> void:
 	t += delta
 	var k: float = clamp(t / total, 0.0, 1.0)
 	var e: float = k * k * (3.0 - 2.0 * k)
-	cam.position = Vector3(0, 2.7, 11.5).lerp(Vector3(0.5, 1.7, 8.0), e)
-	cam.look_at(Vector3(0, 0.2, 0).lerp(Vector3(0.2, -0.2, 0), e), Vector3.UP)
+	cam.position = Vector3(0, 5.2, 17.0).lerp(Vector3(0.4, 3.6, 12.5), e)
+	cam.look_at(Vector3(0, -0.6, 0).lerp(Vector3(0.2, -0.7, 0), e), Vector3.UP)
 
 	# sheet folds
 	var t_drop: float = t_land - 0.55
@@ -205,12 +205,12 @@ func _process(delta: float) -> void:
 	var fo: float = clamp(t / max(t_drop - 0.3, 0.1), 0.0, 1.0)
 	sheet.scale = Vector3(1.0, 1.0, 1.0 - 0.55 * fo)
 	sheet.rotation.y = fo * 0.7
-	sheet.position.y = 2.4 + sin(t * 3.0) * 0.05
+	sheet.position.y = 1.4 + sin(t * 3.0) * 0.05
 
 	# boat drops in, bobs, then goes soggy
 	boat.visible = t >= t_drop
 	var u: float = clamp((t - t_drop) / 0.55, 0.0, 1.0)
-	var by: float = lerp(1.8, -0.5, u * u)
+	var by: float = lerp(1.6, -0.5, u * u)
 	var dt: float = t - t_land
 	var squash := 1.0
 	if dt > 0.0 and dt < 0.4:
