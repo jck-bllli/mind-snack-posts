@@ -69,7 +69,7 @@ def main():
         res = get(me, {"fields": f"business_discovery.username({h}){{followers_count,media.limit(40){{{MEDIA_FIELDS}}}}}"})
         bd = res.get("business_discovery")
         if not bd:
-            skipped.append(f"@{h}: {res.get('error', 'not found')[:120]}")
+            skipped.append(f"@{h}: {res.get('error', 'not found')[:400]}")
             continue
         media = [m for m in bd.get("media", {}).get("data", []) if m.get("media_product_type") == "REELS"]
         if not media:
