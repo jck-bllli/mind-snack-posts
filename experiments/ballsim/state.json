@@ -1,21 +1,5 @@
 {
- "history": [
-  {
-   "pair": "doubling__steady",
-   "key": "ball_0001",
-   "gap": 0.075
-  },
-  {
-   "pair": "doubling__steady_fast",
-   "key": "ball_0002",
-   "gap": 0.05
-  },
-  {
-   "pair": "cube__steady",
-   "key": "ball_0003",
-   "gap": 2.0
-  }
- ],
+ "history": [],
  "bad": [],
- "n": 3
+ "n": 0
 }

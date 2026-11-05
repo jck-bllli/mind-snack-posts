@@ -10,6 +10,7 @@ with the closest finish (lead must change hands), then renders that run.
     python ballsim.py --video fib_vs_doubling --search-only
 """
 import argparse
+from decimal import Decimal
 import json
 import math
 import os
@@ -65,11 +66,17 @@ VIDEOS = {
     "fast_vs_strong": dict(balls=("fast", "strong"), layers=(0.01, 0.1, 1)),
 }
 TARGET = 62.0
+DMG_CAP = 500          # max damage per bounce of a steady ball (first hit has to look believable)
 NICE = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 7.5]
 
 
 def fmt(n):
-    return f"{int(round(n)):,}"
+    """Exact below 1e15; above that keep 3 significant digits and zero-fill, so big numbers look clean
+    (floats cannot hold 20+ digits, which used to show random digits at the end)."""
+    n = float(n)
+    if n < 1e15:
+        return f"{int(round(n)):,}"
+    return f"{int(Decimal(f'{n:.3g}')):,}"
 
 
 class Ball:
@@ -225,6 +232,8 @@ def search(spec, tries=160, offset=0, mode="split"):
                 if hits[j] <= 0 or other[j] <= 0:
                     continue
                 d0 = round_sig(other[j] / hits[j])
+                if d0 > DMG_CAP:                 # a first bounce must not hit for thousands
+                    continue
                 if sa_is_cal:
                     cands.append((d0, None, hits * d0, other))
                 else:
