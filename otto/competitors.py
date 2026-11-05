@@ -13,6 +13,7 @@ accounts can be looked up.
 """
 import json
 import os
+import re
 import statistics
 import sys
 import urllib.error
@@ -25,13 +26,22 @@ WATCHLIST = os.environ.get("OTTO_WATCHLIST", "otto/watchlist.txt")
 MEDIA_FIELDS = "caption,like_count,comments_count,media_product_type,media_type,permalink,timestamp"
 
 
+def scrub(text):
+    """Meta sometimes echoes a bad token back in its error text. Never let it reach the logs."""
+    text = str(text)
+    for raw in {TOKEN, os.environ.get("FB_ACCESS_TOKEN", "")}:
+        if raw:
+            text = text.replace(raw, "[token]")
+    return re.sub(r"EAA[A-Za-z0-9_\-\\@ ]{10,}", "[token]", text)
+
+
 def get(path, params):
     params = dict(params, access_token=TOKEN)
     try:
         with urllib.request.urlopen(f"{API}/{path}?{urllib.parse.urlencode(params)}", timeout=60) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        return {"error": e.read().decode(errors="replace").replace(TOKEN, "[token]")[:400]}
+        return {"error": scrub(e.read().decode(errors="replace"))[:400]}
 
 
 def token_shape():
@@ -54,7 +64,7 @@ def our_ig_id():
                    if p.get("instagram_business_account")), None)
     if not ig:
         print(f"::error::Token check: {token_shape()}")
-        sys.exit(f"::error::No Instagram account linked to a Facebook Page for this token. {res.get('error', '')}")
+        sys.exit(f"::error::No Instagram account linked to a Facebook Page for this token. {scrub(res.get('error', ''))}")
     return ig
 
 
@@ -78,7 +88,7 @@ def main():
         res = get(me, {"fields": f"business_discovery.username({h}){{followers_count,media.limit(40){{{MEDIA_FIELDS}}}}}"})
         bd = res.get("business_discovery")
         if not bd:
-            skipped.append(f"@{h}: {res.get('error', 'not found')[:400]}")
+            skipped.append(f"@{h}: {scrub(res.get('error', 'not found'))[:400]}")
             continue
         media = [m for m in bd.get("media", {}).get("data", []) if m.get("media_product_type") == "REELS"]
         if not media:
