@@ -118,5 +118,152 @@
     "video": "videos/quiz_18.mp4",
     "caption": "US states trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #usstatestrivia #brainteaser",
     "thumb_offset_ms": 1000
+  },
+  {
+    "id": "quiz_19",
+    "video": "videos/quiz_19.mp4",
+    "caption": "Animals: weird babies trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #animalsweirdbabiestrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_20",
+    "video": "videos/quiz_20.mp4",
+    "caption": "Space: moons and planets trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #spacemoonsandplanetstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_21",
+    "video": "videos/quiz_21.mp4",
+    "caption": "Human body: senses trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #humanbodysensestrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_22",
+    "video": "videos/quiz_22.mp4",
+    "caption": "Food: fruit and veg trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #foodfruitandvegtrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_23",
+    "video": "videos/quiz_23.mp4",
+    "caption": "Ocean: deep sea trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #oceandeepseatrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_24",
+    "video": "videos/quiz_24.mp4",
+    "caption": "Inventions: happy accidents trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #inventionshappyaccidentstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_25",
+    "video": "videos/quiz_25.mp4",
+    "caption": "Geography: lakes and waterfalls trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #geographylakesandwaterfallstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_26",
+    "video": "videos/quiz_26.mp4",
+    "caption": "Dinosaurs: fossils trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #dinosaursfossilstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_27",
+    "video": "videos/quiz_27.mp4",
+    "caption": "Words and language: odd words trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #wordsandlanguageoddwordstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_28",
+    "video": "videos/quiz_28.mp4",
+    "caption": "Music: instruments and legends trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #musicinstrumentsandlegendstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_29",
+    "video": "videos/quiz_29.mp4",
+    "caption": "Sports: the Olympics trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #sportstheolympicstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_30",
+    "video": "videos/quiz_30.mp4",
+    "caption": "Weather: sky wonders trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #weatherskywonderstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_31",
+    "video": "videos/quiz_31.mp4",
+    "caption": "History: the ancient world trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #historytheancientworldtrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_32",
+    "video": "videos/quiz_32.mp4",
+    "caption": "Movies: behind the scenes trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #moviesbehindthescenestrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_33",
+    "video": "videos/quiz_33.mp4",
+    "caption": "Technology: internet trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #technologyinternettrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_34",
+    "video": "videos/quiz_34.mp4",
+    "caption": "Animals: record breakers trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #animalsrecordbreakerstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_35",
+    "video": "videos/quiz_35.mp4",
+    "caption": "Science: elements trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #scienceelementstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_36",
+    "video": "videos/quiz_36.mp4",
+    "caption": "Art: famous painters trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #artfamouspainterstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_37",
+    "video": "videos/quiz_37.mp4",
+    "caption": "Food: around the world trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #foodaroundtheworldtrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "turbo"
+  },
+  {
+    "id": "quiz_38",
+    "video": "videos/quiz_38.mp4",
+    "caption": "US states: fun facts trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #usstatesfunfactstrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
+  },
+  {
+    "id": "quiz_39",
+    "video": "videos/quiz_39.mp4",
+    "caption": "Space: Earth and Moon trivia: can you get 5/5? 🧠\nComment your score below 👇 Send this to someone who thinks they know everything.\n\nFollow @mindsnackhere for a new quiz every day.\n\n#trivia #quiz #triviachallenge #funfacts #spaceearthandmoontrivia #brainteaser",
+    "thumb_offset_ms": 1000,
+    "voice": "hype"
   }
 ]
