@@ -1,17 +1,15 @@
 # Otto: styles ranked by attention
 
-8 posts, account median 128.5 views. Outlier = views / median.
+23 posts, account median 733 views. Outlier = views / median.
 
 | Style | Posts | Median views | Avg outlier | Eng. rate | Shares | Saves |
 |---|---|---|---|---|---|---|
-| untagged | 8 | 128.5 | 2.56x | 1.3% | 2 | 3 |
+| untagged | 23 | 733 | 1.01x | 2.5% | 22 | 38 |
 
 ## Top outlier posts
 
-- 9.85x, 1266 views, style untagged: https://www.instagram.com/reel/DfBuiB3gZuk/
-- 5.56x, 714 views, style untagged: https://www.instagram.com/reel/DfLopINgDbd/
-- 1.13x, 145 views, style untagged: https://www.instagram.com/reel/DfERFFMilo8/
-- 1.02x, 131 views, style untagged: https://www.instagram.com/reel/DfOPXEhAT3Y/
-- 0.98x, 126 views, style untagged: https://www.instagram.com/reel/DfOtI0VjzY2/
-
-_Small sample: wait for 3+ posts per style before trusting the ranking._
+- 2.01x, 1476 views, style untagged: https://www.instagram.com/reel/DfYDT9BkWLj/
+- 1.86x, 1362 views, style untagged: https://www.instagram.com/reel/DfQfUx5AC5I/
+- 1.79x, 1312 views, style untagged: https://www.instagram.com/reel/Dfakz_PjRd7/
+- 1.77x, 1300 views, style untagged: https://www.instagram.com/reel/DfgxKCRFPdZ/
+- 1.74x, 1272 views, style untagged: https://www.instagram.com/reel/DfBuiB3gZuk/
