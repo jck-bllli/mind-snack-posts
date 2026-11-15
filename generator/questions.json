@@ -1,2544 +1,3625 @@
 [
-  {
-    "theme": "Animal",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many hearts does an octopus have?",
-        "options": [
-          "1",
-          "2",
-          "3"
-        ],
-        "answer": 2,
-        "fact": "Two pump blood to the gills, one pumps it to the rest of the body."
-      },
-      {
-        "level": "easy",
-        "q": "What is a group of crows called?",
-        "options": [
-          "A pack",
-          "A murder",
-          "A choir"
-        ],
-        "answer": 1,
-        "fact": "A group of owls is called a parliament.",
-        "answer_say": "a murder"
-      },
-      {
-        "level": "medium",
-        "q": "What color is a polar bear's skin?",
-        "options": [
-          "White",
-          "Pink",
-          "Black"
-        ],
-        "answer": 2,
-        "fact": "Black skin soaks up heat. The fur isn't white either, it's see-through.",
-        "answer_say": "black"
-      },
-      {
-        "level": "medium",
-        "q": "Which of these animals can't jump?",
-        "options": [
-          "Kangaroo",
-          "Elephant",
-          "Giraffe"
-        ],
-        "answer": 1,
-        "fact": "An elephant always keeps at least one foot on the ground."
-      },
-      {
-        "level": "hard",
-        "q": "Which animal has fingerprints like ours?",
-        "options": [
-          "Koala",
-          "Dog",
-          "Dolphin"
-        ],
-        "answer": 0,
-        "fact": "Koala prints are so close to human ones they're hard to tell apart.",
-        "answer_say": "the koala"
-      }
-    ]
-  },
-  {
-    "theme": "Space",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which planet is closest to the Sun?",
-        "options": [
-          "Venus",
-          "Mercury",
-          "Mars"
-        ],
-        "answer": 1,
-        "fact": "A year on Mercury lasts just 88 Earth days."
-      },
-      {
-        "level": "easy",
-        "q": "How long does sunlight take to reach Earth?",
-        "options": [
-          "8 seconds",
-          "8 minutes",
-          "8 hours"
-        ],
-        "answer": 1,
-        "fact": "So the Sun you see is about 8 minutes old."
-      },
-      {
-        "level": "medium",
-        "q": "Which planet has the most moons?",
-        "options": [
-          "Jupiter",
-          "Saturn",
-          "Neptune"
-        ],
-        "answer": 1,
-        "fact": "Saturn has well over 200 known moons."
-      },
-      {
-        "level": "medium",
-        "q": "What is the hottest planet?",
-        "options": [
-          "Mercury",
-          "Venus",
-          "Mars"
-        ],
-        "answer": 1,
-        "fact": "Its thick clouds trap heat, even though Mercury is closer to the Sun."
-      },
-      {
-        "level": "hard",
-        "q": "On Venus, which one is longer?",
-        "options": [
-          "A day",
-          "A year",
-          "They're equal"
-        ],
-        "answer": 0,
-        "fact": "One Venus day is about 243 Earth days. Its year is about 225.",
-        "answer_say": "a day"
-      }
-    ]
-  },
-  {
-    "theme": "Human body",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many bones does an adult have?",
-        "options": [
-          "106",
-          "206",
-          "306"
-        ],
-        "answer": 1,
-        "fact": "Babies are born with around 300. Some fuse together as you grow."
-      },
-      {
-        "level": "easy",
-        "q": "What is the largest organ in your body?",
-        "options": [
-          "Liver",
-          "Brain",
-          "Skin"
-        ],
-        "answer": 2,
-        "fact": "Your skin is constantly shedding and replacing itself.",
-        "answer_say": "skin"
-      },
-      {
-        "level": "medium",
-        "q": "Which organ can regrow itself?",
-        "options": [
-          "Heart",
-          "Liver",
-          "Lungs"
-        ],
-        "answer": 1,
-        "fact": "A liver can grow back even after a large part of it is removed.",
-        "answer_say": "the liver"
-      },
-      {
-        "level": "medium",
-        "q": "Where is the smallest bone in your body?",
-        "options": [
-          "Ear",
-          "Toe",
-          "Nose"
-        ],
-        "answer": 0,
-        "fact": "The stapes in your ear is about the size of a grain of rice.",
-        "answer_say": "the ear"
-      },
-      {
-        "level": "hard",
-        "q": "How many times does your heart beat a day?",
-        "options": [
-          "10,000",
-          "100,000",
-          "1,000,000"
-        ],
-        "answer": 1,
-        "fact": "That's over 35 million beats a year."
-      }
-    ]
-  },
-  {
-    "theme": "Geography",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What is the largest ocean on Earth?",
-        "options": [
-          "Atlantic",
-          "Pacific",
-          "Indian"
-        ],
-        "answer": 1,
-        "fact": "The Pacific is bigger than all the land on Earth combined.",
-        "answer_say": "the Pacific"
-      },
-      {
-        "level": "easy",
-        "q": "What is the capital of Australia?",
-        "options": [
-          "Sydney",
-          "Melbourne",
-          "Canberra"
-        ],
-        "answer": 2,
-        "fact": "Canberra was built as a compromise between Sydney and Melbourne."
-      },
-      {
-        "level": "medium",
-        "q": "What is the largest desert on Earth?",
-        "options": [
-          "Sahara",
-          "Antarctica",
-          "Gobi"
-        ],
-        "answer": 1,
-        "fact": "A desert is about low rainfall, not heat."
-      },
-      {
-        "level": "medium",
-        "q": "Which country has the most islands?",
-        "options": [
-          "Indonesia",
-          "Sweden",
-          "Philippines"
-        ],
-        "answer": 1,
-        "fact": "Sweden has over 200,000 islands. Most have nobody living on them."
-      },
-      {
-        "level": "hard",
-        "q": "Which country has the most time zones?",
-        "options": [
-          "Russia",
-          "USA",
-          "France"
-        ],
-        "answer": 2,
-        "fact": "France has 12 thanks to its territories spread around the world."
-      }
-    ]
-  },
-  {
-    "theme": "Food",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which nut is used to make marzipan?",
-        "options": [
-          "Almond",
-          "Cashew",
-          "Peanut"
-        ],
-        "answer": 0,
-        "fact": "Marzipan is mostly ground almonds and sugar.",
-        "answer_say": "almond"
-      },
-      {
-        "level": "easy",
-        "q": "Which of these is a berry?",
-        "options": [
-          "Strawberry",
-          "Banana",
-          "Raspberry"
-        ],
-        "answer": 1,
-        "fact": "Bananas count as berries. Strawberries and raspberries don't.",
-        "answer_say": "a banana"
-      },
-      {
-        "level": "medium",
-        "q": "Peanuts aren't nuts. What are they?",
-        "options": [
-          "Legumes",
-          "Seeds",
-          "Berries"
-        ],
-        "answer": 0,
-        "fact": "Peanuts are in the same family as beans and peas.",
-        "answer_say": "legumes"
-      },
-      {
-        "level": "medium",
-        "q": "Which food can last for thousands of years?",
-        "options": [
-          "Rice",
-          "Honey",
-          "Peanut butter"
-        ],
-        "answer": 1,
-        "fact": "Archaeologists have found honey in ancient Egyptian tombs.",
-        "answer_say": "honey"
-      },
-      {
-        "level": "hard",
-        "q": "What color were carrots originally?",
-        "options": [
-          "Orange",
-          "Purple",
-          "Red"
-        ],
-        "answer": 1,
-        "fact": "Orange carrots took off in the Netherlands in the 1600s.",
-        "answer_say": "purple"
-      }
-    ]
-  },
-  {
-    "theme": "History",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which famous ship sank in 1912?",
-        "options": [
-          "Titanic",
-          "Lusitania",
-          "Mayflower"
-        ],
-        "answer": 0,
-        "fact": "Titanic sank on her very first voyage.",
-        "answer_say": "the Titanic"
-      },
-      {
-        "level": "easy",
-        "q": "Which was invented first?",
-        "options": [
-          "Fax machine",
-          "Telephone",
-          "Light bulb"
-        ],
-        "answer": 0,
-        "fact": "An early fax was patented in 1843, decades before the telephone.",
-        "answer_say": "the fax machine"
-      },
-      {
-        "level": "medium",
-        "q": "How long did the shortest war ever last?",
-        "options": [
-          "38 minutes",
-          "3 days",
-          "2 weeks"
-        ],
-        "answer": 0,
-        "fact": "That was the Anglo-Zanzibar War of 1896."
-      },
-      {
-        "level": "medium",
-        "q": "Cleopatra lived closer in time to which event?",
-        "options": [
-          "The pyramids",
-          "The Moon landing",
-          "Both equal"
-        ],
-        "answer": 1,
-        "fact": "The Great Pyramid was already about 2,500 years old when she was born.",
-        "answer_say": "the Moon landing"
-      },
-      {
-        "level": "hard",
-        "q": "Oxford is older than which empire?",
-        "options": [
-          "Roman",
-          "Aztec",
-          "Ancient Egypt"
-        ],
-        "answer": 1,
-        "fact": "Oxford was teaching 200+ years before the Aztec capital existed.",
-        "answer_say": "the Aztec Empire"
-      }
-    ]
-  },
-  {
-    "theme": "Random",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many keys are on a standard piano?",
-        "options": [
-          "76",
-          "88",
-          "96"
-        ],
-        "answer": 1,
-        "fact": "52 white keys and 36 black ones."
-      },
-      {
-        "level": "easy",
-        "q": "What is the most spoken native language?",
-        "options": [
-          "English",
-          "Spanish",
-          "Mandarin"
-        ],
-        "answer": 2,
-        "fact": "English is the most spoken overall once you count learners."
-      },
-      {
-        "level": "medium",
-        "q": "Which letter isn't in any US state name?",
-        "options": [
-          "Q",
-          "Z",
-          "X"
-        ],
-        "answer": 0,
-        "fact": "Z is in Arizona and X is in Texas."
-      },
-      {
-        "level": "medium",
-        "q": "What was the first toy advertised on TV?",
-        "options": [
-          "Barbie",
-          "Mr. Potato Head",
-          "Slinky"
-        ],
-        "answer": 1,
-        "fact": "Mr. Potato Head hit TV screens in 1952."
-      },
-      {
-        "level": "hard",
-        "q": "Which sport has been played on the Moon?",
-        "options": [
-          "Golf",
-          "Baseball",
-          "Frisbee"
-        ],
-        "answer": 0,
-        "fact": "Astronaut Alan Shepard hit two golf balls on the Moon in 1971.",
-        "answer_say": "golf"
-      }
-    ]
-  },
-  {
-    "theme": "Sports",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many players start for each soccer team?",
-        "options": [
-          "9",
-          "10",
-          "11"
-        ],
-        "answer": 2,
-        "fact": "That includes the goalkeeper."
-      },
-      {
-        "level": "easy",
-        "q": "How long is a marathon?",
-        "options": [
-          "13.1 miles",
-          "26.2 miles",
-          "31 miles"
-        ],
-        "answer": 1,
-        "fact": "That's about 42.2 kilometers."
-      },
-      {
-        "level": "medium",
-        "q": "Why do golf balls have dimples?",
-        "options": [
-          "To fly farther",
-          "To look cool",
-          "To weigh less"
-        ],
-        "answer": 0,
-        "fact": "Dimples cut drag, so a ball can fly about twice as far.",
-        "answer_say": "to fly farther"
-      },
-      {
-        "level": "medium",
-        "q": "Which country has won the most World Cups?",
-        "options": [
-          "Germany",
-          "Brazil",
-          "Italy"
-        ],
-        "answer": 1,
-        "fact": "Brazil has won the men's World Cup five times."
-      },
-      {
-        "level": "hard",
-        "q": "What were the first basketball hoops?",
-        "options": [
-          "Peach baskets",
-          "Metal rings",
-          "Fishing nets"
-        ],
-        "answer": 0,
-        "fact": "Someone had to climb up and get the ball out after every basket.",
-        "answer_say": "peach baskets"
-      }
-    ]
-  },
-  {
-    "theme": "Ocean",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What is the largest animal alive today?",
-        "options": [
-          "Whale shark",
-          "Blue whale",
-          "Giant squid"
-        ],
-        "answer": 1,
-        "fact": "Its tongue alone can weigh as much as an elephant.",
-        "answer_say": "the blue whale"
-      },
-      {
-        "level": "easy",
-        "q": "How many arms does a starfish usually have?",
-        "options": [
-          "3",
-          "5",
-          "8"
-        ],
-        "answer": 1,
-        "fact": "One Antarctic starfish can grow up to 50 arms."
-      },
-      {
-        "level": "medium",
-        "q": "How much of Earth is ocean?",
-        "options": [
-          "About 30%",
-          "About 50%",
-          "About 70%"
-        ],
-        "answer": 2,
-        "fact": "We've seen less than 0.001% of the deep seafloor.",
-        "answer_say": "about seventy percent",
-        "fact_say": "We've seen less than one thousandth of a percent of the deep seafloor."
-      },
-      {
-        "level": "medium",
-        "q": "In which animal does the dad give birth?",
-        "options": [
-          "Seahorse",
-          "Clownfish",
-          "Octopus"
-        ],
-        "answer": 0,
-        "fact": "Seahorse dads carry the eggs in a pouch until they hatch.",
-        "answer_say": "the seahorse"
-      },
-      {
-        "level": "hard",
-        "q": "How deep is the deepest part of the ocean?",
-        "options": [
-          "About 4 kilometers",
-          "About 11 kilometers",
-          "About 25 kilometers"
-        ],
-        "answer": 1,
-        "fact": "Mount Everest would fit inside with about 2 kilometers to spare.",
-        "answer_say": "about eleven kilometers"
-      }
-    ]
-  },
-  {
-    "theme": "Dinosaurs",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which dinosaur had three horns?",
-        "options": [
-          "Stegosaurus",
-          "Triceratops",
-          "Allosaurus"
-        ],
-        "answer": 1,
-        "fact": "Its name means three-horned face.",
-        "answer_say": "Triceratops"
-      },
-      {
-        "level": "easy",
-        "q": "Which dinosaur had plates on its back?",
-        "options": [
-          "Stegosaurus",
-          "Velociraptor",
-          "Brachiosaurus"
-        ],
-        "answer": 0,
-        "fact": "Its name means roof lizard.",
-        "answer_say": "Stegosaurus"
-      },
-      {
-        "level": "medium",
-        "q": "Which animals are living dinosaurs?",
-        "options": [
-          "Crocodiles",
-          "Birds",
-          "Lizards"
-        ],
-        "answer": 1,
-        "fact": "Birds evolved from small feathered dinosaurs.",
-        "answer_say": "birds"
-      },
-      {
-        "level": "medium",
-        "q": "T. rex lived closer in time to whom?",
-        "options": [
-          "Stegosaurus",
-          "Humans",
-          "They're equal"
-        ],
-        "answer": 1,
-        "fact": "Stegosaurus vanished about 80 million years before T. rex.",
-        "q_say": "Tyrannosaurus rex lived closer in time to whom?",
-        "answer_say": "humans",
-        "fact_say": "Stegosaurus vanished about eighty million years before Tyrannosaurus rex."
-      },
-      {
-        "level": "hard",
-        "q": "What is fossil dinosaur poop called?",
-        "options": [
-          "Fossilites",
-          "Dung stones",
-          "Coprolites"
-        ],
-        "answer": 2,
-        "fact": "Scientists study it to learn what dinosaurs ate.",
-        "answer_say": "coprolites"
-      }
-    ]
-  },
-  {
-    "theme": "Inventions",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which tool always points north?",
-        "options": [
-          "Clock",
-          "Compass",
-          "Ruler"
-        ],
-        "answer": 1,
-        "fact": "Compasses were first used in ancient China.",
-        "answer_say": "the compass"
-      },
-      {
-        "level": "easy",
-        "q": "What did the Wright brothers build?",
-        "options": [
-          "Submarine",
-          "Airplane",
-          "Car"
-        ],
-        "answer": 1,
-        "fact": "Their first flight in 1903 lasted 12 seconds.",
-        "answer_say": "an airplane",
-        "fact_say": "Their first flight in nineteen oh three lasted twelve seconds."
-      },
-      {
-        "level": "medium",
-        "q": "A candy bar led to which invention?",
-        "options": [
-          "Refrigerator",
-          "Toaster",
-          "Microwave"
-        ],
-        "answer": 2,
-        "fact": "A melted candy bar gave an engineer the idea.",
-        "answer_say": "the microwave"
-      },
-      {
-        "level": "medium",
-        "q": "What was the first item scanned by barcode?",
-        "options": [
-          "Soda",
-          "Chewing gum",
-          "Cereal"
-        ],
-        "answer": 1,
-        "fact": "A pack of gum was scanned in Ohio in 1974.",
-        "answer_say": "chewing gum",
-        "fact_say": "A pack of gum was scanned in Ohio in nineteen seventy four."
-      },
-      {
-        "level": "hard",
-        "q": "How old was the Popsicle's inventor?",
-        "options": [
-          "25 years old",
-          "40 years old",
-          "11 years old"
-        ],
-        "answer": 2,
-        "fact": "He left soda with a stick outside on a cold night.",
-        "answer_say": "eleven years old"
-      }
-    ]
-  },
-  {
-    "theme": "Weather",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What falls from storms as balls of ice?",
-        "options": [
-          "Fog",
-          "Hail",
-          "Dew"
-        ],
-        "answer": 1,
-        "fact": "Some hailstones grow as big as softballs.",
-        "answer_say": "hail"
-      },
-      {
-        "level": "easy",
-        "q": "What is the middle of a hurricane called?",
-        "options": [
-          "The eye",
-          "The core",
-          "The heart"
-        ],
-        "answer": 0,
-        "fact": "The eye is calm, but the winds around it are fierce.",
-        "answer_say": "the eye"
-      },
-      {
-        "level": "medium",
-        "q": "Is lightning hotter than the Sun's surface?",
-        "options": [
-          "No, much cooler",
-          "Yes, about 5 times",
-          "Exactly the same"
-        ],
-        "answer": 1,
-        "fact": "A bolt can reach about 50,000 degrees Fahrenheit.",
-        "answer_say": "about five times hotter",
-        "fact_say": "A bolt can reach about fifty thousand degrees Fahrenheit."
-      },
-      {
-        "level": "medium",
-        "q": "Which cloud word means rain?",
-        "options": [
-          "Cirrus",
-          "Cumulus",
-          "Nimbus"
-        ],
-        "answer": 2,
-        "fact": "Nimbus is Latin for rain. Cumulus means heap.",
-        "answer_say": "nimbus"
-      },
-      {
-        "level": "hard",
-        "q": "Where do Celsius and Fahrenheit match?",
-        "options": [
-          "0 degrees",
-          "-20 degrees",
-          "-40 degrees"
-        ],
-        "answer": 2,
-        "fact": "At minus 40, both scales show the same number.",
-        "answer_say": "minus forty degrees",
-        "fact_say": "At minus forty, both scales show the same number."
-      }
-    ]
-  },
-  {
-    "theme": "Music",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many strings does a guitar have?",
-        "options": [
-          "4",
-          "6",
-          "8"
-        ],
-        "answer": 1,
-        "fact": "A bass guitar usually has just four.",
-        "q_say": "How many strings does a standard guitar have?"
-      },
-      {
-        "level": "easy",
-        "q": "A trumpet belongs to which family?",
-        "options": [
-          "Woodwind",
-          "Strings",
-          "Brass"
-        ],
-        "answer": 2,
-        "fact": "Brass players make sound by buzzing their lips.",
-        "answer_say": "brass"
-      },
-      {
-        "level": "medium",
-        "q": "A Stradivarius is what instrument?",
-        "options": [
-          "Violin",
-          "Flute",
-          "Trumpet"
-        ],
-        "answer": 0,
-        "fact": "Antonio Stradivari made them in Italy around 1700.",
-        "answer_say": "the violin",
-        "fact_say": "Antonio Stradivari made them in Italy around seventeen hundred."
-      },
-      {
-        "level": "medium",
-        "q": "Which composer kept writing while deaf?",
-        "options": [
-          "Mozart",
-          "Bach",
-          "Beethoven"
-        ],
-        "answer": 2,
-        "fact": "Beethoven kept composing even as he lost his hearing."
-      },
-      {
-        "level": "hard",
-        "q": "The oldest instruments ever found are?",
-        "options": [
-          "Drums",
-          "Flutes",
-          "Harps"
-        ],
-        "answer": 1,
-        "fact": "Bone flutes over 40,000 years old were found in Germany.",
-        "answer_say": "flutes",
-        "fact_say": "Bone flutes over forty thousand years old were found in Germany."
-      }
-    ]
-  },
-  {
-    "theme": "Movies",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Whose nose grows when he lies?",
-        "options": [
-          "Pinocchio",
-          "Peter Pan",
-          "Aladdin"
-        ],
-        "answer": 0,
-        "fact": "Pinocchio is a wooden puppet who wants to be a real boy.",
-        "answer_say": "Pinocchio"
-      },
-      {
-        "level": "easy",
-        "q": "What does Simba mean in Swahili?",
-        "options": [
-          "King",
-          "Lion",
-          "Brave"
-        ],
-        "answer": 1,
-        "fact": "Rafiki, the wise baboon, is Swahili for friend.",
-        "answer_say": "lion"
-      },
-      {
-        "level": "medium",
-        "q": "What is an Oscar statue made of?",
-        "options": [
-          "Solid gold",
-          "Gold-plated bronze",
-          "Gold-plated wood"
-        ],
-        "answer": 1,
-        "fact": "It stands 13.5 inches tall and weighs 8.5 pounds.",
-        "answer_say": "gold-plated bronze",
-        "fact_say": "It stands thirteen and a half inches tall and weighs eight and a half pounds."
-      },
-      {
-        "level": "medium",
-        "q": "What made Toy Story a first in 1995?",
-        "options": [
-          "Clay figures",
-          "Puppets",
-          "Computer animation"
-        ],
-        "answer": 2,
-        "fact": "It was the first full-length film made entirely on computers.",
-        "answer_say": "computer animation"
-      },
-      {
-        "level": "hard",
-        "q": "Which animal is in the T. rex roar?",
-        "options": [
-          "Lion",
-          "Tiger",
-          "Bear"
-        ],
-        "answer": 1,
-        "fact": "Sound designers mixed elephant, tiger and alligator noises.",
-        "q_say": "Which animal's sound is in the Jurassic Park T. rex roar?",
-        "answer_say": "the tiger"
-      }
-    ]
-  },
-  {
-    "theme": "Words and language",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which letter is used most in English?",
-        "options": [
-          "A",
-          "T",
-          "E"
-        ],
-        "answer": 2,
-        "fact": "About one in eight letters in English text is an E.",
-        "answer_say": "the letter E"
-      },
-      {
-        "level": "easy",
-        "q": "Racecar is an example of a what?",
-        "options": [
-          "Anagram",
-          "Palindrome",
-          "Acronym"
-        ],
-        "answer": 1,
-        "fact": "A palindrome reads the same forward and backward.",
-        "answer_say": "a palindrome"
-      },
-      {
-        "level": "medium",
-        "q": "How many letters does Hawaiian have?",
-        "options": [
-          "13",
-          "18",
-          "26"
-        ],
-        "answer": 0,
-        "fact": "Hawaiian uses just 13 letters, including five vowels.",
-        "answer_say": "thirteen"
-      },
-      {
-        "level": "medium",
-        "q": "What is the most used word in English?",
-        "options": [
-          "And",
-          "Of",
-          "The"
-        ],
-        "answer": 2,
-        "fact": "Ten tiny words make up about a quarter of English.",
-        "answer_say": "the little word, the"
-      },
-      {
-        "level": "hard",
-        "q": "About how many languages exist today?",
-        "options": [
-          "About 700",
-          "About 7,000",
-          "About 70,000"
-        ],
-        "answer": 1,
-        "fact": "Papua New Guinea alone has over 800 of them.",
-        "answer_say": "about seven thousand"
-      }
-    ]
-  },
-  {
-    "theme": "Technology",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What was the first computer mouse made of?",
-        "options": [
-          "Plastic",
-          "Wood",
-          "Metal"
-        ],
-        "answer": 1,
-        "fact": "Douglas Engelbart's 1964 prototype had a wooden shell.",
-        "answer_say": "wood",
-        "fact_say": "Douglas Engelbart's nineteen sixty four prototype had a wooden shell."
-      },
-      {
-        "level": "easy",
-        "q": "The first computer bug was a real what?",
-        "options": [
-          "Ant",
-          "Spider",
-          "Moth"
-        ],
-        "answer": 2,
-        "fact": "It was taped into a Harvard logbook in 1947.",
-        "answer_say": "a moth",
-        "fact_say": "It was taped into a Harvard logbook in nineteen forty seven."
-      },
-      {
-        "level": "medium",
-        "q": "What does Wi-Fi stand for?",
-        "options": [
-          "Wireless Fidelity",
-          "Wide Frequency",
-          "Nothing"
-        ],
-        "answer": 2,
-        "fact": "A marketing company made up the name Wi-Fi.",
-        "answer_say": "nothing"
-      },
-      {
-        "level": "medium",
-        "q": "What did the first text message say?",
-        "options": [
-          "Hello",
-          "Merry Christmas",
-          "Test"
-        ],
-        "answer": 1,
-        "fact": "It was sent in 1992 from a computer to a phone.",
-        "fact_say": "It was sent in nineteen ninety two from a computer to a phone."
-      },
-      {
-        "level": "hard",
-        "q": "What was the first message sent online?",
-        "options": [
-          "Hello",
-          "Test",
-          "Lo"
-        ],
-        "answer": 2,
-        "fact": "The system crashed after two letters of login.",
-        "answer_say": "Lo"
-      }
-    ]
-  },
-  {
-    "theme": "Art",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Blue plus yellow makes which color?",
-        "options": [
-          "Orange",
-          "Green",
-          "Purple"
-        ],
-        "answer": 1,
-        "fact": "Red plus blue makes purple.",
-        "answer_say": "green"
-      },
-      {
-        "level": "easy",
-        "q": "What do painters mix colors on?",
-        "options": [
-          "Canvas",
-          "Easel",
-          "Palette"
-        ],
-        "answer": 2,
-        "fact": "Many palettes have a thumb hole to hold them.",
-        "answer_say": "a palette"
-      },
-      {
-        "level": "medium",
-        "q": "Which artist painted melting clocks?",
-        "options": [
-          "Picasso",
-          "Salvador Dali",
-          "Monet"
-        ],
-        "answer": 1,
-        "fact": "The painting is called The Persistence of Memory.",
-        "answer_say": "Salvador Dali"
-      },
-      {
-        "level": "medium",
-        "q": "What metal is the Statue of Liberty's skin?",
-        "options": [
-          "Iron",
-          "Copper",
-          "Steel"
-        ],
-        "answer": 1,
-        "fact": "Its copper skin slowly turned green with age.",
-        "q_say": "What metal is the skin of the Statue of Liberty?",
-        "answer_say": "copper"
-      },
-      {
-        "level": "hard",
-        "q": "How tall is the Mona Lisa painting?",
-        "options": [
-          "About 8 feet",
-          "About 15 feet",
-          "About 2.5 feet"
-        ],
-        "answer": 2,
-        "fact": "It's smaller than many people expect.",
-        "answer_say": "about two and a half feet"
-      }
-    ]
-  },
-  {
-    "theme": "World records",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which mountain is tallest above sea level?",
-        "options": [
-          "K2",
-          "Mount Everest",
-          "Kilimanjaro"
-        ],
-        "answer": 1,
-        "fact": "Everest stands about 29,000 feet high.",
-        "answer_say": "Mount Everest",
-        "fact_say": "Everest stands about twenty nine thousand feet high."
-      },
-      {
-        "level": "easy",
-        "q": "What is the fastest land animal?",
-        "options": [
-          "Lion",
-          "Cheetah",
-          "Horse"
-        ],
-        "answer": 1,
-        "fact": "Cheetahs can run over 60 miles per hour.",
-        "answer_say": "the cheetah",
-        "fact_say": "Cheetahs can run over sixty miles per hour."
-      },
-      {
-        "level": "medium",
-        "q": "What is the largest rainforest on Earth?",
-        "options": [
-          "Congo",
-          "Daintree",
-          "Amazon"
-        ],
-        "answer": 2,
-        "fact": "It stretches across nine countries.",
-        "answer_say": "the Amazon"
-      },
-      {
-        "level": "medium",
-        "q": "Which country is largest by area?",
-        "options": [
-          "Canada",
-          "China",
-          "Russia"
-        ],
-        "answer": 2,
-        "fact": "Russia spans 11 time zones.",
-        "answer_say": "Russia",
-        "fact_say": "Russia spans eleven time zones."
-      },
-      {
-        "level": "hard",
-        "q": "Which animal is fastest on Earth?",
-        "options": [
-          "Cheetah",
-          "Peregrine falcon",
-          "Sailfish"
-        ],
-        "answer": 1,
-        "fact": "In a dive, it tops 200 miles per hour.",
-        "answer_say": "the peregrine falcon",
-        "fact_say": "In a dive, it tops two hundred miles per hour."
-      }
-    ]
-  },
-  {
-    "theme": "US states",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which is the largest US state?",
-        "options": [
-          "Texas",
-          "Alaska",
-          "California"
-        ],
-        "answer": 1,
-        "fact": "Alaska is more than twice the size of Texas.",
-        "answer_say": "Alaska"
-      },
-      {
-        "level": "easy",
-        "q": "Which is the smallest US state?",
-        "options": [
-          "Delaware",
-          "Hawaii",
-          "Rhode Island"
-        ],
-        "answer": 2,
-        "fact": "Rhode Island is only about 48 miles long.",
-        "answer_say": "Rhode Island",
-        "fact_say": "Rhode Island is only about forty eight miles long."
-      },
-      {
-        "level": "medium",
-        "q": "Which US state is entirely islands?",
-        "options": [
-          "Hawaii",
-          "Maine",
-          "Florida"
-        ],
-        "answer": 0,
-        "fact": "Hawaii has eight main islands and over 100 small ones.",
-        "answer_say": "Hawaii",
-        "fact_say": "Hawaii has eight main islands and over one hundred small ones."
-      },
-      {
-        "level": "medium",
-        "q": "Which state has a town called Boring?",
-        "options": [
-          "Nevada",
-          "Vermont",
-          "Oregon"
-        ],
-        "answer": 2,
-        "fact": "Boring, Oregon is a sister town of Dull, Scotland.",
-        "answer_say": "Oregon"
-      },
-      {
-        "level": "hard",
-        "q": "Which state's flag isn't a rectangle?",
-        "options": [
-          "Texas",
-          "Ohio",
-          "Maine"
-        ],
-        "answer": 1,
-        "fact": "Ohio's flag is shaped like a pointed swallowtail.",
-        "answer_say": "Ohio"
-      }
-    ]
-  },
-  {
-    "theme": "Animals: weird babies",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What is a baby kangaroo called?",
-        "options": [
-          "Joey",
-          "Pup",
-          "Kit"
-        ],
-        "answer": 0,
-        "fact": "A newborn joey is only the size of a jellybean."
-      },
-      {
-        "level": "easy",
-        "q": "What is a baby goat called?",
-        "options": [
-          "Calf",
-          "Kid",
-          "Cub"
-        ],
-        "answer": 1,
-        "fact": "Baby goats can walk within hours of being born."
-      },
-      {
-        "level": "medium",
-        "q": "What is a baby bat called?",
-        "options": [
-          "Chick",
-          "Joey",
-          "Pup"
-        ],
-        "answer": 2,
-        "fact": "Mother bats find their pup among thousands by sound."
-      },
-      {
-        "level": "medium",
-        "q": "What is a baby hedgehog called?",
-        "options": [
-          "Hoglet",
-          "Spikelet",
-          "Pup"
-        ],
-        "answer": 0,
-        "fact": "Hoglets are born with soft spines hidden under the skin."
-      },
-      {
-        "level": "hard",
-        "q": "What is a baby echidna called?",
-        "options": [
-          "Joey",
-          "Puggle",
-          "Pouchling"
-        ],
-        "answer": 1,
-        "fact": "Echidnas are mammals that lay eggs.",
-        "answer_say": "a puggle"
-      }
-    ]
-  },
-  {
-    "theme": "Space: moons and planets",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many moons does Earth have?",
-        "options": [
-          "1",
-          "2",
-          "0"
-        ],
-        "answer": 0,
-        "fact": "Mars has two tiny moons, Phobos and Deimos."
-      },
-      {
-        "level": "easy",
-        "q": "Which planet is called the Red Planet?",
-        "options": [
-          "Venus",
-          "Mars",
-          "Jupiter"
-        ],
-        "answer": 1,
-        "fact": "Its dust is full of rusty iron, which makes it red."
-      },
-      {
-        "level": "medium",
-        "q": "Moon gravity compared to Earth's?",
-        "options": [
-          "The same",
-          "About half",
-          "About one sixth"
-        ],
-        "answer": 2,
-        "fact": "You would weigh only a sixth of your normal weight.",
-        "answer_say": "about one sixth"
-      },
-      {
-        "level": "medium",
-        "q": "Which planet spins on its side?",
-        "options": [
-          "Uranus",
-          "Neptune",
-          "Saturn"
-        ],
-        "answer": 0,
-        "fact": "Uranus is tilted about 98 degrees, so it rolls around the Sun."
-      },
-      {
-        "level": "hard",
-        "q": "What is the largest moon we know of?",
-        "options": [
-          "Titan",
-          "Ganymede",
-          "Our Moon"
-        ],
-        "answer": 1,
-        "fact": "Ganymede is even bigger than the planet Mercury.",
-        "answer_say": "Ganymede"
-      }
-    ]
-  },
-  {
-    "theme": "Human body: senses",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which body part helps you balance?",
-        "options": [
-          "Inner ear",
-          "Nose",
-          "Elbow"
-        ],
-        "answer": 0,
-        "fact": "Fluid in your inner ear tells your brain which way is up.",
-        "answer_say": "the inner ear"
-      },
-      {
-        "level": "easy",
-        "q": "Which part of the eye lets in light?",
-        "options": [
-          "Eyelash",
-          "Pupil",
-          "Eyebrow"
-        ],
-        "answer": 1,
-        "fact": "Your pupils widen in the dark to let in more light.",
-        "answer_say": "the pupil"
-      },
-      {
-        "level": "medium",
-        "q": "What causes goosebumps?",
-        "options": [
-          "Frozen sweat",
-          "Tiny hair muscles",
-          "Blood clots"
-        ],
-        "answer": 1,
-        "fact": "They once puffed up our fur to keep us warm.",
-        "answer_say": "tiny hair muscles"
-      },
-      {
-        "level": "medium",
-        "q": "How often do you blink per minute?",
-        "options": [
-          "About 3",
-          "About 60",
-          "About 15"
-        ],
-        "answer": 2,
-        "fact": "That adds up to over ten thousand blinks a day."
-      },
-      {
-        "level": "hard",
-        "q": "What is your body's hardest substance?",
-        "options": [
-          "Bone",
-          "Tooth enamel",
-          "Fingernail"
-        ],
-        "answer": 1,
-        "fact": "Enamel is harder than bone, but it can't heal itself."
-      }
-    ]
-  },
-  {
-    "theme": "Food: fruit and veg",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which fruit has its seeds outside?",
-        "options": [
-          "Strawberry",
-          "Apple",
-          "Banana"
-        ],
-        "answer": 0,
-        "fact": "A strawberry has about 200 seeds on its skin."
-      },
-      {
-        "level": "easy",
-        "q": "Which vegetable makes you cry?",
-        "options": [
-          "Carrot",
-          "Potato",
-          "Onion"
-        ],
-        "answer": 2,
-        "fact": "Cut onions release a gas that stings your eyes."
-      },
-      {
-        "level": "medium",
-        "q": "About a quarter of which fruit is air?",
-        "options": [
-          "Grape",
-          "Apple",
-          "Melon"
-        ],
-        "answer": 1,
-        "fact": "That air is why apples float in water."
-      },
-      {
-        "level": "medium",
-        "q": "Where do pineapples grow?",
-        "options": [
-          "Close to the ground",
-          "On tall trees",
-          "On vines"
-        ],
-        "answer": 0,
-        "fact": "Each pineapple grows from the middle of a low plant.",
-        "answer_say": "close to the ground"
-      },
-      {
-        "level": "hard",
-        "q": "Which spice comes from a crocus flower?",
-        "options": [
-          "Pepper",
-          "Cinnamon",
-          "Saffron"
-        ],
-        "answer": 2,
-        "fact": "Each flower gives just three tiny red threads."
-      }
-    ]
-  },
-  {
-    "theme": "Ocean: deep sea",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What is a group of fish called?",
-        "options": [
-          "School",
-          "Pack",
-          "Flock"
-        ],
-        "answer": 0,
-        "fact": "Swimming in groups helps fish avoid predators.",
-        "answer_say": "a school"
-      },
-      {
-        "level": "easy",
-        "q": "Which is the biggest shark?",
-        "options": [
-          "Great white",
-          "Whale shark",
-          "Hammerhead"
-        ],
-        "answer": 1,
-        "fact": "Whale sharks eat tiny plankton, not people.",
-        "answer_say": "the whale shark"
-      },
-      {
-        "level": "medium",
-        "q": "Which sea animal has no brain?",
-        "options": [
-          "Jellyfish",
-          "Octopus",
-          "Dolphin"
-        ],
-        "answer": 0,
-        "fact": "A jellyfish has no brain, heart, or bones.",
-        "answer_say": "the jellyfish"
-      },
-      {
-        "level": "medium",
-        "q": "How does an anglerfish glow?",
-        "options": [
-          "Sunlight",
-          "Tiny batteries",
-          "Glowing bacteria"
-        ],
-        "answer": 2,
-        "fact": "It uses the glow to lure prey close in the dark.",
-        "answer_say": "glowing bacteria"
-      },
-      {
-        "level": "hard",
-        "q": "Which mammal dives the deepest?",
-        "options": [
-          "Blue whale",
-          "Cuvier's beaked whale",
-          "Walrus"
-        ],
-        "answer": 1,
-        "fact": "One tagged whale dove nearly two miles down.",
-        "answer_say": "Cuvier's beaked whale"
-      }
-    ]
-  },
-  {
-    "theme": "Inventions: happy accidents",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Weak glue led to which invention?",
-        "options": [
-          "Tape",
-          "Stickers",
-          "Post-it notes"
-        ],
-        "answer": 2,
-        "fact": "Its inventor first thought the glue was a failure."
-      },
-      {
-        "level": "easy",
-        "q": "Penicillin was discovered from what?",
-        "options": [
-          "Mold",
-          "Sand",
-          "Honey"
-        ],
-        "answer": 0,
-        "fact": "Alexander Fleming noticed mold killing germs in 1928.",
-        "answer_say": "mold"
-      },
-      {
-        "level": "medium",
-        "q": "A fallen ship spring inspired what?",
-        "options": [
-          "Yo-yo",
-          "Slinky",
-          "Frisbee"
-        ],
-        "answer": 1,
-        "fact": "The Slinky first went on sale in 1945.",
-        "answer_say": "the Slinky"
-      },
-      {
-        "level": "medium",
-        "q": "What inspired Velcro?",
-        "options": [
-          "Spider webs",
-          "Fish scales",
-          "Burrs on a dog"
-        ],
-        "answer": 2,
-        "fact": "A Swiss engineer saw burrs stuck to his dog's fur.",
-        "answer_say": "burrs on a dog"
-      },
-      {
-        "level": "hard",
-        "q": "Play-Doh first cleaned what?",
-        "options": [
-          "Windows",
-          "Wallpaper",
-          "Shoes"
-        ],
-        "answer": 1,
-        "fact": "It was sold as a cleaner before it became a toy.",
-        "answer_say": "wallpaper"
-      }
-    ]
-  },
-  {
-    "theme": "Geography: lakes and waterfalls",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which flag has a maple leaf?",
-        "options": [
-          "Canada",
-          "Ireland",
-          "Norway"
-        ],
-        "answer": 0,
-        "fact": "Canada has the longest coastline of any country."
-      },
-      {
-        "level": "easy",
-        "q": "The Sahara is on which continent?",
-        "options": [
-          "Asia",
-          "Africa",
-          "Australia"
-        ],
-        "answer": 1,
-        "fact": "The Sahara is nearly as big as the United States."
-      },
-      {
-        "level": "medium",
-        "q": "Which lake is the deepest on Earth?",
-        "options": [
-          "Lake Superior",
-          "Lake Victoria",
-          "Lake Baikal"
-        ],
-        "answer": 2,
-        "fact": "Baikal holds about a fifth of Earth's fresh water.",
-        "answer_say": "Lake Baikal"
-      },
-      {
-        "level": "medium",
-        "q": "Which waterfall is the tallest?",
-        "options": [
-          "Niagara Falls",
-          "Angel Falls",
-          "Victoria Falls"
-        ],
-        "answer": 1,
-        "fact": "Angel Falls in Venezuela drops about 3,200 feet.",
-        "answer_say": "Angel Falls"
-      },
-      {
-        "level": "hard",
-        "q": "Where is the lowest point on land?",
-        "options": [
-          "Dead Sea shore",
-          "Death Valley",
-          "Grand Canyon"
-        ],
-        "answer": 0,
-        "fact": "It sits over 1,300 feet below sea level.",
-        "answer_say": "the Dead Sea shore"
-      }
-    ]
-  },
-  {
-    "theme": "Dinosaurs: fossils",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Dinosaur bones turned to stone are called?",
-        "options": [
-          "Fossils",
-          "Crystals",
-          "Statues"
-        ],
-        "answer": 0,
-        "fact": "Fossils form slowly as minerals replace the bone."
-      },
-      {
-        "level": "easy",
-        "q": "Which dinosaur had tiny arms?",
-        "options": [
-          "Stegosaurus",
-          "T. rex",
-          "Triceratops"
-        ],
-        "answer": 1,
-        "fact": "Those small arms still had sharp claws.",
-        "answer_say": "T. rex"
-      },
-      {
-        "level": "medium",
-        "q": "What did Velociraptor really have?",
-        "options": [
-          "Fur",
-          "A shell",
-          "Feathers"
-        ],
-        "answer": 2,
-        "fact": "Real ones were only about the size of a turkey.",
-        "answer_say": "feathers"
-      },
-      {
-        "level": "medium",
-        "q": "What does the word dinosaur mean?",
-        "options": [
-          "Terrible lizard",
-          "Giant bird",
-          "Old bone"
-        ],
-        "answer": 0,
-        "fact": "Richard Owen invented the word in 1842.",
-        "answer_say": "terrible lizard"
-      },
-      {
-        "level": "hard",
-        "q": "Which dinosaur age came first?",
-        "options": [
-          "Jurassic",
-          "Triassic",
-          "Cretaceous"
-        ],
-        "answer": 1,
-        "fact": "Jurassic Park is named after the middle one.",
-        "answer_say": "the Triassic"
-      }
-    ]
-  },
-  {
-    "theme": "Words and language: odd words",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which language says ciao?",
-        "options": [
-          "Spanish",
-          "French",
-          "Italian"
-        ],
-        "answer": 2,
-        "fact": "Ciao once meant I am your servant."
-      },
-      {
-        "level": "easy",
-        "q": "Buzz and boom are what kind of words?",
-        "options": [
-          "Onomatopoeia",
-          "Palindromes",
-          "Acronyms"
-        ],
-        "answer": 0,
-        "fact": "They copy real sounds.",
-        "answer_say": "onomatopoeia"
-      },
-      {
-        "level": "medium",
-        "q": "Cuneiform was written on what?",
-        "options": [
-          "Papyrus",
-          "Clay tablets",
-          "Leaves"
-        ],
-        "answer": 1,
-        "fact": "Sumerians pressed wedge shapes into wet clay.",
-        "answer_say": "clay tablets"
-      },
-      {
-        "level": "medium",
-        "q": "What is the dot over an i called?",
-        "options": [
-          "Dotty",
-          "Pip",
-          "Tittle"
-        ],
-        "answer": 2,
-        "fact": "The dot on a lowercase j has the same name.",
-        "answer_say": "a tittle"
-      },
-      {
-        "level": "hard",
-        "q": "In Ye Olde Shop, ye really says what?",
-        "options": [
-          "The",
-          "You",
-          "Yes"
-        ],
-        "answer": 0,
-        "fact": "The y was an old letter called thorn, sounding like th.",
-        "q_say": "In Ye Olde Shop, what does ye really say?",
-        "answer_say": "the"
-      }
-    ]
-  },
-  {
-    "theme": "Music: instruments and legends",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many Beatles were there?",
-        "options": [
-          "3",
-          "4",
-          "5"
-        ],
-        "answer": 1,
-        "fact": "They came from Liverpool, England."
-      },
-      {
-        "level": "easy",
-        "q": "Which string instrument is biggest?",
-        "options": [
-          "Violin",
-          "Cello",
-          "Double bass"
-        ],
-        "answer": 2,
-        "fact": "It's so tall that players stand or sit on a high stool.",
-        "answer_say": "the double bass"
-      },
-      {
-        "level": "medium",
-        "q": "How many letter names do notes use?",
-        "options": [
-          "7",
-          "5",
-          "12"
-        ],
-        "answer": 0,
-        "fact": "After G, the notes start over at A."
-      },
-      {
-        "level": "medium",
-        "q": "Violin bows are strung with what?",
-        "options": [
-          "Fishing line",
-          "Horse hair",
-          "Wire"
-        ],
-        "answer": 1,
-        "fact": "Most bows use hair from a horse's tail.",
-        "answer_say": "horse hair"
-      },
-      {
-        "level": "hard",
-        "q": "How old was Mozart when he began composing?",
-        "options": [
-          "5",
-          "12",
-          "20"
-        ],
-        "answer": 0,
-        "fact": "He was playing for royalty by age six.",
-        "answer_say": "five"
-      }
-    ]
-  },
-  {
-    "theme": "Sports: the Olympics",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many rings are on the Olympic flag?",
-        "options": [
-          "3",
-          "5",
-          "7"
-        ],
-        "answer": 1,
-        "fact": "The rings link five parts of the world."
-      },
-      {
-        "level": "easy",
-        "q": "Where did the Olympics begin?",
-        "options": [
-          "Greece",
-          "Egypt",
-          "Italy"
-        ],
-        "answer": 0,
-        "fact": "The ancient games started almost 2,800 years ago."
-      },
-      {
-        "level": "medium",
-        "q": "Olympic gold medals are mostly what?",
-        "options": [
-          "Gold",
-          "Brass",
-          "Silver"
-        ],
-        "answer": 2,
-        "fact": "Real gold is only a thin coating on top.",
-        "answer_say": "silver"
-      },
-      {
-        "level": "medium",
-        "q": "Which sport uses a shuttlecock?",
-        "options": [
-          "Tennis",
-          "Badminton",
-          "Squash"
-        ],
-        "answer": 1,
-        "fact": "Top players smash it faster than 200 miles per hour."
-      },
-      {
-        "level": "hard",
-        "q": "Which was once an Olympic sport?",
-        "options": [
-          "Tug of war",
-          "Bowling",
-          "Dodgeball"
-        ],
-        "answer": 0,
-        "fact": "Tug of war was an Olympic event until 1920."
-      }
-    ]
-  },
-  {
-    "theme": "Weather: sky wonders",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "How many colors are in a rainbow?",
-        "options": [
-          "5",
-          "7",
-          "9"
-        ],
-        "answer": 1,
-        "fact": "Isaac Newton chose seven, matching the notes of a scale."
-      },
-      {
-        "level": "easy",
-        "q": "How many sides does a snowflake have?",
-        "options": [
-          "6",
-          "4",
-          "8"
-        ],
-        "answer": 0,
-        "fact": "Water molecules lock together in a six-sided pattern."
-      },
-      {
-        "level": "medium",
-        "q": "Why do we see lightning before thunder?",
-        "options": [
-          "Light is faster",
-          "Thunder is quiet",
-          "Clouds block sound"
-        ],
-        "answer": 0,
-        "fact": "Count the seconds, then divide by five to get miles.",
-        "answer_say": "that light is faster"
-      },
-      {
-        "level": "medium",
-        "q": "How much can a fluffy cloud weigh?",
-        "options": [
-          "A few pounds",
-          "A million pounds",
-          "Nothing"
-        ],
-        "answer": 1,
-        "fact": "The weight is spread over many tiny water drops.",
-        "answer_say": "about a million pounds"
-      },
-      {
-        "level": "hard",
-        "q": "Which continent is the windiest?",
-        "options": [
-          "Africa",
-          "Australia",
-          "Antarctica"
-        ],
-        "answer": 2,
-        "fact": "Cold air pours down its icy slopes at gale speeds."
-      }
-    ]
-  },
-  {
-    "theme": "History: the ancient world",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "In which city is the Colosseum?",
-        "options": [
-          "Athens",
-          "Rome",
-          "Paris"
-        ],
-        "answer": 1,
-        "fact": "It held tens of thousands of cheering fans."
-      },
-      {
-        "level": "easy",
-        "q": "Did Vikings really wear horned helmets?",
-        "options": [
-          "Yes",
-          "Only chiefs",
-          "No"
-        ],
-        "answer": 2,
-        "fact": "The idea came from 19th century opera costumes."
-      },
-      {
-        "level": "medium",
-        "q": "Which Seven Wonder still stands?",
-        "options": [
-          "Great Pyramid",
-          "Colossus of Rhodes",
-          "Lighthouse of Alexandria"
-        ],
-        "answer": 0,
-        "fact": "It is more than 4,500 years old.",
-        "answer_say": "the Great Pyramid"
-      },
-      {
-        "level": "medium",
-        "q": "The Rosetta Stone helped crack what?",
-        "options": [
-          "Viking runes",
-          "Egyptian hieroglyphs",
-          "Chinese writing"
-        ],
-        "answer": 1,
-        "fact": "It repeats one message in three kinds of writing."
-      },
-      {
-        "level": "hard",
-        "q": "Which is older?",
-        "options": [
-          "Great Pyramid",
-          "The Colosseum",
-          "Stonehenge"
-        ],
-        "answer": 2,
-        "fact": "Stonehenge's first ditch was dug about 5,000 years ago.",
-        "answer_say": "Stonehenge"
-      }
-    ]
-  },
-  {
-    "theme": "Movies: behind the scenes",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What color is Shrek?",
-        "options": [
-          "Green",
-          "Blue",
-          "Orange"
-        ],
-        "answer": 0,
-        "fact": "Shrek won the first ever Oscar for best animated film."
-      },
-      {
-        "level": "easy",
-        "q": "What kind of fish is Nemo?",
-        "options": [
-          "Goldfish",
-          "Clownfish",
-          "Pufferfish"
-        ],
-        "answer": 1,
-        "fact": "Clownfish live safely among stinging sea anemones."
-      },
-      {
-        "level": "medium",
-        "q": "Who first voiced Mickey Mouse?",
-        "options": [
-          "Bing Crosby",
-          "Charlie Chaplin",
-          "Walt Disney"
-        ],
-        "answer": 2,
-        "fact": "Walt did the voice himself until 1947."
-      },
-      {
-        "level": "medium",
-        "q": "Chewbacca's voice began as which animal?",
-        "options": [
-          "Bear",
-          "Dog",
-          "Cow"
-        ],
-        "answer": 0,
-        "fact": "Sound designer Ben Burtt also mixed in lion and walrus."
-      },
-      {
-        "level": "hard",
-        "q": "How many Oscars did Titanic win?",
-        "options": [
-          "5",
-          "11",
-          "14"
-        ],
-        "answer": 1,
-        "fact": "It tied the record for the most Oscars ever won."
-      }
-    ]
-  },
-  {
-    "theme": "Technology: internet",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What does the www stand for?",
-        "options": [
-          "World Wide Web",
-          "Wide Web World",
-          "Web World Wire"
-        ],
-        "answer": 0,
-        "fact": "Tim Berners-Lee dreamed up the web in 1989.",
-        "q_say": "What does the W W W stand for?"
-      },
-      {
-        "level": "easy",
-        "q": "Which company makes the iPhone?",
-        "options": [
-          "Apple",
-          "Google",
-          "Sony"
-        ],
-        "answer": 0,
-        "fact": "The first iPhone came out in 2007."
-      },
-      {
-        "level": "medium",
-        "q": "How many bits are in a byte?",
-        "options": [
-          "4",
-          "16",
-          "8"
-        ],
-        "answer": 2,
-        "fact": "A bit is a single one or zero."
-      },
-      {
-        "level": "medium",
-        "q": "The first YouTube video showed what?",
-        "options": [
-          "A zoo",
-          "A beach",
-          "A kitchen"
-        ],
-        "answer": 0,
-        "fact": "It was uploaded in 2005 and lasts only 19 seconds.",
-        "answer_say": "a zoo"
-      },
-      {
-        "level": "hard",
-        "q": "The first webcam watched what?",
-        "options": [
-          "A parking lot",
-          "A coffee pot",
-          "A fish tank"
-        ],
-        "answer": 1,
-        "fact": "Cambridge researchers checked it to see if coffee was ready.",
-        "answer_say": "a coffee pot"
-      }
-    ]
-  },
-  {
-    "theme": "Animals: record breakers",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which animal is the tallest?",
-        "options": [
-          "Giraffe",
-          "Elephant",
-          "Ostrich"
-        ],
-        "answer": 0,
-        "fact": "A giraffe has seven neck bones, the same as you.",
-        "answer_say": "the giraffe"
-      },
-      {
-        "level": "easy",
-        "q": "Which is the biggest bird?",
-        "options": [
-          "Eagle",
-          "Ostrich",
-          "Albatross"
-        ],
-        "answer": 1,
-        "fact": "An ostrich can run about 40 miles per hour.",
-        "answer_say": "the ostrich"
-      },
-      {
-        "level": "medium",
-        "q": "Which animal has the biggest eyes?",
-        "options": [
-          "Owl",
-          "Blue whale",
-          "Giant squid"
-        ],
-        "answer": 2,
-        "fact": "Giant squid eyes are as big as basketballs.",
-        "answer_say": "the giant squid"
-      },
-      {
-        "level": "medium",
-        "q": "Which shark can live 400 years?",
-        "options": [
-          "Greenland shark",
-          "Great white",
-          "Tiger shark"
-        ],
-        "answer": 0,
-        "fact": "These sharks may take 150 years to become adults.",
-        "answer_say": "the Greenland shark"
-      },
-      {
-        "level": "hard",
-        "q": "Longest pregnancy of any land animal?",
-        "options": [
-          "Rhino",
-          "Giraffe",
-          "Elephant"
-        ],
-        "answer": 2,
-        "fact": "An elephant mom carries her baby for about 22 months.",
-        "answer_say": "the elephant"
-      }
-    ]
-  },
-  {
-    "theme": "Science: elements",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What gas do we breathe to live?",
-        "options": [
-          "Oxygen",
-          "Helium",
-          "Neon"
-        ],
-        "answer": 0,
-        "fact": "Plants and algae make the oxygen we breathe."
-      },
-      {
-        "level": "easy",
-        "q": "What keeps you on the ground?",
-        "options": [
-          "Magnetism",
-          "Gravity",
-          "Wind"
-        ],
-        "answer": 1,
-        "fact": "Gravity pulls everything toward the center of Earth."
-      },
-      {
-        "level": "medium",
-        "q": "Which metal is liquid at room temperature?",
-        "options": [
-          "Iron",
-          "Copper",
-          "Mercury"
-        ],
-        "answer": 2,
-        "fact": "Its old name was quicksilver."
-      },
-      {
-        "level": "medium",
-        "q": "What gas is most of the air we breathe?",
-        "options": [
-          "Oxygen",
-          "Nitrogen",
-          "Hydrogen"
-        ],
-        "answer": 1,
-        "fact": "Nitrogen makes up about 78 percent of the air."
-      },
-      {
-        "level": "hard",
-        "q": "Diamonds and pencil lead share what?",
-        "options": [
-          "Carbon",
-          "Silver",
-          "Glass"
-        ],
-        "answer": 0,
-        "fact": "Only the atom pattern differs, so one is soft and one is hard."
-      }
-    ]
-  },
-  {
-    "theme": "Art: famous painters",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Who painted Starry Night?",
-        "options": [
-          "Van Gogh",
-          "Monet",
-          "Picasso"
-        ],
-        "answer": 0,
-        "fact": "Van Gogh made all his famous art in about ten years."
-      },
-      {
-        "level": "easy",
-        "q": "Who painted the Mona Lisa?",
-        "options": [
-          "Michelangelo",
-          "Leonardo da Vinci",
-          "Raphael"
-        ],
-        "answer": 1,
-        "fact": "Leonardo also designed flying machines and bridges."
-      },
-      {
-        "level": "medium",
-        "q": "Picasso helped start which style?",
-        "options": [
-          "Pop art",
-          "Realism",
-          "Cubism"
-        ],
-        "answer": 2,
-        "fact": "Cubism shows objects from many sides at once.",
-        "answer_say": "cubism"
-      },
-      {
-        "level": "medium",
-        "q": "Who painted famous soup cans?",
-        "options": [
-          "Andy Warhol",
-          "Salvador Dali",
-          "Frida Kahlo"
-        ],
-        "answer": 0,
-        "fact": "He painted 32 cans, one for each soup flavor."
-      },
-      {
-        "level": "hard",
-        "q": "Who painted Girl with a Pearl Earring?",
-        "options": [
-          "Rembrandt",
-          "Monet",
-          "Vermeer"
-        ],
-        "answer": 2,
-        "fact": "Vermeer left behind only about 35 known paintings."
-      }
-    ]
-  },
-  {
-    "theme": "Food: around the world",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which country is pizza from?",
-        "options": [
-          "Italy",
-          "Greece",
-          "Spain"
-        ],
-        "answer": 0,
-        "fact": "Modern pizza was born in Naples."
-      },
-      {
-        "level": "easy",
-        "q": "Sushi comes from which country?",
-        "options": [
-          "China",
-          "Japan",
-          "Thailand"
-        ],
-        "answer": 1,
-        "fact": "Sushi began as a way to keep fish fresh in rice."
-      },
-      {
-        "level": "medium",
-        "q": "Tofu is made from what?",
-        "options": [
-          "Rice",
-          "Chickpeas",
-          "Soybeans"
-        ],
-        "answer": 2,
-        "fact": "People in China have made tofu for over 2,000 years."
-      },
-      {
-        "level": "medium",
-        "q": "Guacamole is mostly made from what?",
-        "options": [
-          "Avocado",
-          "Cucumber",
-          "Lime"
-        ],
-        "answer": 0,
-        "fact": "The word comes from an old Aztec word."
-      },
-      {
-        "level": "hard",
-        "q": "How are square watermelons made?",
-        "options": [
-          "Cut with a saw",
-          "Grown in boxes",
-          "Pressed after picking"
-        ],
-        "answer": 1,
-        "fact": "Square ones stack easily, which saves space in shipping.",
-        "answer_say": "grown in boxes"
-      }
-    ]
-  },
-  {
-    "theme": "US states: fun facts",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "Which is the Sunshine State?",
-        "options": [
-          "Florida",
-          "Texas",
-          "Nevada"
-        ],
-        "answer": 0,
-        "fact": "Rockets launch from Florida's Space Coast."
-      },
-      {
-        "level": "easy",
-        "q": "Which state has the Grand Canyon?",
-        "options": [
-          "Utah",
-          "Arizona",
-          "Colorado"
-        ],
-        "answer": 1,
-        "fact": "The canyon is about a mile deep in places."
-      },
-      {
-        "level": "medium",
-        "q": "What is California's capital?",
-        "options": [
-          "Los Angeles",
-          "San Francisco",
-          "Sacramento"
-        ],
-        "answer": 2,
-        "fact": "Sacramento has been the capital since 1854."
-      },
-      {
-        "level": "medium",
-        "q": "Mount Rushmore is in which state?",
-        "options": [
-          "South Dakota",
-          "Montana",
-          "Wyoming"
-        ],
-        "answer": 0,
-        "fact": "Carving took 14 years, from 1927 to 1941."
-      },
-      {
-        "level": "hard",
-        "q": "Which state name has one syllable?",
-        "options": [
-          "Utah",
-          "Maine",
-          "Iowa"
-        ],
-        "answer": 1,
-        "fact": "Maine catches most of America's lobster."
-      }
-    ]
-  },
-  {
-    "theme": "Space: Earth and Moon",
-    "questions": [
-      {
-        "level": "easy",
-        "q": "What causes ocean tides?",
-        "options": [
-          "The Moon",
-          "Wind",
-          "Fish"
-        ],
-        "answer": 0,
-        "fact": "The Moon's gravity tugs the oceans into a bulge.",
-        "answer_say": "the Moon"
-      },
-      {
-        "level": "easy",
-        "q": "Who first walked on the Moon?",
-        "options": [
-          "Buzz Aldrin",
-          "Yuri Gagarin",
-          "Neil Armstrong"
-        ],
-        "answer": 2,
-        "fact": "He stepped onto the Moon in 1969."
-      },
-      {
-        "level": "medium",
-        "q": "Driving to the Moon would take about?",
-        "options": [
-          "5 days",
-          "5 months",
-          "5 years"
-        ],
-        "answer": 1,
-        "fact": "The Moon is about 240,000 miles from Earth."
-      },
-      {
-        "level": "medium",
-        "q": "How many Earths fit inside the Sun?",
-        "options": [
-          "1,000",
-          "1.3 million",
-          "1 billion"
-        ],
-        "answer": 1,
-        "fact": "The Sun holds more than a million Earths.",
-        "answer_say": "one point three million"
-      },
-      {
-        "level": "hard",
-        "q": "Which planet isn't named for a god?",
-        "options": [
-          "Mars",
-          "Venus",
-          "Earth"
-        ],
-        "answer": 2,
-        "fact": "Earth's name comes from old words for ground.",
-        "answer_say": "Earth"
-      }
-    ]
-  }
+ {
+  "theme": "Animal",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many hearts does an octopus have?",
+    "options": [
+     "1",
+     "2",
+     "3"
+    ],
+    "answer": 2,
+    "fact": "Two pump blood to the gills, one pumps it to the rest of the body."
+   },
+   {
+    "level": "easy",
+    "q": "What is a group of crows called?",
+    "options": [
+     "A pack",
+     "A murder",
+     "A choir"
+    ],
+    "answer": 1,
+    "fact": "A group of owls is called a parliament.",
+    "answer_say": "a murder"
+   },
+   {
+    "level": "medium",
+    "q": "What color is a polar bear's skin?",
+    "options": [
+     "White",
+     "Pink",
+     "Black"
+    ],
+    "answer": 2,
+    "fact": "Black skin soaks up heat. The fur isn't white either, it's see-through.",
+    "answer_say": "black"
+   },
+   {
+    "level": "medium",
+    "q": "Which of these animals can't jump?",
+    "options": [
+     "Kangaroo",
+     "Elephant",
+     "Giraffe"
+    ],
+    "answer": 1,
+    "fact": "An elephant always keeps at least one foot on the ground."
+   },
+   {
+    "level": "hard",
+    "q": "Which animal has fingerprints like ours?",
+    "options": [
+     "Koala",
+     "Dog",
+     "Dolphin"
+    ],
+    "answer": 0,
+    "fact": "Koala prints are so close to human ones they're hard to tell apart.",
+    "answer_say": "the koala"
+   }
+  ]
+ },
+ {
+  "theme": "Space",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which planet is closest to the Sun?",
+    "options": [
+     "Venus",
+     "Mercury",
+     "Mars"
+    ],
+    "answer": 1,
+    "fact": "A year on Mercury lasts just 88 Earth days."
+   },
+   {
+    "level": "easy",
+    "q": "How long does sunlight take to reach Earth?",
+    "options": [
+     "8 seconds",
+     "8 minutes",
+     "8 hours"
+    ],
+    "answer": 1,
+    "fact": "So the Sun you see is about 8 minutes old."
+   },
+   {
+    "level": "medium",
+    "q": "Which planet has the most moons?",
+    "options": [
+     "Jupiter",
+     "Saturn",
+     "Neptune"
+    ],
+    "answer": 1,
+    "fact": "Saturn has well over 200 known moons."
+   },
+   {
+    "level": "medium",
+    "q": "What is the hottest planet?",
+    "options": [
+     "Mercury",
+     "Venus",
+     "Mars"
+    ],
+    "answer": 1,
+    "fact": "Its thick clouds trap heat, even though Mercury is closer to the Sun."
+   },
+   {
+    "level": "hard",
+    "q": "On Venus, which one is longer?",
+    "options": [
+     "A day",
+     "A year",
+     "They're equal"
+    ],
+    "answer": 0,
+    "fact": "One Venus day is about 243 Earth days. Its year is about 225.",
+    "answer_say": "a day"
+   }
+  ]
+ },
+ {
+  "theme": "Human body",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many bones does an adult have?",
+    "options": [
+     "106",
+     "206",
+     "306"
+    ],
+    "answer": 1,
+    "fact": "Babies are born with around 300. Some fuse together as you grow."
+   },
+   {
+    "level": "easy",
+    "q": "What is the largest organ in your body?",
+    "options": [
+     "Liver",
+     "Brain",
+     "Skin"
+    ],
+    "answer": 2,
+    "fact": "Your skin is constantly shedding and replacing itself.",
+    "answer_say": "skin"
+   },
+   {
+    "level": "medium",
+    "q": "Which organ can regrow itself?",
+    "options": [
+     "Heart",
+     "Liver",
+     "Lungs"
+    ],
+    "answer": 1,
+    "fact": "A liver can grow back even after a large part of it is removed.",
+    "answer_say": "the liver"
+   },
+   {
+    "level": "medium",
+    "q": "Where is the smallest bone in your body?",
+    "options": [
+     "Ear",
+     "Toe",
+     "Nose"
+    ],
+    "answer": 0,
+    "fact": "The stapes in your ear is about the size of a grain of rice.",
+    "answer_say": "the ear"
+   },
+   {
+    "level": "hard",
+    "q": "How many times does your heart beat a day?",
+    "options": [
+     "10,000",
+     "100,000",
+     "1,000,000"
+    ],
+    "answer": 1,
+    "fact": "That's over 35 million beats a year."
+   }
+  ]
+ },
+ {
+  "theme": "Geography",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is the largest ocean on Earth?",
+    "options": [
+     "Atlantic",
+     "Pacific",
+     "Indian"
+    ],
+    "answer": 1,
+    "fact": "The Pacific is bigger than all the land on Earth combined.",
+    "answer_say": "the Pacific"
+   },
+   {
+    "level": "easy",
+    "q": "What is the capital of Australia?",
+    "options": [
+     "Sydney",
+     "Melbourne",
+     "Canberra"
+    ],
+    "answer": 2,
+    "fact": "Canberra was built as a compromise between Sydney and Melbourne."
+   },
+   {
+    "level": "medium",
+    "q": "What is the largest desert on Earth?",
+    "options": [
+     "Sahara",
+     "Antarctica",
+     "Gobi"
+    ],
+    "answer": 1,
+    "fact": "A desert is about low rainfall, not heat."
+   },
+   {
+    "level": "medium",
+    "q": "Which country has the most islands?",
+    "options": [
+     "Indonesia",
+     "Sweden",
+     "Philippines"
+    ],
+    "answer": 1,
+    "fact": "Sweden has over 200,000 islands. Most have nobody living on them."
+   },
+   {
+    "level": "hard",
+    "q": "Which country has the most time zones?",
+    "options": [
+     "Russia",
+     "USA",
+     "France"
+    ],
+    "answer": 2,
+    "fact": "France has 12 thanks to its territories spread around the world."
+   }
+  ]
+ },
+ {
+  "theme": "Food",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which nut is used to make marzipan?",
+    "options": [
+     "Almond",
+     "Cashew",
+     "Peanut"
+    ],
+    "answer": 0,
+    "fact": "Marzipan is mostly ground almonds and sugar.",
+    "answer_say": "almond"
+   },
+   {
+    "level": "easy",
+    "q": "Which of these is a berry?",
+    "options": [
+     "Strawberry",
+     "Banana",
+     "Raspberry"
+    ],
+    "answer": 1,
+    "fact": "Bananas count as berries. Strawberries and raspberries don't.",
+    "answer_say": "a banana"
+   },
+   {
+    "level": "medium",
+    "q": "Peanuts aren't nuts. What are they?",
+    "options": [
+     "Legumes",
+     "Seeds",
+     "Berries"
+    ],
+    "answer": 0,
+    "fact": "Peanuts are in the same family as beans and peas.",
+    "answer_say": "legumes"
+   },
+   {
+    "level": "medium",
+    "q": "Which food can last for thousands of years?",
+    "options": [
+     "Rice",
+     "Honey",
+     "Peanut butter"
+    ],
+    "answer": 1,
+    "fact": "Archaeologists have found honey in ancient Egyptian tombs.",
+    "answer_say": "honey"
+   },
+   {
+    "level": "hard",
+    "q": "What color were carrots originally?",
+    "options": [
+     "Orange",
+     "Purple",
+     "Red"
+    ],
+    "answer": 1,
+    "fact": "Orange carrots took off in the Netherlands in the 1600s.",
+    "answer_say": "purple"
+   }
+  ]
+ },
+ {
+  "theme": "History",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which famous ship sank in 1912?",
+    "options": [
+     "Titanic",
+     "Lusitania",
+     "Mayflower"
+    ],
+    "answer": 0,
+    "fact": "Titanic sank on her very first voyage.",
+    "answer_say": "the Titanic"
+   },
+   {
+    "level": "easy",
+    "q": "Which was invented first?",
+    "options": [
+     "Fax machine",
+     "Telephone",
+     "Light bulb"
+    ],
+    "answer": 0,
+    "fact": "An early fax was patented in 1843, decades before the telephone.",
+    "answer_say": "the fax machine"
+   },
+   {
+    "level": "medium",
+    "q": "How long did the shortest war ever last?",
+    "options": [
+     "38 minutes",
+     "3 days",
+     "2 weeks"
+    ],
+    "answer": 0,
+    "fact": "That was the Anglo-Zanzibar War of 1896."
+   },
+   {
+    "level": "medium",
+    "q": "Cleopatra lived closer in time to which event?",
+    "options": [
+     "The pyramids",
+     "The Moon landing",
+     "Both equal"
+    ],
+    "answer": 1,
+    "fact": "The Great Pyramid was already about 2,500 years old when she was born.",
+    "answer_say": "the Moon landing"
+   },
+   {
+    "level": "hard",
+    "q": "Oxford is older than which empire?",
+    "options": [
+     "Roman",
+     "Aztec",
+     "Ancient Egypt"
+    ],
+    "answer": 1,
+    "fact": "Oxford was teaching 200+ years before the Aztec capital existed.",
+    "answer_say": "the Aztec Empire"
+   }
+  ]
+ },
+ {
+  "theme": "Random",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many keys are on a standard piano?",
+    "options": [
+     "76",
+     "88",
+     "96"
+    ],
+    "answer": 1,
+    "fact": "52 white keys and 36 black ones."
+   },
+   {
+    "level": "easy",
+    "q": "What is the most spoken native language?",
+    "options": [
+     "English",
+     "Spanish",
+     "Mandarin"
+    ],
+    "answer": 2,
+    "fact": "English is the most spoken overall once you count learners."
+   },
+   {
+    "level": "medium",
+    "q": "Which letter isn't in any US state name?",
+    "options": [
+     "Q",
+     "Z",
+     "X"
+    ],
+    "answer": 0,
+    "fact": "Z is in Arizona and X is in Texas."
+   },
+   {
+    "level": "medium",
+    "q": "What was the first toy advertised on TV?",
+    "options": [
+     "Barbie",
+     "Mr. Potato Head",
+     "Slinky"
+    ],
+    "answer": 1,
+    "fact": "Mr. Potato Head hit TV screens in 1952."
+   },
+   {
+    "level": "hard",
+    "q": "Which sport has been played on the Moon?",
+    "options": [
+     "Golf",
+     "Baseball",
+     "Frisbee"
+    ],
+    "answer": 0,
+    "fact": "Astronaut Alan Shepard hit two golf balls on the Moon in 1971.",
+    "answer_say": "golf"
+   }
+  ]
+ },
+ {
+  "theme": "Sports",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many players start for each soccer team?",
+    "options": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "fact": "That includes the goalkeeper."
+   },
+   {
+    "level": "easy",
+    "q": "How long is a marathon?",
+    "options": [
+     "13.1 miles",
+     "26.2 miles",
+     "31 miles"
+    ],
+    "answer": 1,
+    "fact": "That's about 42.2 kilometers."
+   },
+   {
+    "level": "medium",
+    "q": "Why do golf balls have dimples?",
+    "options": [
+     "To fly farther",
+     "To look cool",
+     "To weigh less"
+    ],
+    "answer": 0,
+    "fact": "Dimples cut drag, so a ball can fly about twice as far.",
+    "answer_say": "to fly farther"
+   },
+   {
+    "level": "medium",
+    "q": "Which country has won the most World Cups?",
+    "options": [
+     "Germany",
+     "Brazil",
+     "Italy"
+    ],
+    "answer": 1,
+    "fact": "Brazil has won the men's World Cup five times."
+   },
+   {
+    "level": "hard",
+    "q": "What were the first basketball hoops?",
+    "options": [
+     "Peach baskets",
+     "Metal rings",
+     "Fishing nets"
+    ],
+    "answer": 0,
+    "fact": "Someone had to climb up and get the ball out after every basket.",
+    "answer_say": "peach baskets"
+   }
+  ]
+ },
+ {
+  "theme": "Ocean",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is the largest animal alive today?",
+    "options": [
+     "Whale shark",
+     "Blue whale",
+     "Giant squid"
+    ],
+    "answer": 1,
+    "fact": "Its tongue alone can weigh as much as an elephant.",
+    "answer_say": "the blue whale"
+   },
+   {
+    "level": "easy",
+    "q": "How many arms does a starfish usually have?",
+    "options": [
+     "3",
+     "5",
+     "8"
+    ],
+    "answer": 1,
+    "fact": "One Antarctic starfish can grow up to 50 arms."
+   },
+   {
+    "level": "medium",
+    "q": "How much of Earth is ocean?",
+    "options": [
+     "About 30%",
+     "About 50%",
+     "About 70%"
+    ],
+    "answer": 2,
+    "fact": "We've seen less than 0.001% of the deep seafloor.",
+    "answer_say": "about seventy percent",
+    "fact_say": "We've seen less than one thousandth of a percent of the deep seafloor."
+   },
+   {
+    "level": "medium",
+    "q": "In which animal does the dad give birth?",
+    "options": [
+     "Seahorse",
+     "Clownfish",
+     "Octopus"
+    ],
+    "answer": 0,
+    "fact": "Seahorse dads carry the eggs in a pouch until they hatch.",
+    "answer_say": "the seahorse"
+   },
+   {
+    "level": "hard",
+    "q": "How deep is the deepest part of the ocean?",
+    "options": [
+     "About 4 kilometers",
+     "About 11 kilometers",
+     "About 25 kilometers"
+    ],
+    "answer": 1,
+    "fact": "Mount Everest would fit inside with about 2 kilometers to spare.",
+    "answer_say": "about eleven kilometers"
+   }
+  ]
+ },
+ {
+  "theme": "Dinosaurs",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which dinosaur had three horns?",
+    "options": [
+     "Stegosaurus",
+     "Triceratops",
+     "Allosaurus"
+    ],
+    "answer": 1,
+    "fact": "Its name means three-horned face.",
+    "answer_say": "Triceratops"
+   },
+   {
+    "level": "easy",
+    "q": "Which dinosaur had plates on its back?",
+    "options": [
+     "Stegosaurus",
+     "Velociraptor",
+     "Brachiosaurus"
+    ],
+    "answer": 0,
+    "fact": "Its name means roof lizard.",
+    "answer_say": "Stegosaurus"
+   },
+   {
+    "level": "medium",
+    "q": "Which animals are living dinosaurs?",
+    "options": [
+     "Crocodiles",
+     "Birds",
+     "Lizards"
+    ],
+    "answer": 1,
+    "fact": "Birds evolved from small feathered dinosaurs.",
+    "answer_say": "birds"
+   },
+   {
+    "level": "medium",
+    "q": "T. rex lived closer in time to whom?",
+    "options": [
+     "Stegosaurus",
+     "Humans",
+     "They're equal"
+    ],
+    "answer": 1,
+    "fact": "Stegosaurus vanished about 80 million years before T. rex.",
+    "q_say": "Tyrannosaurus rex lived closer in time to whom?",
+    "answer_say": "humans",
+    "fact_say": "Stegosaurus vanished about eighty million years before Tyrannosaurus rex."
+   },
+   {
+    "level": "hard",
+    "q": "What is fossil dinosaur poop called?",
+    "options": [
+     "Fossilites",
+     "Dung stones",
+     "Coprolites"
+    ],
+    "answer": 2,
+    "fact": "Scientists study it to learn what dinosaurs ate.",
+    "answer_say": "coprolites"
+   }
+  ]
+ },
+ {
+  "theme": "Inventions",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which tool always points north?",
+    "options": [
+     "Clock",
+     "Compass",
+     "Ruler"
+    ],
+    "answer": 1,
+    "fact": "Compasses were first used in ancient China.",
+    "answer_say": "the compass"
+   },
+   {
+    "level": "easy",
+    "q": "What did the Wright brothers build?",
+    "options": [
+     "Submarine",
+     "Airplane",
+     "Car"
+    ],
+    "answer": 1,
+    "fact": "Their first flight in 1903 lasted 12 seconds.",
+    "answer_say": "an airplane",
+    "fact_say": "Their first flight in nineteen oh three lasted twelve seconds."
+   },
+   {
+    "level": "medium",
+    "q": "A candy bar led to which invention?",
+    "options": [
+     "Refrigerator",
+     "Toaster",
+     "Microwave"
+    ],
+    "answer": 2,
+    "fact": "A melted candy bar gave an engineer the idea.",
+    "answer_say": "the microwave"
+   },
+   {
+    "level": "medium",
+    "q": "What was the first item scanned by barcode?",
+    "options": [
+     "Soda",
+     "Chewing gum",
+     "Cereal"
+    ],
+    "answer": 1,
+    "fact": "A pack of gum was scanned in Ohio in 1974.",
+    "answer_say": "chewing gum",
+    "fact_say": "A pack of gum was scanned in Ohio in nineteen seventy four."
+   },
+   {
+    "level": "hard",
+    "q": "How old was the Popsicle's inventor?",
+    "options": [
+     "25 years old",
+     "40 years old",
+     "11 years old"
+    ],
+    "answer": 2,
+    "fact": "He left soda with a stick outside on a cold night.",
+    "answer_say": "eleven years old"
+   }
+  ]
+ },
+ {
+  "theme": "Weather",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What falls from storms as balls of ice?",
+    "options": [
+     "Fog",
+     "Hail",
+     "Dew"
+    ],
+    "answer": 1,
+    "fact": "Some hailstones grow as big as softballs.",
+    "answer_say": "hail"
+   },
+   {
+    "level": "easy",
+    "q": "What is the middle of a hurricane called?",
+    "options": [
+     "The eye",
+     "The core",
+     "The heart"
+    ],
+    "answer": 0,
+    "fact": "The eye is calm, but the winds around it are fierce.",
+    "answer_say": "the eye"
+   },
+   {
+    "level": "medium",
+    "q": "Is lightning hotter than the Sun's surface?",
+    "options": [
+     "No, much cooler",
+     "Yes, about 5 times",
+     "Exactly the same"
+    ],
+    "answer": 1,
+    "fact": "A bolt can reach about 50,000 degrees Fahrenheit.",
+    "answer_say": "about five times hotter",
+    "fact_say": "A bolt can reach about fifty thousand degrees Fahrenheit."
+   },
+   {
+    "level": "medium",
+    "q": "Which cloud word means rain?",
+    "options": [
+     "Cirrus",
+     "Cumulus",
+     "Nimbus"
+    ],
+    "answer": 2,
+    "fact": "Nimbus is Latin for rain. Cumulus means heap.",
+    "answer_say": "nimbus"
+   },
+   {
+    "level": "hard",
+    "q": "Where do Celsius and Fahrenheit match?",
+    "options": [
+     "0 degrees",
+     "-20 degrees",
+     "-40 degrees"
+    ],
+    "answer": 2,
+    "fact": "At minus 40, both scales show the same number.",
+    "answer_say": "minus forty degrees",
+    "fact_say": "At minus forty, both scales show the same number."
+   }
+  ]
+ },
+ {
+  "theme": "Music",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many strings does a guitar have?",
+    "options": [
+     "4",
+     "6",
+     "8"
+    ],
+    "answer": 1,
+    "fact": "A bass guitar usually has just four.",
+    "q_say": "How many strings does a standard guitar have?"
+   },
+   {
+    "level": "easy",
+    "q": "A trumpet belongs to which family?",
+    "options": [
+     "Woodwind",
+     "Strings",
+     "Brass"
+    ],
+    "answer": 2,
+    "fact": "Brass players make sound by buzzing their lips.",
+    "answer_say": "brass"
+   },
+   {
+    "level": "medium",
+    "q": "A Stradivarius is what instrument?",
+    "options": [
+     "Violin",
+     "Flute",
+     "Trumpet"
+    ],
+    "answer": 0,
+    "fact": "Antonio Stradivari made them in Italy around 1700.",
+    "answer_say": "the violin",
+    "fact_say": "Antonio Stradivari made them in Italy around seventeen hundred."
+   },
+   {
+    "level": "medium",
+    "q": "Which composer kept writing while deaf?",
+    "options": [
+     "Mozart",
+     "Bach",
+     "Beethoven"
+    ],
+    "answer": 2,
+    "fact": "Beethoven kept composing even as he lost his hearing."
+   },
+   {
+    "level": "hard",
+    "q": "The oldest instruments ever found are?",
+    "options": [
+     "Drums",
+     "Flutes",
+     "Harps"
+    ],
+    "answer": 1,
+    "fact": "Bone flutes over 40,000 years old were found in Germany.",
+    "answer_say": "flutes",
+    "fact_say": "Bone flutes over forty thousand years old were found in Germany."
+   }
+  ]
+ },
+ {
+  "theme": "Movies",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Whose nose grows when he lies?",
+    "options": [
+     "Pinocchio",
+     "Peter Pan",
+     "Aladdin"
+    ],
+    "answer": 0,
+    "fact": "Pinocchio is a wooden puppet who wants to be a real boy.",
+    "answer_say": "Pinocchio"
+   },
+   {
+    "level": "easy",
+    "q": "What does Simba mean in Swahili?",
+    "options": [
+     "King",
+     "Lion",
+     "Brave"
+    ],
+    "answer": 1,
+    "fact": "Rafiki, the wise baboon, is Swahili for friend.",
+    "answer_say": "lion"
+   },
+   {
+    "level": "medium",
+    "q": "What is an Oscar statue made of?",
+    "options": [
+     "Solid gold",
+     "Gold-plated bronze",
+     "Gold-plated wood"
+    ],
+    "answer": 1,
+    "fact": "It stands 13.5 inches tall and weighs 8.5 pounds.",
+    "answer_say": "gold-plated bronze",
+    "fact_say": "It stands thirteen and a half inches tall and weighs eight and a half pounds."
+   },
+   {
+    "level": "medium",
+    "q": "What made Toy Story a first in 1995?",
+    "options": [
+     "Clay figures",
+     "Puppets",
+     "Computer animation"
+    ],
+    "answer": 2,
+    "fact": "It was the first full-length film made entirely on computers.",
+    "answer_say": "computer animation"
+   },
+   {
+    "level": "hard",
+    "q": "Which animal is in the T. rex roar?",
+    "options": [
+     "Lion",
+     "Tiger",
+     "Bear"
+    ],
+    "answer": 1,
+    "fact": "Sound designers mixed elephant, tiger and alligator noises.",
+    "q_say": "Which animal's sound is in the Jurassic Park T. rex roar?",
+    "answer_say": "the tiger"
+   }
+  ]
+ },
+ {
+  "theme": "Words and language",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which letter is used most in English?",
+    "options": [
+     "A",
+     "T",
+     "E"
+    ],
+    "answer": 2,
+    "fact": "About one in eight letters in English text is an E.",
+    "answer_say": "the letter E"
+   },
+   {
+    "level": "easy",
+    "q": "Racecar is an example of a what?",
+    "options": [
+     "Anagram",
+     "Palindrome",
+     "Acronym"
+    ],
+    "answer": 1,
+    "fact": "A palindrome reads the same forward and backward.",
+    "answer_say": "a palindrome"
+   },
+   {
+    "level": "medium",
+    "q": "How many letters does Hawaiian have?",
+    "options": [
+     "13",
+     "18",
+     "26"
+    ],
+    "answer": 0,
+    "fact": "Hawaiian uses just 13 letters, including five vowels.",
+    "answer_say": "thirteen"
+   },
+   {
+    "level": "medium",
+    "q": "What is the most used word in English?",
+    "options": [
+     "And",
+     "Of",
+     "The"
+    ],
+    "answer": 2,
+    "fact": "Ten tiny words make up about a quarter of English.",
+    "answer_say": "the little word, the"
+   },
+   {
+    "level": "hard",
+    "q": "About how many languages exist today?",
+    "options": [
+     "About 700",
+     "About 7,000",
+     "About 70,000"
+    ],
+    "answer": 1,
+    "fact": "Papua New Guinea alone has over 800 of them.",
+    "answer_say": "about seven thousand"
+   }
+  ]
+ },
+ {
+  "theme": "Technology",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What was the first computer mouse made of?",
+    "options": [
+     "Plastic",
+     "Wood",
+     "Metal"
+    ],
+    "answer": 1,
+    "fact": "Douglas Engelbart's 1964 prototype had a wooden shell.",
+    "answer_say": "wood",
+    "fact_say": "Douglas Engelbart's nineteen sixty four prototype had a wooden shell."
+   },
+   {
+    "level": "easy",
+    "q": "The first computer bug was a real what?",
+    "options": [
+     "Ant",
+     "Spider",
+     "Moth"
+    ],
+    "answer": 2,
+    "fact": "It was taped into a Harvard logbook in 1947.",
+    "answer_say": "a moth",
+    "fact_say": "It was taped into a Harvard logbook in nineteen forty seven."
+   },
+   {
+    "level": "medium",
+    "q": "What does Wi-Fi stand for?",
+    "options": [
+     "Wireless Fidelity",
+     "Wide Frequency",
+     "Nothing"
+    ],
+    "answer": 2,
+    "fact": "A marketing company made up the name Wi-Fi.",
+    "answer_say": "nothing"
+   },
+   {
+    "level": "medium",
+    "q": "What did the first text message say?",
+    "options": [
+     "Hello",
+     "Merry Christmas",
+     "Test"
+    ],
+    "answer": 1,
+    "fact": "It was sent in 1992 from a computer to a phone.",
+    "fact_say": "It was sent in nineteen ninety two from a computer to a phone."
+   },
+   {
+    "level": "hard",
+    "q": "What was the first message sent online?",
+    "options": [
+     "Hello",
+     "Test",
+     "Lo"
+    ],
+    "answer": 2,
+    "fact": "The system crashed after two letters of login.",
+    "answer_say": "Lo"
+   }
+  ]
+ },
+ {
+  "theme": "Art",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Blue plus yellow makes which color?",
+    "options": [
+     "Orange",
+     "Green",
+     "Purple"
+    ],
+    "answer": 1,
+    "fact": "Red plus blue makes purple.",
+    "answer_say": "green"
+   },
+   {
+    "level": "easy",
+    "q": "What do painters mix colors on?",
+    "options": [
+     "Canvas",
+     "Easel",
+     "Palette"
+    ],
+    "answer": 2,
+    "fact": "Many palettes have a thumb hole to hold them.",
+    "answer_say": "a palette"
+   },
+   {
+    "level": "medium",
+    "q": "Which artist painted melting clocks?",
+    "options": [
+     "Picasso",
+     "Salvador Dali",
+     "Monet"
+    ],
+    "answer": 1,
+    "fact": "The painting is called The Persistence of Memory.",
+    "answer_say": "Salvador Dali"
+   },
+   {
+    "level": "medium",
+    "q": "What metal is the Statue of Liberty's skin?",
+    "options": [
+     "Iron",
+     "Copper",
+     "Steel"
+    ],
+    "answer": 1,
+    "fact": "Its copper skin slowly turned green with age.",
+    "q_say": "What metal is the skin of the Statue of Liberty?",
+    "answer_say": "copper"
+   },
+   {
+    "level": "hard",
+    "q": "How tall is the Mona Lisa painting?",
+    "options": [
+     "About 8 feet",
+     "About 15 feet",
+     "About 2.5 feet"
+    ],
+    "answer": 2,
+    "fact": "It's smaller than many people expect.",
+    "answer_say": "about two and a half feet"
+   }
+  ]
+ },
+ {
+  "theme": "World records",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which mountain is tallest above sea level?",
+    "options": [
+     "K2",
+     "Mount Everest",
+     "Kilimanjaro"
+    ],
+    "answer": 1,
+    "fact": "Everest stands about 29,000 feet high.",
+    "answer_say": "Mount Everest",
+    "fact_say": "Everest stands about twenty nine thousand feet high."
+   },
+   {
+    "level": "easy",
+    "q": "What is the fastest land animal?",
+    "options": [
+     "Lion",
+     "Cheetah",
+     "Horse"
+    ],
+    "answer": 1,
+    "fact": "Cheetahs can run over 60 miles per hour.",
+    "answer_say": "the cheetah",
+    "fact_say": "Cheetahs can run over sixty miles per hour."
+   },
+   {
+    "level": "medium",
+    "q": "What is the largest rainforest on Earth?",
+    "options": [
+     "Congo",
+     "Daintree",
+     "Amazon"
+    ],
+    "answer": 2,
+    "fact": "It stretches across nine countries.",
+    "answer_say": "the Amazon"
+   },
+   {
+    "level": "medium",
+    "q": "Which country is largest by area?",
+    "options": [
+     "Canada",
+     "China",
+     "Russia"
+    ],
+    "answer": 2,
+    "fact": "Russia spans 11 time zones.",
+    "answer_say": "Russia",
+    "fact_say": "Russia spans eleven time zones."
+   },
+   {
+    "level": "hard",
+    "q": "Which animal is fastest on Earth?",
+    "options": [
+     "Cheetah",
+     "Peregrine falcon",
+     "Sailfish"
+    ],
+    "answer": 1,
+    "fact": "In a dive, it tops 200 miles per hour.",
+    "answer_say": "the peregrine falcon",
+    "fact_say": "In a dive, it tops two hundred miles per hour."
+   }
+  ]
+ },
+ {
+  "theme": "US states",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which is the largest US state?",
+    "options": [
+     "Texas",
+     "Alaska",
+     "California"
+    ],
+    "answer": 1,
+    "fact": "Alaska is more than twice the size of Texas.",
+    "answer_say": "Alaska"
+   },
+   {
+    "level": "easy",
+    "q": "Which is the smallest US state?",
+    "options": [
+     "Delaware",
+     "Hawaii",
+     "Rhode Island"
+    ],
+    "answer": 2,
+    "fact": "Rhode Island is only about 48 miles long.",
+    "answer_say": "Rhode Island",
+    "fact_say": "Rhode Island is only about forty eight miles long."
+   },
+   {
+    "level": "medium",
+    "q": "Which US state is entirely islands?",
+    "options": [
+     "Hawaii",
+     "Maine",
+     "Florida"
+    ],
+    "answer": 0,
+    "fact": "Hawaii has eight main islands and over 100 small ones.",
+    "answer_say": "Hawaii",
+    "fact_say": "Hawaii has eight main islands and over one hundred small ones."
+   },
+   {
+    "level": "medium",
+    "q": "Which state has a town called Boring?",
+    "options": [
+     "Nevada",
+     "Vermont",
+     "Oregon"
+    ],
+    "answer": 2,
+    "fact": "Boring, Oregon is a sister town of Dull, Scotland.",
+    "answer_say": "Oregon"
+   },
+   {
+    "level": "hard",
+    "q": "Which state's flag isn't a rectangle?",
+    "options": [
+     "Texas",
+     "Ohio",
+     "Maine"
+    ],
+    "answer": 1,
+    "fact": "Ohio's flag is shaped like a pointed swallowtail.",
+    "answer_say": "Ohio"
+   }
+  ]
+ },
+ {
+  "theme": "Animals: weird babies",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is a baby kangaroo called?",
+    "options": [
+     "Joey",
+     "Pup",
+     "Kit"
+    ],
+    "answer": 0,
+    "fact": "A newborn joey is only the size of a jellybean."
+   },
+   {
+    "level": "easy",
+    "q": "What is a baby goat called?",
+    "options": [
+     "Calf",
+     "Kid",
+     "Cub"
+    ],
+    "answer": 1,
+    "fact": "Baby goats can walk within hours of being born."
+   },
+   {
+    "level": "medium",
+    "q": "What is a baby bat called?",
+    "options": [
+     "Chick",
+     "Joey",
+     "Pup"
+    ],
+    "answer": 2,
+    "fact": "Mother bats find their pup among thousands by sound."
+   },
+   {
+    "level": "medium",
+    "q": "What is a baby hedgehog called?",
+    "options": [
+     "Hoglet",
+     "Spikelet",
+     "Pup"
+    ],
+    "answer": 0,
+    "fact": "Hoglets are born with soft spines hidden under the skin."
+   },
+   {
+    "level": "hard",
+    "q": "What is a baby echidna called?",
+    "options": [
+     "Joey",
+     "Puggle",
+     "Pouchling"
+    ],
+    "answer": 1,
+    "fact": "Echidnas are mammals that lay eggs.",
+    "answer_say": "a puggle"
+   }
+  ]
+ },
+ {
+  "theme": "Space: moons and planets",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many moons does Earth have?",
+    "options": [
+     "1",
+     "2",
+     "0"
+    ],
+    "answer": 0,
+    "fact": "Mars has two tiny moons, Phobos and Deimos."
+   },
+   {
+    "level": "easy",
+    "q": "Which planet is called the Red Planet?",
+    "options": [
+     "Venus",
+     "Mars",
+     "Jupiter"
+    ],
+    "answer": 1,
+    "fact": "Its dust is full of rusty iron, which makes it red."
+   },
+   {
+    "level": "medium",
+    "q": "Moon gravity compared to Earth's?",
+    "options": [
+     "The same",
+     "About half",
+     "About one sixth"
+    ],
+    "answer": 2,
+    "fact": "You would weigh only a sixth of your normal weight.",
+    "answer_say": "about one sixth"
+   },
+   {
+    "level": "medium",
+    "q": "Which planet spins on its side?",
+    "options": [
+     "Uranus",
+     "Neptune",
+     "Saturn"
+    ],
+    "answer": 0,
+    "fact": "Uranus is tilted about 98 degrees, so it rolls around the Sun."
+   },
+   {
+    "level": "hard",
+    "q": "What is the largest moon we know of?",
+    "options": [
+     "Titan",
+     "Ganymede",
+     "Our Moon"
+    ],
+    "answer": 1,
+    "fact": "Ganymede is even bigger than the planet Mercury.",
+    "answer_say": "Ganymede"
+   }
+  ]
+ },
+ {
+  "theme": "Human body: senses",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which body part helps you balance?",
+    "options": [
+     "Inner ear",
+     "Nose",
+     "Elbow"
+    ],
+    "answer": 0,
+    "fact": "Fluid in your inner ear tells your brain which way is up.",
+    "answer_say": "the inner ear"
+   },
+   {
+    "level": "easy",
+    "q": "Which part of the eye lets in light?",
+    "options": [
+     "Eyelash",
+     "Pupil",
+     "Eyebrow"
+    ],
+    "answer": 1,
+    "fact": "Your pupils widen in the dark to let in more light.",
+    "answer_say": "the pupil"
+   },
+   {
+    "level": "medium",
+    "q": "What causes goosebumps?",
+    "options": [
+     "Frozen sweat",
+     "Tiny hair muscles",
+     "Blood clots"
+    ],
+    "answer": 1,
+    "fact": "They once puffed up our fur to keep us warm.",
+    "answer_say": "tiny hair muscles"
+   },
+   {
+    "level": "medium",
+    "q": "How often do you blink per minute?",
+    "options": [
+     "About 3",
+     "About 60",
+     "About 15"
+    ],
+    "answer": 2,
+    "fact": "That adds up to over ten thousand blinks a day."
+   },
+   {
+    "level": "hard",
+    "q": "What is your body's hardest substance?",
+    "options": [
+     "Bone",
+     "Tooth enamel",
+     "Fingernail"
+    ],
+    "answer": 1,
+    "fact": "Enamel is harder than bone, but it can't heal itself."
+   }
+  ]
+ },
+ {
+  "theme": "Food: fruit and veg",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which fruit has its seeds outside?",
+    "options": [
+     "Strawberry",
+     "Apple",
+     "Banana"
+    ],
+    "answer": 0,
+    "fact": "A strawberry has about 200 seeds on its skin."
+   },
+   {
+    "level": "easy",
+    "q": "Which vegetable makes you cry?",
+    "options": [
+     "Carrot",
+     "Potato",
+     "Onion"
+    ],
+    "answer": 2,
+    "fact": "Cut onions release a gas that stings your eyes."
+   },
+   {
+    "level": "medium",
+    "q": "About a quarter of which fruit is air?",
+    "options": [
+     "Grape",
+     "Apple",
+     "Melon"
+    ],
+    "answer": 1,
+    "fact": "That air is why apples float in water."
+   },
+   {
+    "level": "medium",
+    "q": "Where do pineapples grow?",
+    "options": [
+     "Close to the ground",
+     "On tall trees",
+     "On vines"
+    ],
+    "answer": 0,
+    "fact": "Each pineapple grows from the middle of a low plant.",
+    "answer_say": "close to the ground"
+   },
+   {
+    "level": "hard",
+    "q": "Which spice comes from a crocus flower?",
+    "options": [
+     "Pepper",
+     "Cinnamon",
+     "Saffron"
+    ],
+    "answer": 2,
+    "fact": "Each flower gives just three tiny red threads."
+   }
+  ]
+ },
+ {
+  "theme": "Ocean: deep sea",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is a group of fish called?",
+    "options": [
+     "School",
+     "Pack",
+     "Flock"
+    ],
+    "answer": 0,
+    "fact": "Swimming in groups helps fish avoid predators.",
+    "answer_say": "a school"
+   },
+   {
+    "level": "easy",
+    "q": "Which is the biggest shark?",
+    "options": [
+     "Great white",
+     "Whale shark",
+     "Hammerhead"
+    ],
+    "answer": 1,
+    "fact": "Whale sharks eat tiny plankton, not people.",
+    "answer_say": "the whale shark"
+   },
+   {
+    "level": "medium",
+    "q": "Which sea animal has no brain?",
+    "options": [
+     "Jellyfish",
+     "Octopus",
+     "Dolphin"
+    ],
+    "answer": 0,
+    "fact": "A jellyfish has no brain, heart, or bones.",
+    "answer_say": "the jellyfish"
+   },
+   {
+    "level": "medium",
+    "q": "How does an anglerfish glow?",
+    "options": [
+     "Sunlight",
+     "Tiny batteries",
+     "Glowing bacteria"
+    ],
+    "answer": 2,
+    "fact": "It uses the glow to lure prey close in the dark.",
+    "answer_say": "glowing bacteria"
+   },
+   {
+    "level": "hard",
+    "q": "Which mammal dives the deepest?",
+    "options": [
+     "Blue whale",
+     "Cuvier's beaked whale",
+     "Walrus"
+    ],
+    "answer": 1,
+    "fact": "One tagged whale dove nearly two miles down.",
+    "answer_say": "Cuvier's beaked whale"
+   }
+  ]
+ },
+ {
+  "theme": "Inventions: happy accidents",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Weak glue led to which invention?",
+    "options": [
+     "Tape",
+     "Stickers",
+     "Post-it notes"
+    ],
+    "answer": 2,
+    "fact": "Its inventor first thought the glue was a failure."
+   },
+   {
+    "level": "easy",
+    "q": "Penicillin was discovered from what?",
+    "options": [
+     "Mold",
+     "Sand",
+     "Honey"
+    ],
+    "answer": 0,
+    "fact": "Alexander Fleming noticed mold killing germs in 1928.",
+    "answer_say": "mold"
+   },
+   {
+    "level": "medium",
+    "q": "A fallen ship spring inspired what?",
+    "options": [
+     "Yo-yo",
+     "Slinky",
+     "Frisbee"
+    ],
+    "answer": 1,
+    "fact": "The Slinky first went on sale in 1945.",
+    "answer_say": "the Slinky"
+   },
+   {
+    "level": "medium",
+    "q": "What inspired Velcro?",
+    "options": [
+     "Spider webs",
+     "Fish scales",
+     "Burrs on a dog"
+    ],
+    "answer": 2,
+    "fact": "A Swiss engineer saw burrs stuck to his dog's fur.",
+    "answer_say": "burrs on a dog"
+   },
+   {
+    "level": "hard",
+    "q": "Play-Doh first cleaned what?",
+    "options": [
+     "Windows",
+     "Wallpaper",
+     "Shoes"
+    ],
+    "answer": 1,
+    "fact": "It was sold as a cleaner before it became a toy.",
+    "answer_say": "wallpaper"
+   }
+  ]
+ },
+ {
+  "theme": "Geography: lakes and waterfalls",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which flag has a maple leaf?",
+    "options": [
+     "Canada",
+     "Ireland",
+     "Norway"
+    ],
+    "answer": 0,
+    "fact": "Canada has the longest coastline of any country."
+   },
+   {
+    "level": "easy",
+    "q": "The Sahara is on which continent?",
+    "options": [
+     "Asia",
+     "Africa",
+     "Australia"
+    ],
+    "answer": 1,
+    "fact": "The Sahara is nearly as big as the United States."
+   },
+   {
+    "level": "medium",
+    "q": "Which lake is the deepest on Earth?",
+    "options": [
+     "Lake Superior",
+     "Lake Victoria",
+     "Lake Baikal"
+    ],
+    "answer": 2,
+    "fact": "Baikal holds about a fifth of Earth's fresh water.",
+    "answer_say": "Lake Baikal"
+   },
+   {
+    "level": "medium",
+    "q": "Which waterfall is the tallest?",
+    "options": [
+     "Niagara Falls",
+     "Angel Falls",
+     "Victoria Falls"
+    ],
+    "answer": 1,
+    "fact": "Angel Falls in Venezuela drops about 3,200 feet.",
+    "answer_say": "Angel Falls"
+   },
+   {
+    "level": "hard",
+    "q": "Where is the lowest point on land?",
+    "options": [
+     "Dead Sea shore",
+     "Death Valley",
+     "Grand Canyon"
+    ],
+    "answer": 0,
+    "fact": "It sits over 1,300 feet below sea level.",
+    "answer_say": "the Dead Sea shore"
+   }
+  ]
+ },
+ {
+  "theme": "Dinosaurs: fossils",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Dinosaur bones turned to stone are called?",
+    "options": [
+     "Fossils",
+     "Crystals",
+     "Statues"
+    ],
+    "answer": 0,
+    "fact": "Fossils form slowly as minerals replace the bone."
+   },
+   {
+    "level": "easy",
+    "q": "Which dinosaur had tiny arms?",
+    "options": [
+     "Stegosaurus",
+     "T. rex",
+     "Triceratops"
+    ],
+    "answer": 1,
+    "fact": "Those small arms still had sharp claws.",
+    "answer_say": "T. rex"
+   },
+   {
+    "level": "medium",
+    "q": "What did Velociraptor really have?",
+    "options": [
+     "Fur",
+     "A shell",
+     "Feathers"
+    ],
+    "answer": 2,
+    "fact": "Real ones were only about the size of a turkey.",
+    "answer_say": "feathers"
+   },
+   {
+    "level": "medium",
+    "q": "What does the word dinosaur mean?",
+    "options": [
+     "Terrible lizard",
+     "Giant bird",
+     "Old bone"
+    ],
+    "answer": 0,
+    "fact": "Richard Owen invented the word in 1842.",
+    "answer_say": "terrible lizard"
+   },
+   {
+    "level": "hard",
+    "q": "Which dinosaur age came first?",
+    "options": [
+     "Jurassic",
+     "Triassic",
+     "Cretaceous"
+    ],
+    "answer": 1,
+    "fact": "Jurassic Park is named after the middle one.",
+    "answer_say": "the Triassic"
+   }
+  ]
+ },
+ {
+  "theme": "Words and language: odd words",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which language says ciao?",
+    "options": [
+     "Spanish",
+     "French",
+     "Italian"
+    ],
+    "answer": 2,
+    "fact": "Ciao once meant I am your servant."
+   },
+   {
+    "level": "easy",
+    "q": "Buzz and boom are what kind of words?",
+    "options": [
+     "Onomatopoeia",
+     "Palindromes",
+     "Acronyms"
+    ],
+    "answer": 0,
+    "fact": "They copy real sounds.",
+    "answer_say": "onomatopoeia"
+   },
+   {
+    "level": "medium",
+    "q": "Cuneiform was written on what?",
+    "options": [
+     "Papyrus",
+     "Clay tablets",
+     "Leaves"
+    ],
+    "answer": 1,
+    "fact": "Sumerians pressed wedge shapes into wet clay.",
+    "answer_say": "clay tablets"
+   },
+   {
+    "level": "medium",
+    "q": "What is the dot over an i called?",
+    "options": [
+     "Dotty",
+     "Pip",
+     "Tittle"
+    ],
+    "answer": 2,
+    "fact": "The dot on a lowercase j has the same name.",
+    "answer_say": "a tittle"
+   },
+   {
+    "level": "hard",
+    "q": "In Ye Olde Shop, ye really says what?",
+    "options": [
+     "The",
+     "You",
+     "Yes"
+    ],
+    "answer": 0,
+    "fact": "The y was an old letter called thorn, sounding like th.",
+    "q_say": "In Ye Olde Shop, what does ye really say?",
+    "answer_say": "the"
+   }
+  ]
+ },
+ {
+  "theme": "Music: instruments and legends",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many Beatles were there?",
+    "options": [
+     "3",
+     "4",
+     "5"
+    ],
+    "answer": 1,
+    "fact": "They came from Liverpool, England."
+   },
+   {
+    "level": "easy",
+    "q": "Which string instrument is biggest?",
+    "options": [
+     "Violin",
+     "Cello",
+     "Double bass"
+    ],
+    "answer": 2,
+    "fact": "It's so tall that players stand or sit on a high stool.",
+    "answer_say": "the double bass"
+   },
+   {
+    "level": "medium",
+    "q": "How many letter names do notes use?",
+    "options": [
+     "7",
+     "5",
+     "12"
+    ],
+    "answer": 0,
+    "fact": "After G, the notes start over at A."
+   },
+   {
+    "level": "medium",
+    "q": "Violin bows are strung with what?",
+    "options": [
+     "Fishing line",
+     "Horse hair",
+     "Wire"
+    ],
+    "answer": 1,
+    "fact": "Most bows use hair from a horse's tail.",
+    "answer_say": "horse hair"
+   },
+   {
+    "level": "hard",
+    "q": "How old was Mozart when he began composing?",
+    "options": [
+     "5",
+     "12",
+     "20"
+    ],
+    "answer": 0,
+    "fact": "He was playing for royalty by age six.",
+    "answer_say": "five"
+   }
+  ]
+ },
+ {
+  "theme": "Sports: the Olympics",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many rings are on the Olympic flag?",
+    "options": [
+     "3",
+     "5",
+     "7"
+    ],
+    "answer": 1,
+    "fact": "The rings link five parts of the world."
+   },
+   {
+    "level": "easy",
+    "q": "Where did the Olympics begin?",
+    "options": [
+     "Greece",
+     "Egypt",
+     "Italy"
+    ],
+    "answer": 0,
+    "fact": "The ancient games started almost 2,800 years ago."
+   },
+   {
+    "level": "medium",
+    "q": "Olympic gold medals are mostly what?",
+    "options": [
+     "Gold",
+     "Brass",
+     "Silver"
+    ],
+    "answer": 2,
+    "fact": "Real gold is only a thin coating on top.",
+    "answer_say": "silver"
+   },
+   {
+    "level": "medium",
+    "q": "Which sport uses a shuttlecock?",
+    "options": [
+     "Tennis",
+     "Badminton",
+     "Squash"
+    ],
+    "answer": 1,
+    "fact": "Top players smash it faster than 200 miles per hour."
+   },
+   {
+    "level": "hard",
+    "q": "Which was once an Olympic sport?",
+    "options": [
+     "Tug of war",
+     "Bowling",
+     "Dodgeball"
+    ],
+    "answer": 0,
+    "fact": "Tug of war was an Olympic event until 1920."
+   }
+  ]
+ },
+ {
+  "theme": "Weather: sky wonders",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many colors are in a rainbow?",
+    "options": [
+     "5",
+     "7",
+     "9"
+    ],
+    "answer": 1,
+    "fact": "Isaac Newton chose seven, matching the notes of a scale."
+   },
+   {
+    "level": "easy",
+    "q": "How many sides does a snowflake have?",
+    "options": [
+     "6",
+     "4",
+     "8"
+    ],
+    "answer": 0,
+    "fact": "Water molecules lock together in a six-sided pattern."
+   },
+   {
+    "level": "medium",
+    "q": "Why do we see lightning before thunder?",
+    "options": [
+     "Light is faster",
+     "Thunder is quiet",
+     "Clouds block sound"
+    ],
+    "answer": 0,
+    "fact": "Count the seconds, then divide by five to get miles.",
+    "answer_say": "that light is faster"
+   },
+   {
+    "level": "medium",
+    "q": "How much can a fluffy cloud weigh?",
+    "options": [
+     "A few pounds",
+     "A million pounds",
+     "Nothing"
+    ],
+    "answer": 1,
+    "fact": "The weight is spread over many tiny water drops.",
+    "answer_say": "about a million pounds"
+   },
+   {
+    "level": "hard",
+    "q": "Which continent is the windiest?",
+    "options": [
+     "Africa",
+     "Australia",
+     "Antarctica"
+    ],
+    "answer": 2,
+    "fact": "Cold air pours down its icy slopes at gale speeds."
+   }
+  ]
+ },
+ {
+  "theme": "History: the ancient world",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "In which city is the Colosseum?",
+    "options": [
+     "Athens",
+     "Rome",
+     "Paris"
+    ],
+    "answer": 1,
+    "fact": "It held tens of thousands of cheering fans."
+   },
+   {
+    "level": "easy",
+    "q": "Did Vikings really wear horned helmets?",
+    "options": [
+     "Yes",
+     "Only chiefs",
+     "No"
+    ],
+    "answer": 2,
+    "fact": "The idea came from 19th century opera costumes."
+   },
+   {
+    "level": "medium",
+    "q": "Which Seven Wonder still stands?",
+    "options": [
+     "Great Pyramid",
+     "Colossus of Rhodes",
+     "Lighthouse of Alexandria"
+    ],
+    "answer": 0,
+    "fact": "It is more than 4,500 years old.",
+    "answer_say": "the Great Pyramid"
+   },
+   {
+    "level": "medium",
+    "q": "The Rosetta Stone helped crack what?",
+    "options": [
+     "Viking runes",
+     "Egyptian hieroglyphs",
+     "Chinese writing"
+    ],
+    "answer": 1,
+    "fact": "It repeats one message in three kinds of writing."
+   },
+   {
+    "level": "hard",
+    "q": "Which is older?",
+    "options": [
+     "Great Pyramid",
+     "The Colosseum",
+     "Stonehenge"
+    ],
+    "answer": 2,
+    "fact": "Stonehenge's first ditch was dug about 5,000 years ago.",
+    "answer_say": "Stonehenge"
+   }
+  ]
+ },
+ {
+  "theme": "Movies: behind the scenes",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What color is Shrek?",
+    "options": [
+     "Green",
+     "Blue",
+     "Orange"
+    ],
+    "answer": 0,
+    "fact": "Shrek won the first ever Oscar for best animated film."
+   },
+   {
+    "level": "easy",
+    "q": "What kind of fish is Nemo?",
+    "options": [
+     "Goldfish",
+     "Clownfish",
+     "Pufferfish"
+    ],
+    "answer": 1,
+    "fact": "Clownfish live safely among stinging sea anemones."
+   },
+   {
+    "level": "medium",
+    "q": "Who first voiced Mickey Mouse?",
+    "options": [
+     "Bing Crosby",
+     "Charlie Chaplin",
+     "Walt Disney"
+    ],
+    "answer": 2,
+    "fact": "Walt did the voice himself until 1947."
+   },
+   {
+    "level": "medium",
+    "q": "Chewbacca's voice began as which animal?",
+    "options": [
+     "Bear",
+     "Dog",
+     "Cow"
+    ],
+    "answer": 0,
+    "fact": "Sound designer Ben Burtt also mixed in lion and walrus."
+   },
+   {
+    "level": "hard",
+    "q": "How many Oscars did Titanic win?",
+    "options": [
+     "5",
+     "11",
+     "14"
+    ],
+    "answer": 1,
+    "fact": "It tied the record for the most Oscars ever won."
+   }
+  ]
+ },
+ {
+  "theme": "Technology: internet",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What does the www stand for?",
+    "options": [
+     "World Wide Web",
+     "Wide Web World",
+     "Web World Wire"
+    ],
+    "answer": 0,
+    "fact": "Tim Berners-Lee dreamed up the web in 1989.",
+    "q_say": "What does the W W W stand for?"
+   },
+   {
+    "level": "easy",
+    "q": "Which company makes the iPhone?",
+    "options": [
+     "Apple",
+     "Google",
+     "Sony"
+    ],
+    "answer": 0,
+    "fact": "The first iPhone came out in 2007."
+   },
+   {
+    "level": "medium",
+    "q": "How many bits are in a byte?",
+    "options": [
+     "4",
+     "16",
+     "8"
+    ],
+    "answer": 2,
+    "fact": "A bit is a single one or zero."
+   },
+   {
+    "level": "medium",
+    "q": "The first YouTube video showed what?",
+    "options": [
+     "A zoo",
+     "A beach",
+     "A kitchen"
+    ],
+    "answer": 0,
+    "fact": "It was uploaded in 2005 and lasts only 19 seconds.",
+    "answer_say": "a zoo"
+   },
+   {
+    "level": "hard",
+    "q": "The first webcam watched what?",
+    "options": [
+     "A parking lot",
+     "A coffee pot",
+     "A fish tank"
+    ],
+    "answer": 1,
+    "fact": "Cambridge researchers checked it to see if coffee was ready.",
+    "answer_say": "a coffee pot"
+   }
+  ]
+ },
+ {
+  "theme": "Animals: record breakers",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which animal is the tallest?",
+    "options": [
+     "Giraffe",
+     "Elephant",
+     "Ostrich"
+    ],
+    "answer": 0,
+    "fact": "A giraffe has seven neck bones, the same as you.",
+    "answer_say": "the giraffe"
+   },
+   {
+    "level": "easy",
+    "q": "Which is the biggest bird?",
+    "options": [
+     "Eagle",
+     "Ostrich",
+     "Albatross"
+    ],
+    "answer": 1,
+    "fact": "An ostrich can run about 40 miles per hour.",
+    "answer_say": "the ostrich"
+   },
+   {
+    "level": "medium",
+    "q": "Which animal has the biggest eyes?",
+    "options": [
+     "Owl",
+     "Blue whale",
+     "Giant squid"
+    ],
+    "answer": 2,
+    "fact": "Giant squid eyes are as big as basketballs.",
+    "answer_say": "the giant squid"
+   },
+   {
+    "level": "medium",
+    "q": "Which shark can live 400 years?",
+    "options": [
+     "Greenland shark",
+     "Great white",
+     "Tiger shark"
+    ],
+    "answer": 0,
+    "fact": "These sharks may take 150 years to become adults.",
+    "answer_say": "the Greenland shark"
+   },
+   {
+    "level": "hard",
+    "q": "Longest pregnancy of any land animal?",
+    "options": [
+     "Rhino",
+     "Giraffe",
+     "Elephant"
+    ],
+    "answer": 2,
+    "fact": "An elephant mom carries her baby for about 22 months.",
+    "answer_say": "the elephant"
+   }
+  ]
+ },
+ {
+  "theme": "Science: elements",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What gas do we breathe to live?",
+    "options": [
+     "Oxygen",
+     "Helium",
+     "Neon"
+    ],
+    "answer": 0,
+    "fact": "Plants and algae make the oxygen we breathe."
+   },
+   {
+    "level": "easy",
+    "q": "What keeps you on the ground?",
+    "options": [
+     "Magnetism",
+     "Gravity",
+     "Wind"
+    ],
+    "answer": 1,
+    "fact": "Gravity pulls everything toward the center of Earth."
+   },
+   {
+    "level": "medium",
+    "q": "Which metal is liquid at room temperature?",
+    "options": [
+     "Iron",
+     "Copper",
+     "Mercury"
+    ],
+    "answer": 2,
+    "fact": "Its old name was quicksilver."
+   },
+   {
+    "level": "medium",
+    "q": "What gas is most of the air we breathe?",
+    "options": [
+     "Oxygen",
+     "Nitrogen",
+     "Hydrogen"
+    ],
+    "answer": 1,
+    "fact": "Nitrogen makes up about 78 percent of the air."
+   },
+   {
+    "level": "hard",
+    "q": "Diamonds and pencil lead share what?",
+    "options": [
+     "Carbon",
+     "Silver",
+     "Glass"
+    ],
+    "answer": 0,
+    "fact": "Only the atom pattern differs, so one is soft and one is hard."
+   }
+  ]
+ },
+ {
+  "theme": "Art: famous painters",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Who painted Starry Night?",
+    "options": [
+     "Van Gogh",
+     "Monet",
+     "Picasso"
+    ],
+    "answer": 0,
+    "fact": "Van Gogh made all his famous art in about ten years."
+   },
+   {
+    "level": "easy",
+    "q": "Who painted the Mona Lisa?",
+    "options": [
+     "Michelangelo",
+     "Leonardo da Vinci",
+     "Raphael"
+    ],
+    "answer": 1,
+    "fact": "Leonardo also designed flying machines and bridges."
+   },
+   {
+    "level": "medium",
+    "q": "Picasso helped start which style?",
+    "options": [
+     "Pop art",
+     "Realism",
+     "Cubism"
+    ],
+    "answer": 2,
+    "fact": "Cubism shows objects from many sides at once.",
+    "answer_say": "cubism"
+   },
+   {
+    "level": "medium",
+    "q": "Who painted famous soup cans?",
+    "options": [
+     "Andy Warhol",
+     "Salvador Dali",
+     "Frida Kahlo"
+    ],
+    "answer": 0,
+    "fact": "He painted 32 cans, one for each soup flavor."
+   },
+   {
+    "level": "hard",
+    "q": "Who painted Girl with a Pearl Earring?",
+    "options": [
+     "Rembrandt",
+     "Monet",
+     "Vermeer"
+    ],
+    "answer": 2,
+    "fact": "Vermeer left behind only about 35 known paintings."
+   }
+  ]
+ },
+ {
+  "theme": "Food: around the world",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which country is pizza from?",
+    "options": [
+     "Italy",
+     "Greece",
+     "Spain"
+    ],
+    "answer": 0,
+    "fact": "Modern pizza was born in Naples."
+   },
+   {
+    "level": "easy",
+    "q": "Sushi comes from which country?",
+    "options": [
+     "China",
+     "Japan",
+     "Thailand"
+    ],
+    "answer": 1,
+    "fact": "Sushi began as a way to keep fish fresh in rice."
+   },
+   {
+    "level": "medium",
+    "q": "Tofu is made from what?",
+    "options": [
+     "Rice",
+     "Chickpeas",
+     "Soybeans"
+    ],
+    "answer": 2,
+    "fact": "People in China have made tofu for over 2,000 years."
+   },
+   {
+    "level": "medium",
+    "q": "Guacamole is mostly made from what?",
+    "options": [
+     "Avocado",
+     "Cucumber",
+     "Lime"
+    ],
+    "answer": 0,
+    "fact": "The word comes from an old Aztec word."
+   },
+   {
+    "level": "hard",
+    "q": "How are square watermelons made?",
+    "options": [
+     "Cut with a saw",
+     "Grown in boxes",
+     "Pressed after picking"
+    ],
+    "answer": 1,
+    "fact": "Square ones stack easily, which saves space in shipping.",
+    "answer_say": "grown in boxes"
+   }
+  ]
+ },
+ {
+  "theme": "US states: fun facts",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which is the Sunshine State?",
+    "options": [
+     "Florida",
+     "Texas",
+     "Nevada"
+    ],
+    "answer": 0,
+    "fact": "Rockets launch from Florida's Space Coast."
+   },
+   {
+    "level": "easy",
+    "q": "Which state has the Grand Canyon?",
+    "options": [
+     "Utah",
+     "Arizona",
+     "Colorado"
+    ],
+    "answer": 1,
+    "fact": "The canyon is about a mile deep in places."
+   },
+   {
+    "level": "medium",
+    "q": "What is California's capital?",
+    "options": [
+     "Los Angeles",
+     "San Francisco",
+     "Sacramento"
+    ],
+    "answer": 2,
+    "fact": "Sacramento has been the capital since 1854."
+   },
+   {
+    "level": "medium",
+    "q": "Mount Rushmore is in which state?",
+    "options": [
+     "South Dakota",
+     "Montana",
+     "Wyoming"
+    ],
+    "answer": 0,
+    "fact": "Carving took 14 years, from 1927 to 1941."
+   },
+   {
+    "level": "hard",
+    "q": "Which state name has one syllable?",
+    "options": [
+     "Utah",
+     "Maine",
+     "Iowa"
+    ],
+    "answer": 1,
+    "fact": "Maine catches most of America's lobster."
+   }
+  ]
+ },
+ {
+  "theme": "Space: Earth and Moon",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What causes ocean tides?",
+    "options": [
+     "The Moon",
+     "Wind",
+     "Fish"
+    ],
+    "answer": 0,
+    "fact": "The Moon's gravity tugs the oceans into a bulge.",
+    "answer_say": "the Moon"
+   },
+   {
+    "level": "easy",
+    "q": "Who first walked on the Moon?",
+    "options": [
+     "Buzz Aldrin",
+     "Yuri Gagarin",
+     "Neil Armstrong"
+    ],
+    "answer": 2,
+    "fact": "He stepped onto the Moon in 1969."
+   },
+   {
+    "level": "medium",
+    "q": "Driving to the Moon would take about?",
+    "options": [
+     "5 days",
+     "5 months",
+     "5 years"
+    ],
+    "answer": 1,
+    "fact": "The Moon is about 240,000 miles from Earth."
+   },
+   {
+    "level": "medium",
+    "q": "How many Earths fit inside the Sun?",
+    "options": [
+     "1,000",
+     "1.3 million",
+     "1 billion"
+    ],
+    "answer": 1,
+    "fact": "The Sun holds more than a million Earths.",
+    "answer_say": "one point three million"
+   },
+   {
+    "level": "hard",
+    "q": "Which planet isn't named for a god?",
+    "options": [
+     "Mars",
+     "Venus",
+     "Earth"
+    ],
+    "answer": 2,
+    "fact": "Earth's name comes from old words for ground.",
+    "answer_say": "Earth"
+   }
+  ]
+ },
+ {
+  "theme": "Animals: sleepy and sneaky",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which animal sleeps hanging upside down?",
+    "options": [
+     "Bat",
+     "Rabbit",
+     "Frog"
+    ],
+    "answer": 0,
+    "fact": "Bats can drop from their perch straight into flight.",
+    "answer_say": "bat"
+   },
+   {
+    "level": "easy",
+    "q": "Who sleeps about 20 hours a day?",
+    "options": [
+     "Koala",
+     "Horse",
+     "Giraffe"
+    ],
+    "answer": 0,
+    "fact": "Eucalyptus leaves give koalas very little energy.",
+    "answer_say": "koala"
+   },
+   {
+    "level": "medium",
+    "q": "Sea otters hold hands while they what?",
+    "options": [
+     "Sleep",
+     "Swim fast",
+     "Hunt"
+    ],
+    "answer": 0,
+    "fact": "It keeps the group from drifting apart.",
+    "answer_say": "sleep"
+   },
+   {
+    "level": "medium",
+    "q": "Which animal sleeps with half its brain?",
+    "options": [
+     "Dolphin",
+     "Cat",
+     "Rabbit"
+    ],
+    "answer": 0,
+    "fact": "One half stays awake so it can surface to breathe.",
+    "answer_say": "the dolphin"
+   },
+   {
+    "level": "hard",
+    "q": "Which bird can sleep while flying?",
+    "options": [
+     "Frigatebird",
+     "Penguin",
+     "Ostrich"
+    ],
+    "answer": 0,
+    "fact": "Frigatebirds nap in bursts of about 12 seconds.",
+    "answer_say": "the frigatebird"
+   }
+  ]
+ },
+ {
+  "theme": "Space: stars and galaxies",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is the closest star to Earth?",
+    "options": [
+     "Sun",
+     "Polaris",
+     "Sirius"
+    ],
+    "answer": 0,
+    "fact": "The next closest star is over four light years away.",
+    "answer_say": "the Sun"
+   },
+   {
+    "level": "easy",
+    "q": "Which galaxy do we live in?",
+    "options": [
+     "Milky Way",
+     "Andromeda",
+     "Whirlpool"
+    ],
+    "answer": 0,
+    "fact": "It holds hundreds of billions of stars.",
+    "answer_say": "the Milky Way"
+   },
+   {
+    "level": "medium",
+    "q": "What is a shooting star really?",
+    "options": [
+     "A space rock",
+     "A tiny star",
+     "A comet"
+    ],
+    "answer": 0,
+    "fact": "Many are no bigger than a grain of sand.",
+    "answer_say": "a space rock"
+   },
+   {
+    "level": "medium",
+    "q": "What is a star's giant explosion called?",
+    "options": [
+     "Supernova",
+     "Eclipse",
+     "Nebula"
+    ],
+    "answer": 0,
+    "fact": "A supernova can briefly outshine a whole galaxy.",
+    "answer_say": "a supernova"
+   },
+   {
+    "level": "hard",
+    "q": "Andromeda's light left it how long ago?",
+    "options": [
+     "2.5 million years",
+     "25,000 years",
+     "250 years"
+    ],
+    "answer": 0,
+    "fact": "You can spot it without a telescope in dark skies.",
+    "answer_say": "two point five million years"
+   }
+  ]
+ },
+ {
+  "theme": "Human body: the brain",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How heavy is an adult human brain?",
+    "options": [
+     "About 3 pounds",
+     "About 1 pound",
+     "About 10 pounds"
+    ],
+    "answer": 0,
+    "fact": "It's only about two percent of your body weight.",
+    "answer_say": "about three pounds"
+   },
+   {
+    "level": "easy",
+    "q": "Your right hand is run by which side?",
+    "options": [
+     "The left side",
+     "The right side",
+     "Both equally"
+    ],
+    "answer": 0,
+    "fact": "Each side of the brain controls the opposite body side.",
+    "q_say": "Your right hand is run by which side of the brain?",
+    "answer_say": "the left side"
+   },
+   {
+    "level": "medium",
+    "q": "How much energy does your brain use?",
+    "options": [
+     "About 2%",
+     "About 20%",
+     "About 60%"
+    ],
+    "answer": 1,
+    "fact": "It's a small organ that uses a fifth of your energy.",
+    "answer_say": "about twenty percent"
+   },
+   {
+    "level": "medium",
+    "q": "Which part of your head feels no pain?",
+    "options": [
+     "Brain",
+     "Scalp",
+     "Ears"
+    ],
+    "answer": 0,
+    "fact": "Doctors can operate on it while patients stay awake.",
+    "answer_say": "the brain"
+   },
+   {
+    "level": "hard",
+    "q": "How many neurons are in your brain?",
+    "options": [
+     "86 million",
+     "86 billion",
+     "86 trillion"
+    ],
+    "answer": 1,
+    "fact": "Signals zip between them at up to 270 miles per hour.",
+    "answer_say": "about eighty six billion"
+   }
+  ]
+ },
+ {
+  "theme": "Geography: rivers and mountains",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which river runs through Egypt?",
+    "options": [
+     "Nile",
+     "Thames",
+     "Amazon"
+    ],
+    "answer": 0,
+    "fact": "The Nile flows north into the Mediterranean Sea.",
+    "answer_say": "the Nile"
+   },
+   {
+    "level": "easy",
+    "q": "Which continent has the most countries?",
+    "options": [
+     "Africa",
+     "Asia",
+     "Europe"
+    ],
+    "answer": 0,
+    "fact": "Africa has 54 countries."
+   },
+   {
+    "level": "medium",
+    "q": "Longest mountain range on land?",
+    "options": [
+     "Andes",
+     "Rockies",
+     "Alps"
+    ],
+    "answer": 0,
+    "fact": "The Andes stretch about 4,300 miles through South America.",
+    "answer_say": "the Andes"
+   },
+   {
+    "level": "medium",
+    "q": "Which river carries the most water?",
+    "options": [
+     "Amazon",
+     "Nile",
+     "Mississippi"
+    ],
+    "answer": 0,
+    "fact": "The Amazon carries about a fifth of all river water.",
+    "answer_say": "the Amazon"
+   },
+   {
+    "level": "hard",
+    "q": "Which country has the most lakes?",
+    "options": [
+     "Canada",
+     "Finland",
+     "Russia"
+    ],
+    "answer": 0,
+    "fact": "Canada has more than a million lakes."
+   }
+  ]
+ },
+ {
+  "theme": "Food: sweet treats",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is chocolate made from?",
+    "options": [
+     "Cacao beans",
+     "Coffee beans",
+     "Peanuts"
+    ],
+    "answer": 0,
+    "fact": "Cacao beans grow inside pods on trees.",
+    "answer_say": "cacao beans"
+   },
+   {
+    "level": "easy",
+    "q": "What is cotton candy made of?",
+    "options": [
+     "Spun sugar",
+     "Real cotton",
+     "Whipped cream"
+    ],
+    "answer": 0,
+    "fact": "A dentist helped invent the machine for it.",
+    "answer_say": "spun sugar"
+   },
+   {
+    "level": "medium",
+    "q": "Where were gummy bears invented?",
+    "options": [
+     "Germany",
+     "Japan",
+     "America"
+    ],
+    "answer": 0,
+    "fact": "A candy maker made the first ones in the 1920s."
+   },
+   {
+    "level": "medium",
+    "q": "Early marshmallows came from what?",
+    "options": [
+     "A plant root",
+     "Sea foam",
+     "Tree bark"
+    ],
+    "answer": 0,
+    "fact": "The marsh mallow plant grows in wet marshes.",
+    "answer_say": "a plant root"
+   },
+   {
+    "level": "hard",
+    "q": "White chocolate contains no what?",
+    "options": [
+     "Cocoa solids",
+     "Sugar",
+     "Milk"
+    ],
+    "answer": 0,
+    "fact": "It's made with cocoa butter, the fat from cacao beans.",
+    "answer_say": "cocoa solids"
+   }
+  ]
+ },
+ {
+  "theme": "History: odd and old",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Who gave America the Statue of Liberty?",
+    "options": [
+     "France",
+     "Spain",
+     "Italy"
+    ],
+    "answer": 0,
+    "fact": "It arrived in 350 pieces packed in 214 crates."
+   },
+   {
+    "level": "easy",
+    "q": "What did Romans build to move water?",
+    "options": [
+     "Aqueducts",
+     "Moats",
+     "Drawbridges"
+    ],
+    "answer": 0,
+    "fact": "Some Roman aqueducts still stand today.",
+    "answer_say": "aqueducts"
+   },
+   {
+    "level": "medium",
+    "q": "Which country first used paper money?",
+    "options": [
+     "China",
+     "Egypt",
+     "Greece"
+    ],
+    "answer": 0,
+    "fact": "Paper money appeared there over 1,000 years ago."
+   },
+   {
+    "level": "medium",
+    "q": "What did a royal jester do?",
+    "options": [
+     "Entertain the court",
+     "Guard the castle",
+     "Cook the feast"
+    ],
+    "answer": 0,
+    "fact": "Jesters wore bright hats with jingling bells.",
+    "answer_say": "entertaining the court"
+   },
+   {
+    "level": "hard",
+    "q": "Which came first?",
+    "options": [
+     "Eyeglasses",
+     "Printing press",
+     "Pocket watch"
+    ],
+    "answer": 0,
+    "fact": "Eyeglasses appeared in Italy around the 1280s.",
+    "answer_say": "eyeglasses"
+   }
+  ]
+ },
+ {
+  "theme": "Sports: ball games",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many points is a free throw worth?",
+    "options": [
+     "1",
+     "2",
+     "3"
+    ],
+    "answer": 0,
+    "fact": "The free throw line is 15 feet from the backboard.",
+    "answer_say": "one point"
+   },
+   {
+    "level": "easy",
+    "q": "Which sport is played at Wimbledon?",
+    "options": [
+     "Tennis",
+     "Golf",
+     "Cricket"
+    ],
+    "answer": 0,
+    "fact": "Players there must wear almost all white.",
+    "answer_say": "tennis"
+   },
+   {
+    "level": "medium",
+    "q": "How many holes are in a golf round?",
+    "options": [
+     "9",
+     "18",
+     "24"
+    ],
+    "answer": 1,
+    "fact": "Scotland set the standard at 18 holes in 1764.",
+    "answer_say": "eighteen"
+   },
+   {
+    "level": "medium",
+    "q": "How high is a basketball hoop?",
+    "options": [
+     "8 feet",
+     "10 feet",
+     "12 feet"
+    ],
+    "answer": 1,
+    "fact": "It has been 10 feet since the game began."
+   },
+   {
+    "level": "hard",
+    "q": "How many stitches are on a baseball?",
+    "options": [
+     "88",
+     "108",
+     "144"
+    ],
+    "answer": 1,
+    "fact": "Major league balls are sewn by hand with red thread.",
+    "answer_say": "one hundred eight"
+   }
+  ]
+ },
+ {
+  "theme": "Ocean: coral reefs",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What builds coral reefs?",
+    "options": [
+     "Tiny animals",
+     "Giant fish",
+     "Volcanoes"
+    ],
+    "answer": 0,
+    "fact": "Coral polyps build hard limestone homes.",
+    "answer_say": "tiny animals"
+   },
+   {
+    "level": "easy",
+    "q": "Where is the world's biggest reef?",
+    "options": [
+     "Australia",
+     "Mexico",
+     "Egypt"
+    ],
+    "answer": 0,
+    "fact": "The Great Barrier Reef is over 1,400 miles long."
+   },
+   {
+    "level": "medium",
+    "q": "Clownfish are all born what?",
+    "options": [
+     "Male",
+     "Female",
+     "Orange"
+    ],
+    "answer": 0,
+    "fact": "The biggest one in each group becomes female.",
+    "answer_say": "male"
+   },
+   {
+    "level": "medium",
+    "q": "Parrotfish help make what?",
+    "options": [
+     "Sand",
+     "Salt",
+     "Pearls"
+    ],
+    "answer": 0,
+    "fact": "They munch coral and poop out fine sand.",
+    "answer_say": "sand"
+   },
+   {
+    "level": "hard",
+    "q": "How many eyes does a box jellyfish have?",
+    "options": [
+     "2",
+     "24",
+     "100"
+    ],
+    "answer": 1,
+    "fact": "Some of its eyes can form real images.",
+    "answer_say": "twenty four"
+   }
+  ]
+ },
+ {
+  "theme": "Dinosaurs: giants",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which dinosaur had a very long neck?",
+    "options": [
+     "Brachiosaurus",
+     "T. rex",
+     "Velociraptor"
+    ],
+    "answer": 0,
+    "fact": "It reached leaves in the treetops."
+   },
+   {
+    "level": "easy",
+    "q": "How did baby dinosaurs begin life?",
+    "options": [
+     "In eggs",
+     "In pouches",
+     "In cocoons"
+    ],
+    "answer": 0,
+    "fact": "Some dinosaurs sat on nests like birds do.",
+    "answer_say": "in eggs"
+   },
+   {
+    "level": "medium",
+    "q": "Which name means thunder lizard?",
+    "options": [
+     "Brontosaurus",
+     "Allosaurus",
+     "Iguanodon"
+    ],
+    "answer": 0,
+    "fact": "Brontosaurus was a huge plant eater.",
+    "answer_say": "Brontosaurus"
+   },
+   {
+    "level": "medium",
+    "q": "Which dinosaur had a sail on its back?",
+    "options": [
+     "Spinosaurus",
+     "Triceratops",
+     "Ankylosaurus"
+    ],
+    "answer": 0,
+    "fact": "Spinosaurus had a long snout like a crocodile."
+   },
+   {
+    "level": "hard",
+    "q": "When did the big dinosaurs die out?",
+    "options": [
+     "6.6 million years ago",
+     "66 million years ago",
+     "660 million years ago"
+    ],
+    "answer": 1,
+    "fact": "An asteroid struck what is now Mexico.",
+    "answer_say": "sixty six million years ago"
+   }
+  ]
+ },
+ {
+  "theme": "Words and language: word origins",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Bonjour is a word in which language?",
+    "options": [
+     "French",
+     "Spanish",
+     "Italian"
+    ],
+    "answer": 0,
+    "fact": "Bonjour means good day."
+   },
+   {
+    "level": "easy",
+    "q": "Which language is spoken in Brazil?",
+    "options": [
+     "Portuguese",
+     "Spanish",
+     "Italian"
+    ],
+    "answer": 0,
+    "fact": "Brazil has the most Portuguese speakers in the world."
+   },
+   {
+    "level": "medium",
+    "q": "Which language gave us the word ketchup?",
+    "options": [
+     "Chinese",
+     "Italian",
+     "Spanish"
+    ],
+    "answer": 0,
+    "fact": "It began as the name of a fish sauce."
+   },
+   {
+    "level": "medium",
+    "q": "Which language gave us the word robot?",
+    "options": [
+     "Czech",
+     "Latin",
+     "Japanese"
+    ],
+    "answer": 0,
+    "fact": "It comes from a Czech word meaning forced work.",
+    "answer_say": "Czech"
+   },
+   {
+    "level": "hard",
+    "q": "Where do people speak by whistling?",
+    "options": [
+     "Canary Islands",
+     "Hawaii",
+     "Iceland"
+    ],
+    "answer": 0,
+    "fact": "Whistles carry across deep valleys on La Gomera.",
+    "answer_say": "the Canary Islands"
+   }
+  ]
+ },
+ {
+  "theme": "Science: light and sound",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What does a prism do to light?",
+    "options": [
+     "Splits it into colors",
+     "Makes it hotter",
+     "Turns it black"
+    ],
+    "answer": 0,
+    "fact": "Sunlight is a mix of all the rainbow colors.",
+    "answer_say": "splitting it into colors"
+   },
+   {
+    "level": "easy",
+    "q": "What do magnets attract?",
+    "options": [
+     "Iron",
+     "Wood",
+     "Glass"
+    ],
+    "answer": 0,
+    "fact": "Earth itself acts like a giant magnet.",
+    "answer_say": "iron"
+   },
+   {
+    "level": "medium",
+    "q": "Can sound travel through empty space?",
+    "options": [
+     "No",
+     "Yes",
+     "Only loud sound"
+    ],
+    "answer": 0,
+    "fact": "Space has no air to carry sound waves.",
+    "answer_say": "no"
+   },
+   {
+    "level": "medium",
+    "q": "Which color soaks up the most heat?",
+    "options": [
+     "Black",
+     "White",
+     "Yellow"
+    ],
+    "answer": 0,
+    "fact": "White reflects light, so it stays cooler.",
+    "answer_say": "black"
+   },
+   {
+    "level": "hard",
+    "q": "How far does light go in one second?",
+    "options": [
+     "186 miles",
+     "186,000 miles",
+     "186 million miles"
+    ],
+    "answer": 1,
+    "fact": "That's around Earth seven and a half times.",
+    "answer_say": "one hundred eighty six thousand miles"
+   }
+  ]
+ },
+ {
+  "theme": "Animals: birds",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which bird swims but can't fly?",
+    "options": [
+     "Penguin",
+     "Eagle",
+     "Robin"
+    ],
+    "answer": 0,
+    "fact": "Penguins use their wings like flippers.",
+    "answer_say": "penguin"
+   },
+   {
+    "level": "easy",
+    "q": "Which bird can turn its head the most?",
+    "options": [
+     "Owl",
+     "Duck",
+     "Pigeon"
+    ],
+    "answer": 0,
+    "fact": "Owls can turn their heads about 270 degrees.",
+    "answer_say": "the owl"
+   },
+   {
+    "level": "medium",
+    "q": "Which is the smallest bird?",
+    "options": [
+     "Bee hummingbird",
+     "Sparrow",
+     "Robin"
+    ],
+    "answer": 0,
+    "fact": "It's only about two inches long.",
+    "answer_say": "the bee hummingbird"
+   },
+   {
+    "level": "medium",
+    "q": "Which bird can fly backward?",
+    "options": [
+     "Hummingbird",
+     "Eagle",
+     "Seagull"
+    ],
+    "answer": 0,
+    "fact": "Their wings beat dozens of times each second.",
+    "answer_say": "the hummingbird"
+   },
+   {
+    "level": "hard",
+    "q": "Which bird migrates the farthest?",
+    "options": [
+     "Arctic tern",
+     "Albatross",
+     "Goose"
+    ],
+    "answer": 0,
+    "fact": "Its yearly trip can top 40,000 miles.",
+    "answer_say": "the Arctic tern"
+   }
+  ]
+ },
+ {
+  "theme": "Weather: sky and seasons",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What causes the seasons?",
+    "options": [
+     "Earth's tilt",
+     "Distance from Sun",
+     "The Moon"
+    ],
+    "answer": 0,
+    "fact": "Earth is closest to the Sun in early January."
+   },
+   {
+    "level": "easy",
+    "q": "Which tool measures temperature?",
+    "options": [
+     "Thermometer",
+     "Barometer",
+     "Compass"
+    ],
+    "answer": 0,
+    "fact": "A barometer measures air pressure.",
+    "answer_say": "the thermometer"
+   },
+   {
+    "level": "medium",
+    "q": "Why is the sky blue?",
+    "options": [
+     "Air scatters blue light",
+     "Ocean reflection",
+     "Blue dust"
+    ],
+    "answer": 0,
+    "fact": "Short blue waves bounce around the air the most.",
+    "answer_say": "because air scatters blue light"
+   },
+   {
+    "level": "medium",
+    "q": "Where was Earth's coldest day recorded?",
+    "options": [
+     "Antarctica",
+     "Siberia",
+     "Greenland"
+    ],
+    "answer": 0,
+    "fact": "It hit about minus 129 degrees Fahrenheit in 1983."
+   },
+   {
+    "level": "hard",
+    "q": "What shape is a rainbow really?",
+    "options": [
+     "A full circle",
+     "A half circle",
+     "A triangle"
+    ],
+    "answer": 0,
+    "fact": "The ground gets in the way, so we see an arc.",
+    "answer_say": "a full circle"
+   }
+  ]
+ },
+ {
+  "theme": "Technology: video games",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which game lets you build with blocks?",
+    "options": [
+     "Minecraft",
+     "Tetris",
+     "Pac-Man"
+    ],
+    "answer": 0,
+    "fact": "It's the best-selling video game of all time."
+   },
+   {
+    "level": "easy",
+    "q": "Which game character is a plumber?",
+    "options": [
+     "Mario",
+     "Sonic",
+     "Pac-Man"
+    ],
+    "answer": 0,
+    "fact": "He was named after Nintendo's landlord."
+   },
+   {
+    "level": "medium",
+    "q": "Pac-Man's name comes from what?",
+    "options": [
+     "An eating sound",
+     "A hungry cat",
+     "A pizza slice"
+    ],
+    "answer": 0,
+    "fact": "Paku paku is Japanese for a chomping mouth.",
+    "answer_say": "an eating sound"
+   },
+   {
+    "level": "medium",
+    "q": "Pong copied which sport?",
+    "options": [
+     "Table tennis",
+     "Soccer",
+     "Boxing"
+    ],
+    "answer": 0,
+    "fact": "Pong came out in 1972.",
+    "answer_say": "table tennis"
+   },
+   {
+    "level": "hard",
+    "q": "Mario first appeared in which game?",
+    "options": [
+     "Donkey Kong",
+     "Super Mario Bros",
+     "Pac-Man"
+    ],
+    "answer": 0,
+    "fact": "He debuted in 1981 as a character called Jumpman."
+   }
+  ]
+ },
+ {
+  "theme": "Art: museums and masters",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which museum has the Mona Lisa?",
+    "options": [
+     "Louvre",
+     "Prado",
+     "Tate"
+    ],
+    "answer": 0,
+    "fact": "The Louvre is the most visited museum in the world.",
+    "answer_say": "the Louvre in Paris"
+   },
+   {
+    "level": "easy",
+    "q": "Who carved the statue of David?",
+    "options": [
+     "Michelangelo",
+     "Raphael",
+     "Leonardo"
+    ],
+    "answer": 0,
+    "fact": "He carved it from one block of marble."
+   },
+   {
+    "level": "medium",
+    "q": "What are the primary paint colors?",
+    "options": [
+     "Red, yellow, blue",
+     "Red, green, orange",
+     "Pink, white, black"
+    ],
+    "answer": 0,
+    "fact": "Mix two of them to get orange, green or purple.",
+    "answer_say": "red, yellow, blue"
+   },
+   {
+    "level": "medium",
+    "q": "What does origami mean?",
+    "options": [
+     "Folding paper",
+     "Cutting paper",
+     "Painting paper"
+    ],
+    "answer": 0,
+    "fact": "Ori means fold and kami means paper in Japanese.",
+    "answer_say": "folding paper"
+   },
+   {
+    "level": "hard",
+    "q": "Who painted The Scream?",
+    "options": [
+     "Edvard Munch",
+     "Claude Monet",
+     "Gustav Klimt"
+    ],
+    "answer": 0,
+    "fact": "Munch made several versions of it."
+   }
+  ]
+ },
+ {
+  "theme": "US states: landmarks",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which state has the Golden Gate Bridge?",
+    "options": [
+     "California",
+     "Oregon",
+     "Florida"
+    ],
+    "answer": 0,
+    "fact": "Its color is officially called International Orange."
+   },
+   {
+    "level": "easy",
+    "q": "Which state has most of Yellowstone?",
+    "options": [
+     "Wyoming",
+     "Texas",
+     "Ohio"
+    ],
+    "answer": 0,
+    "fact": "Yellowstone was the world's first national park."
+   },
+   {
+    "level": "medium",
+    "q": "Which state has the most national parks?",
+    "options": [
+     "California",
+     "Alaska",
+     "Utah"
+    ],
+    "answer": 0,
+    "fact": "California has nine national parks."
+   },
+   {
+    "level": "medium",
+    "q": "Where is the Space Needle?",
+    "options": [
+     "Washington",
+     "Oregon",
+     "Texas"
+    ],
+    "answer": 0,
+    "fact": "It was built for the 1962 World's Fair."
+   },
+   {
+    "level": "hard",
+    "q": "Which state has the longest coastline?",
+    "options": [
+     "Alaska",
+     "Florida",
+     "California"
+    ],
+    "answer": 0,
+    "fact": "Alaska has over 6,000 miles of coastline."
+   }
+  ]
+ },
+ {
+  "theme": "Inventions: getting around",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What powered early trains?",
+    "options": [
+     "Steam",
+     "Wind",
+     "Batteries"
+    ],
+    "answer": 0,
+    "fact": "Steam trains began carrying passengers in 1825.",
+    "answer_say": "steam"
+   },
+   {
+    "level": "easy",
+    "q": "What color are most US school buses?",
+    "options": [
+     "Yellow",
+     "Orange",
+     "Red"
+    ],
+    "answer": 0,
+    "fact": "Yellow was chosen because it's easy to spot.",
+    "answer_say": "yellow"
+   },
+   {
+    "level": "medium",
+    "q": "Which invention came first?",
+    "options": [
+     "Bicycle",
+     "Car",
+     "Airplane"
+    ],
+    "answer": 0,
+    "fact": "The first bicycle had no pedals.",
+    "answer_say": "bicycle"
+   },
+   {
+    "level": "medium",
+    "q": "Who made the assembly line famous?",
+    "options": [
+     "Henry Ford",
+     "Thomas Edison",
+     "Karl Benz"
+    ],
+    "answer": 0,
+    "fact": "It cut Model T building time from 12 hours to 1.5.",
+    "fact_say": "It cut Model T building time from twelve hours to about an hour and a half."
+   },
+   {
+    "level": "hard",
+    "q": "Which city had the first subway?",
+    "options": [
+     "London",
+     "New York",
+     "Paris"
+    ],
+    "answer": 0,
+    "fact": "It opened in 1863 and ran on steam."
+   }
+  ]
+ }
 ]
