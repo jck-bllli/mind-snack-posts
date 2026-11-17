@@ -20,7 +20,7 @@ import urllib.parse
 import urllib.request
 
 API = "https://graph.facebook.com/v24.0"
-TOKEN = os.environ.get("FB_ACCESS_TOKEN", "").strip()
+TOKEN = "".join(os.environ.get("FB_ACCESS_TOKEN", "").split())  # drop any pasted spaces/newlines
 WATCHLIST = os.environ.get("OTTO_WATCHLIST", "otto/watchlist.txt")
 MEDIA_FIELDS = "caption,like_count,comments_count,media_product_type,media_type,permalink,timestamp"
 
@@ -31,7 +31,12 @@ def get(path, params):
         with urllib.request.urlopen(f"{API}/{path}?{urllib.parse.urlencode(params)}", timeout=60) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        return {"error": e.read().decode(errors="replace").replace(TOKEN, "[token]")[:400]}
+        # never echo Meta's message: for a bad token it repeats the token text into the public log
+        try:
+            err = json.loads(e.read()).get("error", {})
+            return {"error": f"HTTP {e.code} code {err.get('code')} type {err.get('type')} sub {err.get('error_subcode')}"}
+        except Exception:
+            return {"error": f"HTTP {e.code}"}
 
 
 def our_ig_id():
