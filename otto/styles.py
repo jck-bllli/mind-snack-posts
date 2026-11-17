@@ -8,6 +8,7 @@ Style tag lookup (first match wins):
   1. "style" on the posted.json entry
   2. "style" on the queue.json item with the same id
   3. days/<date>.json "styles"[am|pm] for ids like DATE-am, else its "style" (trumps-day)
+  4. "voice-<voice>" from the entry's narrator voice, if it has one
   otherwise $OTTO_DEFAULT_STYLE (default "untagged")
 
 Outlier score = a post's views / the account's median views (2.0 = twice normal).
@@ -72,6 +73,8 @@ def style_of(entry, queue):
             return day["styles"][slot]
         if day.get("style"):
             return day["style"]
+    if entry.get("voice"):  # no style tag yet: group by narrator voice so Otto still compares something
+        return "voice-" + str(entry["voice"])
     return os.environ.get("OTTO_DEFAULT_STYLE", "untagged")
 
 
