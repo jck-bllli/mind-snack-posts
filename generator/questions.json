@@ -3621,5 +3621,1072 @@
     "fact": "It opened in 1863 and ran on steam."
    }
   ]
+ },
+ {
+  "theme": "Animals: super senses",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What do bats use to find food at night?",
+    "options": [
+     "Sunlight",
+     "Echolocation",
+     "Whiskers"
+    ],
+    "answer": 1,
+    "fact": "They listen to echoes of their own squeaks.",
+    "answer_say": "echolocation"
+   },
+   {
+    "level": "easy",
+    "q": "How does a snake smell?",
+    "options": [
+     "With its ears",
+     "With its tail",
+     "With its tongue"
+    ],
+    "answer": 2,
+    "fact": "Snakes flick their tongues to taste the air.",
+    "answer_say": "with its tongue"
+   },
+   {
+    "level": "medium",
+    "q": "Where do butterflies taste food?",
+    "options": [
+     "Their feet",
+     "Their wings",
+     "Their eyes"
+    ],
+    "answer": 0,
+    "fact": "Butterflies have taste sensors on their feet.",
+    "answer_say": "with their feet"
+   },
+   {
+    "level": "medium",
+    "q": "Which animal tastes with its whole body?",
+    "options": [
+     "Eagle",
+     "Catfish",
+     "Rabbit"
+    ],
+    "answer": 1,
+    "fact": "Catfish have taste buds all over their skin.",
+    "answer_say": "the catfish"
+   },
+   {
+    "level": "hard",
+    "q": "Which mammal senses prey's electricity?",
+    "options": [
+     "Otter",
+     "Beaver",
+     "Platypus"
+    ],
+    "answer": 2,
+    "fact": "A platypus feels electric signals with its bill.",
+    "answer_say": "the platypus",
+    "q_say": "Which mammal senses the electricity of its prey?"
+   }
+  ]
+ },
+ {
+  "theme": "Space: Mars and rockets",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many planets orbit our Sun?",
+    "options": [
+     "Nine",
+     "Eight",
+     "Ten"
+    ],
+    "answer": 1,
+    "fact": "Pluto became a dwarf planet in 2006.",
+    "answer_say": "eight"
+   },
+   {
+    "level": "easy",
+    "q": "What is a space rock that lands on Earth?",
+    "options": [
+     "Comet",
+     "Meteorite",
+     "Moon"
+    ],
+    "answer": 1,
+    "fact": "Most meteorites come from the asteroid belt.",
+    "answer_say": "a meteorite"
+   },
+   {
+    "level": "medium",
+    "q": "What is Olympus Mons on Mars?",
+    "options": [
+     "A giant crater",
+     "A tiny moon",
+     "A giant volcano"
+    ],
+    "answer": 2,
+    "fact": "It is about 2.5 times taller than Everest.",
+    "answer_say": "a giant volcano",
+    "fact_say": "It is about two and a half times taller than Mount Everest."
+   },
+   {
+    "level": "medium",
+    "q": "How long is a day on Mars?",
+    "options": [
+     "About 12 hours",
+     "A bit over 24 hours",
+     "About 48 hours"
+    ],
+    "answer": 1,
+    "fact": "A Mars day is about 24 hours and 40 minutes.",
+    "answer_say": "a bit over twenty four hours",
+    "fact_say": "A Mars day is about twenty four hours and forty minutes."
+   },
+   {
+    "level": "hard",
+    "q": "What first reached interstellar space?",
+    "options": [
+     "Hubble",
+     "Apollo 11",
+     "Voyager 1"
+    ],
+    "answer": 2,
+    "fact": "Voyager 1 left our Sun's bubble in 2012.",
+    "answer_say": "Voyager one",
+    "fact_say": "Voyager one left our Sun's bubble in twenty twelve.",
+    "q_say": "What was the first thing to reach interstellar space?"
+   }
+  ]
+ },
+ {
+  "theme": "Human body: bones and blood",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What pumps blood around your body?",
+    "options": [
+     "Lungs",
+     "Heart",
+     "Stomach"
+    ],
+    "answer": 1,
+    "fact": "Your heart is about the size of your fist.",
+    "answer_say": "the heart"
+   },
+   {
+    "level": "easy",
+    "q": "What protects your brain?",
+    "options": [
+     "Ribs",
+     "Skin",
+     "Skull"
+    ],
+    "answer": 2,
+    "fact": "Your skull is made of 22 bones.",
+    "answer_say": "the skull",
+    "fact_say": "Your skull is made of twenty two bones."
+   },
+   {
+    "level": "medium",
+    "q": "What in your blood fights germs?",
+    "options": [
+     "Plasma",
+     "White blood cells",
+     "Platelets"
+    ],
+    "answer": 1,
+    "fact": "White blood cells are your body's tiny defenders.",
+    "answer_say": "white blood cells"
+   },
+   {
+    "level": "medium",
+    "q": "Which is the longest bone in your body?",
+    "options": [
+     "Arm bone",
+     "Thigh bone",
+     "Shin bone"
+    ],
+    "answer": 1,
+    "fact": "The thigh bone is about a quarter of your height.",
+    "answer_say": "the thigh bone"
+   },
+   {
+    "level": "hard",
+    "q": "How long does a red blood cell live?",
+    "options": [
+     "About 4 days",
+     "About 4 years",
+     "About 4 months"
+    ],
+    "answer": 2,
+    "fact": "Your body makes about 2 million new ones every second.",
+    "answer_say": "about four months",
+    "fact_say": "Your body makes about two million new ones every second."
+   }
+  ]
+ },
+ {
+  "theme": "Geography: famous cities",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which city has the sail-shaped Opera House?",
+    "options": [
+     "Perth",
+     "Melbourne",
+     "Sydney"
+    ],
+    "answer": 2,
+    "fact": "It took 14 years to build.",
+    "answer_say": "Sydney",
+    "fact_say": "It took fourteen years to build."
+   },
+   {
+    "level": "easy",
+    "q": "Which city has the Eiffel Tower?",
+    "options": [
+     "Rome",
+     "Paris",
+     "Berlin"
+    ],
+    "answer": 1,
+    "fact": "The Eiffel Tower grows taller in summer heat.",
+    "answer_say": "Paris"
+   },
+   {
+    "level": "medium",
+    "q": "What is the capital of Canada?",
+    "options": [
+     "Toronto",
+     "Vancouver",
+     "Ottawa"
+    ],
+    "answer": 2,
+    "fact": "Toronto is bigger, but Ottawa is the capital.",
+    "answer_say": "Ottawa"
+   },
+   {
+    "level": "medium",
+    "q": "Which city sits on two continents?",
+    "options": [
+     "Cairo",
+     "Istanbul",
+     "Moscow"
+    ],
+    "answer": 1,
+    "fact": "Istanbul sits in both Europe and Asia.",
+    "answer_say": "Istanbul"
+   },
+   {
+    "level": "hard",
+    "q": "What is the capital of Brazil?",
+    "options": [
+     "Rio de Janeiro",
+     "Brasilia",
+     "Sao Paulo"
+    ],
+    "answer": 1,
+    "fact": "Brasilia was built from scratch in the 1950s.",
+    "answer_say": "Brasilia",
+    "fact_say": "Brasilia was built from scratch in the nineteen fifties."
+   }
+  ]
+ },
+ {
+  "theme": "Food: drinks and snacks",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What are raisins made from?",
+    "options": [
+     "Plums",
+     "Grapes",
+     "Cherries"
+    ],
+    "answer": 1,
+    "fact": "Raisins are grapes with the water dried out.",
+    "answer_say": "grapes"
+   },
+   {
+    "level": "easy",
+    "q": "Black and green tea come from what?",
+    "options": [
+     "Two different plants",
+     "The same plant",
+     "Tree bark"
+    ],
+    "answer": 1,
+    "fact": "They differ in how the leaves are processed.",
+    "answer_say": "the same plant"
+   },
+   {
+    "level": "medium",
+    "q": "What is hummus mostly made from?",
+    "options": [
+     "Potatoes",
+     "Lentils",
+     "Chickpeas"
+    ],
+    "answer": 2,
+    "fact": "Hummus is mashed chickpeas with sesame paste.",
+    "answer_say": "chickpeas"
+   },
+   {
+    "level": "medium",
+    "q": "What turns milk into yogurt?",
+    "options": [
+     "Salt",
+     "Good bacteria",
+     "Sugar"
+    ],
+    "answer": 1,
+    "fact": "Tiny helpful bacteria thicken the milk.",
+    "answer_say": "good bacteria"
+   },
+   {
+    "level": "hard",
+    "q": "Where did coffee plants first grow wild?",
+    "options": [
+     "Colombia",
+     "Ethiopia",
+     "Vietnam"
+    ],
+    "answer": 1,
+    "fact": "A legend says dancing goats led people to it.",
+    "answer_say": "Ethiopia"
+   }
+  ]
+ },
+ {
+  "theme": "History: castles and knights",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What did knights wear for protection?",
+    "options": [
+     "Silk robes",
+     "Armor",
+     "Cloaks"
+    ],
+    "answer": 1,
+    "fact": "Knights could still run and climb in armor.",
+    "answer_say": "armor"
+   },
+   {
+    "level": "easy",
+    "q": "What is a water ditch around a castle?",
+    "options": [
+     "A canal",
+     "A moat",
+     "A pond"
+    ],
+    "answer": 1,
+    "fact": "Moats made it hard to reach the castle walls.",
+    "answer_say": "a moat"
+   },
+   {
+    "level": "medium",
+    "q": "What was a castle's main tower called?",
+    "options": [
+     "The spire",
+     "The dome",
+     "The keep"
+    ],
+    "answer": 2,
+    "fact": "The keep was the last safe place to hide.",
+    "answer_say": "the keep"
+   },
+   {
+    "level": "medium",
+    "q": "What is a family symbol on a shield called?",
+    "options": [
+     "Crown",
+     "Coat of arms",
+     "Banner"
+    ],
+    "answer": 1,
+    "fact": "It helped friends spot each other in battle.",
+    "answer_say": "a coat of arms"
+   },
+   {
+    "level": "hard",
+    "q": "Which country has the world's biggest castle?",
+    "options": [
+     "Germany",
+     "Poland",
+     "Scotland"
+    ],
+    "answer": 1,
+    "fact": "Malbork Castle is the biggest by land area.",
+    "answer_say": "Poland"
+   }
+  ]
+ },
+ {
+  "theme": "Sports: winter sports",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which sport uses a puck?",
+    "options": [
+     "Curling",
+     "Ice hockey",
+     "Skiing"
+    ],
+    "answer": 1,
+    "fact": "Pucks are frozen so they bounce less.",
+    "answer_say": "ice hockey"
+   },
+   {
+    "level": "easy",
+    "q": "Which sport sweeps the ice with brooms?",
+    "options": [
+     "Luge",
+     "Bobsled",
+     "Curling"
+    ],
+    "answer": 2,
+    "fact": "Curling stones are made of granite.",
+    "answer_say": "curling"
+   },
+   {
+    "level": "medium",
+    "q": "Which sport mixes skiing and shooting?",
+    "options": [
+     "Slalom",
+     "Biathlon",
+     "Luge"
+    ],
+    "answer": 1,
+    "fact": "Athletes must calm down to aim after skiing hard.",
+    "answer_say": "the biathlon"
+   },
+   {
+    "level": "medium",
+    "q": "How many turns is a triple axel?",
+    "options": [
+     "Three",
+     "Three and a half",
+     "Four"
+    ],
+    "answer": 1,
+    "fact": "The axel jump needs an extra half turn.",
+    "answer_say": "three and a half"
+   },
+   {
+    "level": "hard",
+    "q": "Where were the first Winter Olympics held?",
+    "options": [
+     "Oslo",
+     "St. Moritz",
+     "Chamonix"
+    ],
+    "answer": 2,
+    "fact": "They began in 1924 in the French Alps.",
+    "answer_say": "Shamoni, in France",
+    "fact_say": "They began in nineteen twenty four in the French Alps."
+   }
+  ]
+ },
+ {
+  "theme": "Music: the orchestra",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What does a conductor hold?",
+    "options": [
+     "A flag",
+     "A baton",
+     "A mic"
+    ],
+    "answer": 1,
+    "fact": "The baton helps keep everyone in time.",
+    "answer_say": "a baton"
+   },
+   {
+    "level": "easy",
+    "q": "What is a group of singers called?",
+    "options": [
+     "A band",
+     "A herd",
+     "A choir"
+    ],
+    "answer": 2,
+    "fact": "Many choirs sing in four voice parts.",
+    "answer_say": "a choir"
+   },
+   {
+    "level": "medium",
+    "q": "In music, what does forte mean?",
+    "options": [
+     "Soft",
+     "Loud",
+     "Fast"
+    ],
+    "answer": 1,
+    "fact": "The piano's name means soft and loud.",
+    "answer_say": "loud"
+   },
+   {
+    "level": "medium",
+    "q": "Which is the orchestra's smallest woodwind?",
+    "options": [
+     "Oboe",
+     "Piccolo",
+     "Clarinet"
+    ],
+    "answer": 1,
+    "fact": "A piccolo is half the size of a flute.",
+    "answer_say": "the piccolo"
+   },
+   {
+    "level": "hard",
+    "q": "Who wrote The Four Seasons?",
+    "options": [
+     "Mozart",
+     "Bach",
+     "Vivaldi"
+    ],
+    "answer": 2,
+    "fact": "He wrote it about 300 years ago.",
+    "answer_say": "Vivaldi",
+    "fact_say": "He wrote it about three hundred years ago."
+   }
+  ]
+ },
+ {
+  "theme": "Science: plants and trees",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What gas do plants take from the air?",
+    "options": [
+     "Oxygen",
+     "Carbon dioxide",
+     "Helium"
+    ],
+    "answer": 1,
+    "fact": "They use it with sunlight to make food.",
+    "answer_say": "carbon dioxide"
+   },
+   {
+    "level": "easy",
+    "q": "Which plant part makes seeds?",
+    "options": [
+     "Root",
+     "Flower",
+     "Stem"
+    ],
+    "answer": 1,
+    "fact": "Bees help flowers by carrying pollen.",
+    "answer_say": "the flower"
+   },
+   {
+    "level": "medium",
+    "q": "What makes leaves green?",
+    "options": [
+     "Sunlight",
+     "Water",
+     "Chlorophyll"
+    ],
+    "answer": 2,
+    "fact": "Leaves change color in fall when it fades.",
+    "answer_say": "chlorophyll"
+   },
+   {
+    "level": "medium",
+    "q": "How can you tell how old a tree is?",
+    "options": [
+     "Count leaves",
+     "Count its rings",
+     "Measure shade"
+    ],
+    "answer": 1,
+    "fact": "Each ring usually equals one year of growth.",
+    "answer_say": "counting its rings"
+   },
+   {
+    "level": "hard",
+    "q": "Which tree is the tallest in the world?",
+    "options": [
+     "Oak",
+     "Coast redwood",
+     "Baobab"
+    ],
+    "answer": 1,
+    "fact": "The tallest redwood is about 380 feet.",
+    "answer_say": "the coast redwood",
+    "fact_say": "The tallest redwood is about three hundred eighty feet tall."
+   }
+  ]
+ },
+ {
+  "theme": "Ocean: whales and dolphins",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What kind of animal is a dolphin?",
+    "options": [
+     "Fish",
+     "Mammal",
+     "Reptile"
+    ],
+    "answer": 1,
+    "fact": "Dolphins breathe air and feed babies milk.",
+    "answer_say": "a mammal"
+   },
+   {
+    "level": "easy",
+    "q": "What do whales breathe through?",
+    "options": [
+     "Gills",
+     "A blowhole",
+     "Their mouth"
+    ],
+    "answer": 1,
+    "fact": "A blue whale's spout can shoot 30 feet up.",
+    "answer_say": "a blowhole",
+    "fact_say": "A blue whale's spout can shoot thirty feet up."
+   },
+   {
+    "level": "medium",
+    "q": "Which whale is famous for singing?",
+    "options": [
+     "Orca",
+     "Beluga",
+     "Humpback"
+    ],
+    "answer": 2,
+    "fact": "A humpback song can last up to 20 minutes.",
+    "answer_say": "the humpback",
+    "fact_say": "A humpback song can last up to twenty minutes."
+   },
+   {
+    "level": "medium",
+    "q": "What is a baby whale called?",
+    "options": [
+     "Pup",
+     "Calf",
+     "Cub"
+    ],
+    "answer": 1,
+    "fact": "A baby blue whale gains about 200 pounds a day.",
+    "answer_say": "a calf",
+    "fact_say": "A baby blue whale gains about two hundred pounds a day."
+   },
+   {
+    "level": "hard",
+    "q": "Which whale has a long tusk?",
+    "options": [
+     "Sperm whale",
+     "Narwhal",
+     "Beluga"
+    ],
+    "answer": 1,
+    "fact": "The tusk is really a very long tooth.",
+    "answer_say": "the narwhal"
+   }
+  ]
+ },
+ {
+  "theme": "Dinosaurs: sky and sea",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "Which giant shark is now extinct?",
+    "options": [
+     "Great white",
+     "Megalodon",
+     "Hammerhead"
+    ],
+    "answer": 1,
+    "fact": "Megalodon teeth were as big as your hand.",
+    "answer_say": "the Megalodon"
+   },
+   {
+    "level": "easy",
+    "q": "Who studies fossils for a living?",
+    "options": [
+     "Astronomers",
+     "Paleontologists",
+     "Chemists"
+    ],
+    "answer": 1,
+    "fact": "Their name means students of ancient life.",
+    "answer_say": "paleontologists"
+   },
+   {
+    "level": "medium",
+    "q": "What were pterosaurs?",
+    "options": [
+     "Dinosaurs",
+     "Flying reptiles",
+     "Giant birds"
+    ],
+    "answer": 1,
+    "fact": "They flew, but they weren't dinosaurs.",
+    "answer_say": "flying reptiles"
+   },
+   {
+    "level": "medium",
+    "q": "Which sea reptile looked like a dolphin?",
+    "options": [
+     "Plesiosaur",
+     "Mosasaur",
+     "Ichthyosaur"
+    ],
+    "answer": 2,
+    "fact": "Ichthyosaurs gave birth to live babies.",
+    "answer_say": "the ichthyosaur"
+   },
+   {
+    "level": "hard",
+    "q": "Which flyer was as wide as a small plane?",
+    "options": [
+     "Pteranodon",
+     "Quetzalcoatlus",
+     "Archaeopteryx"
+    ],
+    "answer": 1,
+    "fact": "Its wingspan was about 33 feet.",
+    "answer_say": "Ket-sal-ko-at-lus",
+    "fact_say": "Its wingspan was about thirty three feet."
+   }
+  ]
+ },
+ {
+  "theme": "Words and language: alphabets",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many letters are in the English alphabet?",
+    "options": [
+     "24",
+     "26",
+     "28"
+    ],
+    "answer": 1,
+    "fact": "The word alphabet comes from alpha and beta.",
+    "answer_say": "twenty six"
+   },
+   {
+    "level": "easy",
+    "q": "Hot and cold are what kind of words?",
+    "options": [
+     "Synonyms",
+     "Antonyms",
+     "Rhymes"
+    ],
+    "answer": 1,
+    "fact": "Antonyms are words with opposite meanings.",
+    "answer_say": "antonyms"
+   },
+   {
+    "level": "medium",
+    "q": "Which language is read right to left?",
+    "options": [
+     "Spanish",
+     "Arabic",
+     "Korean"
+    ],
+    "answer": 1,
+    "fact": "Hebrew is read right to left too.",
+    "answer_say": "Arabic"
+   },
+   {
+    "level": "medium",
+    "q": "What is the study of word origins called?",
+    "options": [
+     "Entomology",
+     "Ecology",
+     "Etymology"
+    ],
+    "answer": 2,
+    "fact": "Etymology comes from Greek words for true sense.",
+    "answer_say": "etymology"
+   },
+   {
+    "level": "hard",
+    "q": "Whose old alphabet inspired ours?",
+    "options": [
+     "Vikings",
+     "Phoenicians",
+     "Aztecs"
+    ],
+    "answer": 1,
+    "fact": "The Greeks borrowed it and added vowels.",
+    "answer_say": "the Phoenicians"
+   }
+  ]
+ },
+ {
+  "theme": "World records: biggest places",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is the biggest island on Earth?",
+    "options": [
+     "Iceland",
+     "Greenland",
+     "Madagascar"
+    ],
+    "answer": 1,
+    "fact": "Most of Greenland is covered in ice.",
+    "answer_say": "Greenland"
+   },
+   {
+    "level": "easy",
+    "q": "Which planet is the biggest?",
+    "options": [
+     "Saturn",
+     "Neptune",
+     "Jupiter"
+    ],
+    "answer": 2,
+    "fact": "Over 1,300 Earths could fit inside Jupiter.",
+    "answer_say": "Jupiter",
+    "fact_say": "Over thirteen hundred Earths could fit inside Jupiter."
+   },
+   {
+    "level": "medium",
+    "q": "What is the largest hot desert?",
+    "options": [
+     "Gobi",
+     "Sahara",
+     "Arabian"
+    ],
+    "answer": 1,
+    "fact": "The Sahara is nearly as big as the United States.",
+    "answer_say": "the Sahara"
+   },
+   {
+    "level": "medium",
+    "q": "Which is the biggest lake by area?",
+    "options": [
+     "Lake Superior",
+     "Caspian Sea",
+     "Lake Victoria"
+    ],
+    "answer": 1,
+    "fact": "The Caspian Sea is called a sea but is a lake.",
+    "answer_say": "the Caspian Sea"
+   },
+   {
+    "level": "hard",
+    "q": "Which is the largest country in Africa?",
+    "options": [
+     "Sudan",
+     "Algeria",
+     "Egypt"
+    ],
+    "answer": 1,
+    "fact": "Sudan lost the top spot in 2011.",
+    "answer_say": "Algeria",
+    "fact_say": "Sudan lost the top spot in twenty eleven."
+   }
+  ]
+ },
+ {
+  "theme": "Weather: wind and storms",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is a spinning funnel of wind called?",
+    "options": [
+     "Blizzard",
+     "Tornado",
+     "Drizzle"
+    ],
+    "answer": 1,
+    "fact": "Strong tornadoes can spin over 200 miles per hour.",
+    "answer_say": "a tornado",
+    "fact_say": "Strong tornadoes can spin over two hundred miles per hour."
+   },
+   {
+    "level": "easy",
+    "q": "What is a heavy snowstorm with wind called?",
+    "options": [
+     "Hurricane",
+     "Drought",
+     "Blizzard"
+    ],
+    "answer": 2,
+    "fact": "A blizzard has strong winds and blowing snow.",
+    "answer_say": "a blizzard"
+   },
+   {
+    "level": "medium",
+    "q": "In Asia, what are hurricanes called?",
+    "options": [
+     "Monsoon",
+     "Typhoon",
+     "Tsunami"
+    ],
+    "answer": 1,
+    "fact": "Hurricanes and typhoons are the same kind of storm.",
+    "answer_say": "typhoons"
+   },
+   {
+    "level": "medium",
+    "q": "Which tool measures wind speed?",
+    "options": [
+     "Barometer",
+     "Anemometer",
+     "Thermometer"
+    ],
+    "answer": 1,
+    "fact": "Its spinning cups turn faster in stronger wind.",
+    "answer_say": "an anemometer"
+   },
+   {
+    "level": "hard",
+    "q": "What does the Beaufort scale measure?",
+    "options": [
+     "Rainfall",
+     "Wind strength",
+     "Earthquakes"
+    ],
+    "answer": 1,
+    "fact": "It was made for sailors in 1805.",
+    "answer_say": "wind strength",
+    "fact_say": "It was made for sailors in eighteen oh five.",
+    "q_say": "What does the Bo-fort scale measure?"
+   }
+  ]
+ },
+ {
+  "theme": "Technology: phones and computers",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "What is a computer's brain called?",
+    "options": [
+     "Monitor",
+     "CPU",
+     "Mouse"
+    ],
+    "answer": 1,
+    "fact": "CPU stands for central processing unit.",
+    "answer_say": "the C P U",
+    "fact_say": "C P U stands for central processing unit."
+   },
+   {
+    "level": "easy",
+    "q": "What does GPS help you find?",
+    "options": [
+     "Lost socks",
+     "Your location",
+     "Wi-Fi"
+    ],
+    "answer": 1,
+    "fact": "GPS satellites orbit about 12,550 miles up.",
+    "answer_say": "your location",
+    "fact_say": "G P S satellites orbit about twelve thousand five hundred fifty miles up.",
+    "q_say": "What does G P S help you find?"
+   },
+   {
+    "level": "medium",
+    "q": "Bluetooth is named after a what?",
+    "options": [
+     "Blue bird",
+     "Viking king",
+     "Tooth doctor"
+    ],
+    "answer": 1,
+    "fact": "Its logo mixes the king's initials in runes.",
+    "answer_say": "a Viking king"
+   },
+   {
+    "level": "medium",
+    "q": "What does QR stand for?",
+    "options": [
+     "Quiet Room",
+     "Quick Response",
+     "Quality Rating"
+    ],
+    "answer": 1,
+    "fact": "It was invented in 1994 to track car parts.",
+    "answer_say": "quick response",
+    "fact_say": "It was invented in nineteen ninety four to track car parts.",
+    "q_say": "What does Q R stand for?"
+   },
+   {
+    "level": "hard",
+    "q": "How heavy was the first hard drive?",
+    "options": [
+     "About 5 pounds",
+     "About 50 pounds",
+     "Over one ton"
+    ],
+    "answer": 2,
+    "fact": "It held only about five million characters.",
+    "answer_say": "over one ton",
+    "q_say": "How heavy was the very first hard drive?"
+   }
+  ]
+ },
+ {
+  "theme": "Animals: bugs and insects",
+  "questions": [
+   {
+    "level": "easy",
+    "q": "How many legs does an insect have?",
+    "options": [
+     "Eight",
+     "Six",
+     "Four"
+    ],
+    "answer": 1,
+    "fact": "Spiders have eight, so they aren't insects.",
+    "answer_say": "six"
+   },
+   {
+    "level": "easy",
+    "q": "Which insect glows at night?",
+    "options": [
+     "Ladybug",
+     "Firefly",
+     "Wasp"
+    ],
+    "answer": 1,
+    "fact": "Fireflies glow using a chemical reaction.",
+    "answer_say": "the firefly"
+   },
+   {
+    "level": "medium",
+    "q": "Which insect may live just a day as an adult?",
+    "options": [
+     "Butterfly",
+     "Ant",
+     "Mayfly"
+    ],
+    "answer": 2,
+    "fact": "Some adult mayflies live less than a day.",
+    "answer_say": "the mayfly"
+   },
+   {
+    "level": "medium",
+    "q": "Which insect chirps by rubbing its wings?",
+    "options": [
+     "Beetle",
+     "Cricket",
+     "Ant"
+    ],
+    "answer": 1,
+    "fact": "Crickets chirp faster when it's warmer.",
+    "answer_say": "the cricket"
+   },
+   {
+    "level": "hard",
+    "q": "How many eyes does a honeybee have?",
+    "options": [
+     "Two",
+     "Five",
+     "Ten"
+    ],
+    "answer": 1,
+    "fact": "Two big eyes and three tiny ones on top.",
+    "answer_say": "five"
+   }
+  ]
  }
 ]
