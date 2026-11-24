@@ -1,15 +1,15 @@
 # Otto: styles ranked by attention
 
-40 posts, account median 1185 views. Outlier = views / median.
+56 posts, account median 943 views. Outlier = views / median.
 
 | Style | Posts | Median views | Avg outlier | Eng. rate | Shares | Saves |
 |---|---|---|---|---|---|---|
-| untagged | 40 | 1185 | 0.69x | 2.5% | 53 | 58 |
+| untagged | 56 | 943 | 0.85x | 2.5% | 70 | 91 |
 
 ## Top outlier posts
 
-- 1.25x, 1483 views, style untagged: https://www.instagram.com/reel/DfYDT9BkWLj/
-- 1.15x, 1363 views, style untagged: https://www.instagram.com/reel/DfQfUx5AC5I/
-- 1.11x, 1318 views, style untagged: https://www.instagram.com/reel/Dfakz_PjRd7/
-- 1.11x, 1319 views, style untagged: https://www.instagram.com/reel/DfgxKCRFPdZ/
-- 1.08x, 1274 views, style untagged: https://www.instagram.com/reel/DfQ92JSky5n/
+- 1.57x, 1483 views, style untagged: https://www.instagram.com/reel/DfYDT9BkWLj/
+- 1.45x, 1363 views, style untagged: https://www.instagram.com/reel/DfQfUx5AC5I/
+- 1.44x, 1357 views, style untagged: https://www.instagram.com/reel/DgCRTXHAf0I/
+- 1.41x, 1329 views, style untagged: https://www.instagram.com/reel/DgBN8TZCAa-/
+- 1.4x, 1319 views, style untagged: https://www.instagram.com/reel/Dfakz_PjRd7/
